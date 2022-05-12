@@ -24,8 +24,8 @@
         	function change() {
         		var name = window.location.search.substr(1).split("=")[1];
 
-        		var internal_name = "pdf/"+name+".pdf";
-        		var external_name = "https://docs.google.com/viewer?url=pdf/"+name+".pdf&embedded=true";
+        		var internal_name = "pdf/dispense/"+name+".pdf";
+        		var external_name = "https://docs.google.com/viewer?url=pdf/dispense/"+name+".pdf&embedded=true";
 
         		document.getElementById("external_pdf").setAttribute("data", internal_name);
         		document.getElementById("internal_pdf").setAttribute("src", external_name);
@@ -106,8 +106,8 @@
 		<main role="main">
 			<section class="jumbotron text-center my-3">
 				<div class="container">
-					<h1 class="jumbotron-heading" id="title">Album example</h1>
-					<p class="lead text-muted" id="description">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+					<p class="d-flex display-5 m-3 justify-content-center" id="title"></p>
+					<p class="lead text-muted" id="description"></p>
 					<p>
 						<a href="dispense.html" class="btn btn-outline-secondary my-2">Torna indietro</a>
 					</p>
