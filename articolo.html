@@ -25,7 +25,7 @@
         		var name = window.location.search.substr(1).split("=")[1];
 
         		var internal_name = "pdf/articoli/"+name+".pdf";
-        		var external_name = "https://docs.google.com/viewer?url=pdf/articoli/"+name+".pdf&embedded=true";
+        		var external_name = "https://docs.google.com/viewer?url=pdf/article/"+name+".pdf&embedded=true";
 
         		document.getElementById("external_pdf").setAttribute("data", internal_name);
         		document.getElementById("internal_pdf").setAttribute("src", external_name);

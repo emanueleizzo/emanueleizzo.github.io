@@ -1,3 +1,23 @@
 .display-7 {
     font-size: 1.25rem;
 }
+
+mark.green {
+    background-color: palegreen;
+    border-radius: 5px;
+}
+
+mark.yellow {
+    background-color: palegoldenrod;
+    border-radius: 5px;
+}
+
+mark.blue {
+    background-color: paleturquoise;
+    border-radius: 5px;
+}
+
+mark.red {
+    background-color: palevioletred;
+    border-radius: 5px;
+}
