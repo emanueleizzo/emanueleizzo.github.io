@@ -21,7 +21,7 @@
         function change() {
             var name = window.location.search.substr(1).split("=")[1];
 
-            var path = "lessons/"+name+".txt";
+            var path = "lessons/"+name+".html";
 
             fetch(path)
                 .then(response => response.text())
