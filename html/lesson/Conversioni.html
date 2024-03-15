@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
         <div class="card mb-3 border-0">
             <div class="flex justify-content-between align-items-center">
                 <h1>Sistemi di numerazione</h1>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-12">
         <div class="card mb-3 border-0">
             <div class="flex justify-content-between align-items-center">
                 <h2>Il sistema di numerazione decimale</h2>
@@ -33,7 +33,34 @@
                     </div>
                 </div>
                 Come accennato prima, il sistema di numerazione decimale è un sistema di numerazione posizionale, ossia le cifre utilizzabili variano di valore in base alla posizione in cui si trovano. Questo diventa evidente se si osserva la <mark class="yellow">notazione polinomiale</mark> (o <mark class="yellow">espansa</mark>) di un qualsiasi numero; esempio:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>463</mn><mo>,</mo><mn>23</mn><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><mn>100</mn><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><mn>10</mn><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>10</mn></mfrac><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>2</mn></msup><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>1</mn></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>0</mn></msup><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></math>
+                <div class="d-flex justify-content-center align-items-center p-2">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>463</mn><mo>,</mo><mn>23</mn><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><mn>100</mn><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><mn>10</mn><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>10</mn></mfrac><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>2</mn></msup><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>1</mn></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>0</mn></msup><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></math>
+                </div>
+                <div class="card m-2">
+                    <div class="card-body p-2">
+                        Generalizzando, è possibile esprimere un numero <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>.</mo><mo>.</mo><mo>.</mo><msub><mi>c</mi><mn>2</mn></msub><msub><mi>c</mi><mn>1</mn></msub><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msub><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><msub><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>.</mo><mo>.</mo><mo>.</mo></math> in base <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math> come segue:
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>.</mo><mo>.</mo><mo>.</mo><msub><mi>c</mi><mn>2</mn></msub><msub><mi>c</mi><mn>1</mn></msub><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msub><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><msub><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>.</mo><mo>.</mo><mo>.</mo><msub><mo>)</mo><mi>b</mi></msub><mo>=</mo><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>&#xd7;</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>&#xd7;</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><mo>&#xd7;</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub><mo>&#xd7;</mo><msup><mi>b</mi><mn>1</mn></msup><mo>+</mo><msub><mi>c</mi><mn>0</mn></msub><mo>&#xd7;</mo><msup><mi>b</mi><mn>0</mn></msup><mo>+</mo><msub><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>&#xd7;</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><msub><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>&#xd7;</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo></math>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="card mb-3 border-0">
+            <div class="flex justify-content-between align-items-center">
+                <h2>Il sistema di numerazione binario</h2>
+                <div class="card m-2">
+                    <div class="card-body p-2">
+                        Il <mark class="green">sistema di numerazione decimale</mark>, o sistema in base 10, è un sistema posizionale che utilizza le <mark class="green">cifre decimali da 0 a 9</mark>.
+                    </div>
+                </div>
+                Come accennato prima, il sistema di numerazione decimale è un sistema di numerazione posizionale, ossia le cifre utilizzabili variano di valore in base alla posizione in cui si trovano. Questo diventa evidente se si osserva la <mark class="yellow">notazione polinomiale</mark> (o <mark class="yellow">espansa</mark>) di un qualsiasi numero; esempio:
+                <div class="d-flex justify-content-center align-items-center p-2">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>463</mn><mo>,</mo><mn>23</mn><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><mn>100</mn><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><mn>10</mn><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>10</mn></mfrac><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><mfrac><mn>1</mn><mn>100</mn></mfrac><mo>=</mo><mn>4</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>2</mn></msup><mo>+</mo><mn>6</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>1</mn></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mn>0</mn></msup><mo>+</mo><mn>2</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>3</mn><mo>&#xd7;</mo><msup><mn>10</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></math>
+                </div>
             </div>
         </div>
     </div>
