@@ -30,12 +30,10 @@
                 .then(response => response.text())
                 .then((data) => {
                     document.getElementById("lesson").innerHTML = data;
-                })
-
-            document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
-            document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
-
-	    MathJax.typeset();
+		    document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
+                    document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
+		    MathJax.typeset();
+                });
         }
     </script>
 
