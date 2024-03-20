@@ -36,7 +36,11 @@
             document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
         }
 
-	document.addEventListener('DOMContentLoaded', MathJax.typeset());
+	document.addEventListener('DOMContentLoaded', function() => {
+	    MathJax.startup.document.state(0);
+	    MathJax.texReset();
+	    MathJax.typeset();
+	});
     </script>
 
     <title>Pagina di Emanuele Izzo</title>
