@@ -22,12 +22,6 @@
         }
 
 	function change() {
-	    loadLesson();
-		
-	    setTimeout(MathJax.typeset(), 2);
-	}
-	    
-        function loadLesson() {
             var name = window.location.search.substr(1).split("=")[1];
 
             var path = "html/lesson/" + name + ".html";
@@ -41,6 +35,8 @@
             document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
             document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
         }
+
+	document.addEventListener('DOMContentLoaded', function() {MathJax.typeset());
     </script>
 
     <title>Pagina di Emanuele Izzo</title>
