@@ -37,9 +37,10 @@
         }
 
 	document.addEventListener('DOMContentLoaded', function() {
-	    MathJax.startup.document.state(0);
-	    MathJax.texReset();
-	    MathJax.typeset();
+	    var math = new MathJax;
+	    math.startup.document.state(0);
+	    math.texReset();
+	    math.typeset();
 	});
     </script>
 
