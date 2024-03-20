@@ -24,7 +24,7 @@
 	function change() {
 	    loadLesson();
 		
-	    MathJax.typesetPromise();
+	    setTimeout(MathJax.typesetPromise(), 2);
 	}
 	    
         function loadLesson() {
