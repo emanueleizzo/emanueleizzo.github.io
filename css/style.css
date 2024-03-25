@@ -21,3 +21,8 @@ mark.red {
     background-color: palevioletred;
     border-radius: 5px;
 }
+
+div.comment {
+    font-style: italic;
+    color: gray;
+}

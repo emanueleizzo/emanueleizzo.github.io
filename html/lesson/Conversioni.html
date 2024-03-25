@@ -79,12 +79,12 @@
         <div class="card mb-3 border-0">
             <div class="flex justify-content-between align-items-center">
                 <h3>... E da decimale a binario</h3>
-                La domanda che uno si potrebbe porre a questo punto è come effettuare la conversione da decimale a binario; questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo generato). esempio
+                La domanda che uno si potrebbe porre a questo punto è come effettuare la conversione da decimale a binario; questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2 fino ad avere zero come quoziente, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo generato). esempio
                 <div class="d-flex justify-content-center align-items-center p-2">
-                    \[\]
+                    \[156_{10}=10011100_2\]
                 </div>
                 <div class="d-flex justify-content-center align-items-center p-2">
-                    <div class="col-4">
+                    <div class="col-3">
                         <table class="table table-bordered">
                             <tbody>
                                 <tr>
@@ -93,8 +93,51 @@
                                     <td>78</td>
                                     <td><b>0</b></td>
                                 </tr>
+                                <tr>
+                                    <td>78</td>
+                                    <td>2</td>
+                                    <td>39</td>
+                                    <td><b>0</b></td>
+                                </tr>
+                                <tr>
+                                    <td>39</td>
+                                    <td>2</td>
+                                    <td>19</td>
+                                    <td><b>1</b></td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>2</td>
+                                    <td>9</td>
+                                    <td><b>1</b></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td><b>1</b></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td><b>0</b></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td><b>0</b></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td><b>1</b></td>
+                                </tr>
                             </tbody>
                         </table>
+                        <div class="comment">Notare che il quoziente di ogni divisione diventa il dividendo della divisione successiva.</div>
                     </div>
                 </div>
             </div>
