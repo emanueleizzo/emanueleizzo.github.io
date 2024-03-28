@@ -1,13 +1,12 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="card mb-3 border-0">
-            <div class="flex">
+        <div class="mb-3 border-0">
+            <div>
                 <h1>Sistemi di numerazione</h1>
                 Partiamo dal definire cosa è un sistema di numerazione:
-                <div class="card m-2">
-                    <div class="card-body p-2">
-                        Un <mark class="green">sistema di numerazione</mark> è un insieme di simboli e di regole con cui rappresentare i numeri ele operazioni che si possono effettuare su di essi.
-                    </div>
+                <div class="definition m-2 p-2">
+                    Un <mark class="green">sistema di numerazione</mark> è un insieme di simboli e di regole con cui
+                    rappresentare i numeri ele operazioni che si possono effettuare su di essi.
                 </div>
                 Per definire un sistema di numerazione quindi è necessario definire due elementi distinti:
                 <ul>
@@ -16,131 +15,282 @@
                 </ul>
                 I sistemi di numerazione si possono dividere in due categorie:
                 <ul>
-                    <li>I sistemi di numerazione <b>posizionale</b> in cui i valori dei simboli variano in base alla posizione che occupano nel numero. Un esempio di sistema di numerazione posizionale è il sistema di numerazione <i>decimale</i>.</li>
-                    <li>I sistemi di numerazione <b>additivi/sottrattivo</b> in cui i valori dei simboli non variano e ogni numero è ricavato tramite la somma o la sottrazione delle cifre da cui è formato. Un esempio di sistema di numerazione posizionale è il sistema di numerazione <i>romano</i>.</li>
+                    <li>I sistemi di numerazione <b>posizionale</b> in cui i valori dei simboli variano in base alla
+                        posizione che occupano nel numero. Un esempio di sistema di numerazione posizionale è il sistema
+                        di numerazione <i>decimale</i>.</li>
+                    <li>I sistemi di numerazione <b>additivi/sottrattivo</b> in cui i valori dei simboli non variano e
+                        ogni numero è ricavato tramite la somma o la sottrazione delle cifre da cui è formato. Un
+                        esempio di sistema di numerazione posizionale è il sistema di numerazione <i>romano</i>.</li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <div class="col-md-12">
-        <div class="card mb-3 border-0">
-            <div class="flex">
-                <h2>Il sistema di numerazione decimale</h2>
-                <div class="card m-2">
-                    <div class="card-body p-2">
-                        Il <mark class="green">sistema di numerazione decimale</mark>, o sistema in base 10, è un sistema posizionale che utilizza le <mark class="green">cifre decimali da 0 a 9</mark>.
-                    </div>
+        <div class="mb-3 border-0">
+            <h2>Il sistema di numerazione decimale</h2>
+            <div class="definition m-2 p-2">
+                Il <mark class="green">sistema di numerazione decimale</mark>, o sistema in base 10, è un sistema
+                posizionale che utilizza le <mark class="green">cifre decimali da 0 a 9</mark>.
+            </div>
+            Come accennato prima, il sistema di numerazione decimale è un sistema di numerazione posizionale, ossia le
+            cifre utilizzabili variano di valore in base alla posizione in cui si trovano. Questo diventa evidente se si
+            osserva la <mark class="yellow">notazione polinomiale</mark> (o <mark class="yellow">espansa</mark>) di un
+            qualsiasi numero; esempio:
+            <div class="d-flex justify-content-center align-items-center">
+                \[463,23=4\times100+6\times10+3\times1+2\times\frac{1}{10}+3\times\frac{1}{100}=4\times10^2+6\times10^6+3\times10^0+2\times10^{-1}+2\times10^{-3}\]
+            </div>
+            <div class="definition m-2 p-2">
+                Generalizzando, è possibile esprimere un numero \(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...\) in base
+                \(b\) come segue:
+                <div class="d-flex justify-content-center align-items-center">
+                    \[(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...)_b=c_{n-1}\times b^{n-1}+c_{n-2}\times
+                    b^{n-2}+...+c_1\times b^1+c_0\times b^0+c_{-1}\times b^{-1}+c_{-2}\times b^{-2}+...\]
                 </div>
-                Come accennato prima, il sistema di numerazione decimale è un sistema di numerazione posizionale, ossia le cifre utilizzabili variano di valore in base alla posizione in cui si trovano. Questo diventa evidente se si osserva la <mark class="yellow">notazione polinomiale</mark> (o <mark class="yellow">espansa</mark>) di un qualsiasi numero; esempio:
-                <div class="d-flex justify-content-center align-items-center p-2">
-                    \[463,23=4\times100+6\times10+3\times1+2\times\frac{1}{10}+3\times\frac{1}{100}=4\times10^2+6\times10^6+3\times10^0+2\times10^{-1}+2\times10^{-3}\]
+            </div>
+        </div>
+
+        <div class="mb-3 border-0">
+            <h2>Il sistema di numerazione binario</h2>
+            <div class="definition m-2 p-2">
+                Il <mark class="green">sistema di numerazione binario</mark>, o sistema in base 2, è un sistema
+                posizionale che utilizza le <mark class="green">cifre 0 e 1</mark>.
+            </div>
+            Prima di andare avanti è importante dare la definizione di <mark class="yellow">bit</mark> (o <mark
+                class="yellow">binary digit</mark>), ossia la singola cifra utilizzata in binario.
+        </div>
+
+        <div class="mb-3 border-0">
+            <h3>Convertire da binario a decimale...</h3>
+            Come il sistema decimale anche il sistema binario è un sistema posizionale, ossia ad ogni posizione è
+            associata una specifica potenza di 2; esempio:
+            <div class="d-flex justify-content-center align-items-center">
+                \[1001011,1101_2=1\times2^6+1\times2^3+1\times2^1+1\times2^{-1}+1\times2^{-2}+1\times2^{-4}=64+8+2+1+0.5+0.25+0.0625=75,8125_{10}\]
+            </div>
+            Notare che utilizzando la notazione polinomiale è possibile passare dalla base 10 alla base, permettendoci
+            quindi di effettuare la <mark class="yellow">conversione da binario a decimale</mark>. Un dettaglio
+            interessante che si può notare nell'esempio sopra è che sono stati omessi gli zeri (per ovvie motivazioni:
+            un numero moltiplicato per zero sarà sempre uguale a zero). Tramite ciò siamo in grado di definire un
+            intervallo di rappresentazione.
+            <div class="definition m-2 p-2">
+                Dati \(n\) utilizzabili, l'<mark class="green">intervallo di rappresentazione</mark> possibile è
+                \([0, 2^n-1]\).
+            </div>
+        </div>
+
+        <div class="mb-3 border-0">
+            <h3>... E da decimale a binario</h3>
+            La domanda che uno si potrebbe porre a questo punto è come effettuare la conversione da decimale a binario;
+            questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2 fino ad
+            avere zero come quoziente, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo
+            generato). Esempio:
+            <div class="d-flex justify-content-center align-items-center">
+                \[156_{10}=10011100_2\]
+            </div>
+            <div class="row justify-content-around mb-3">
+                <div class="col-3">
+                    <table class="table table-bordered m-0">
+                        <tbody>
+                            <tr>
+                                <td>156</td>
+                                <td>2</td>
+                                <td>78</td>
+                                <td><b>0</b></td>
+                            </tr>
+                            <tr>
+                                <td>78</td>
+                                <td>2</td>
+                                <td>39</td>
+                                <td><b>0</b></td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>2</td>
+                                <td>19</td>
+                                <td><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>2</td>
+                                <td>9</td>
+                                <td><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td><b>0</b></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td><b>0</b></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td><b>1</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="card m-2">
-                    <div class="card-body p-2">
-                        Generalizzando, è possibile esprimere un numero \(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...\) in base \(b\) come segue:
-                        <div class="d-flex justify-content-center align-items-center p-2">
-                            \[(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...)_b=c_{n-1}\times b^{n-1}+c_{n-2}\times b^{n-2}+...+c_1\times b^1+c_0\times b^0+c_{-1}\times b^{-1}+c_{-2}\times b^{-2}+...\]
-                        </div>
-                    </div>
+            </div>
+            <div class="row justify-content-around mb-3">
+                <div class="col-3">
+                    <div class="comment">Notare che il quoziente di ogni divisione diventa il dividendo della divisione
+                        successiva.</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-12">
-        <div class="card mb-3 border-0">
-            <div class="flex">
-                <h2>Il sistema di numerazione binario</h2>
-                <div class="card m-2">
-                    <div class="card-body p-2">
-                        Il <mark class="green">sistema di numerazione binario</mark>, o sistema in base 2, è un sistema posizionale che utilizza le <mark class="green">cifre 0 e 1</mark>.
-                    </div>
-                </div>
-                Prima di andare avanti è importante dare la definizione di <mark class="yellow">bit</mark> (o <mark class="yellow">binary digit</mark>), ossia la singola cifra utilizzata in binario. 
+    <div class="mb-3 border-0">
+        <h3>La rappresentazione in virgola fissa</h3>
+        Notare che per ora abbiamo solo trattato numeri interi. Per quello che riguarda i numeri con la virgola cambiano
+        le meccaniche: per la parte intera si seguono le regole viste prima, mentre per la parte frazionaria si esegue
+        una <mark class="yellow">moltiplicazione a cascata</mark> per 2 fino ad avere 1 come risultato (quindi senza la
+        virgola) o fino a riempire tutti i bit disponibili per la parte decimale, prendendo poi i valori della parte
+        intera dall'alto (primo generato) verso il basso (ultimo generato). Questa conversione viene detta <mark
+            class="green">rappresentazione in virgola mobile ad \(n\) bit</mark>, dove \(n\) rappresenta il numero di
+        bit usati sia per la parte intera che per la parte decimale. Esempio:
+        <div class="d-flex flex-column justify-content-center align-items-center mb-3">
+            \[210,762_{10}=111000110,_2\]
+            <div class="comment">In questo caso viene usata una rappresentazione in virgola mobile a 8 bit.</div>
+        </div>
+        <div class="row justify-content-around mb-3">
+            <div class="col-3">
+                <table class="table table-bordered m-0">
+                    <tbody>
+                        <tr>
+                            <td>210</td>
+                            <td>2</td>
+                            <td>105</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>105</td>
+                            <td>2</td>
+                            <td>57</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>2</td>
+                            <td>28</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>2</td>
+                            <td>14</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td><b>1</b></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="col-3">
+                <table class="table table-bordered m-0">
+                    <tbody>
+                        <tr>
+                            <td>0.762</td>
+                            <td>2</td>
+                            <td>1.524</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,524</td>
+                            <td>2</td>
+                            <td>1,048</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,048</td>
+                            <td>2</td>
+                            <td>0,096</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,096</td>
+                            <td>2</td>
+                            <td>0,192</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,192</td>
+                            <td>2</td>
+                            <td>0,384</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,384</td>
+                            <td>2</td>
+                            <td>0,768</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,768</td>
+                            <td>2</td>
+                            <td>1,536</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,536</td>
+                            <td>2</td>
+                            <td>1,072</td>
+                            <td><b>1</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row justify-content-around mb-3">
+            <div class="col-3">
+                <div class="comment">Per la parte intera vengono utilizzate le stesse regole usate in precedenza.</div>
+            </div>
+            <div class="col-3">
+                <div class="comment">Possiamo osservare che la parte frazionaria risultante di ogni moltiplicazione
+                    diventa il fattore della moltiplicazione successiva.</div>
+            </div>
+        </div>
+        Possiamo come prima definire anche qui un'intervallo di rappresentazione in base al numeo ri bit utilizzati.
+        <div class="definition m-2 p-2">
+            Dati \(n\) utilizzabili per la parte intera ed \(n\) bit utilizzabili per la parte frazionaria, l'<mark class="green">intervallo di rappresentazione</mark> possibile è
+            \([0, 2^n-2^{-n}]\).
         </div>
     </div>
 
-    <div class="col-md-12">
-        <div class="card mb-3 border-0">
-            <div class="flex">
-                <h3>Convertire da binario a decimale...</h3>
-                Come il sistema decimale anche il sistema binario è un sistema posizionale, ossia ad ogni posizione è associata una specifica potenza di 2; esempio:
-                <div class="d-flex justify-content-center align-items-center p-2">
-                    \[1001011,1101_2=1\times2^6+1\times2^3+1\times2^1+1\times2^{-1}+1\times2^{-2}+1\times2^{-4}=64+8+2+1+0.5+0.25+0.0625=75,8125_{10}\]
-                </div>
-                Notare che utilizzando la notazione polinomiale è possibile passare dalla base 10 alla base, permettendoci quindi di effettuare la <mark class="yellow">conversione da binario a decimale</mark>. Un dettaglio interessante che si può notare nell'esempio sopra è che sono stati omessi gli zeri (per ovvie motivazioni: un numero moltiplicato per zero sarà sempre uguale a zero).
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="card mb-3 border-0">
-            <div class="flex justify-content-between align-items-center">
-                <h3>... E da decimale a binario</h3>
-                La domanda che uno si potrebbe porre a questo punto è come effettuare la conversione da decimale a binario; questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2 fino ad avere zero come quoziente, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo generato). esempio
-                <div class="d-flex justify-content-center align-items-center p-2">
-                    \[156_{10}=10011100_2\]
-                </div>
-                <div class="d-flex justify-content-center align-items-center p-2">
-                    <div class="col-3">
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td>156</td>
-                                    <td>2</td>
-                                    <td>78</td>
-                                    <td><b>0</b></td>
-                                </tr>
-                                <tr>
-                                    <td>78</td>
-                                    <td>2</td>
-                                    <td>39</td>
-                                    <td><b>0</b></td>
-                                </tr>
-                                <tr>
-                                    <td>39</td>
-                                    <td>2</td>
-                                    <td>19</td>
-                                    <td><b>1</b></td>
-                                </tr>
-                                <tr>
-                                    <td>19</td>
-                                    <td>2</td>
-                                    <td>9</td>
-                                    <td><b>1</b></td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>2</td>
-                                    <td>4</td>
-                                    <td><b>1</b></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td><b>0</b></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                    <td><b>0</b></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>0</td>
-                                    <td><b>1</b></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="comment">Notare che il quoziente di ogni divisione diventa il dividendo della divisione successiva.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="mb-3 border-0">
+        <h3>La rappresentazione in complemento a 2</h3>
+        
     </div>
 </div>

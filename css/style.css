@@ -24,12 +24,17 @@ mark.red {
     background-color: #d8709380;
 }
 
+div.definition {
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+}
+
 div.comment {
     font-style: italic;
     color: gray;
 }
 
-.application {
+div.application {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -38,7 +43,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.presentation {
+div.presentation {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -47,7 +52,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.session {
+div.session {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -56,7 +61,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.transport {
+div.transport {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -65,7 +70,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.network {
+div.network {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -74,7 +79,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.data_link {
+div.data_link {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -83,7 +88,7 @@ div.comment {
     font-weight: bolder;
 }
 
-.physical {
+div.physical {
     border-style: solid;
     border-width: 2px;
     border-color: black;
