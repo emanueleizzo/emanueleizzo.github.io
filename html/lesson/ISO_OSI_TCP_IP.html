@@ -1,0 +1,126 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-3 border-0">
+            <div class="flex">
+                <h1>Il modello IOS/OSI e lo stack TCP/IP</h1>
+                <div class="m-3">
+                <div class="row justify-content-between mb-2">
+                    <div class="col-3">
+                        <h3>Modello ISO/OSI</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3>Stack TCP/IP</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3>PDU</h3>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="application d-flex p-2 justify-content-center align-items-center">
+                            Applicazione
+                        </div>
+                        <div class="presentation d-flex p-2 justify-content-center align-items-center">
+                            Presentazione
+                        </div> 
+                        <div class="session d-flex p-2 justify-content-center align-items-center">
+                            Sessione
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="application d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                            Applicazione
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="pdu d-flex p-2 justify-content-center align-items-center"  style="height: 100%">
+                            Messaggio
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="transport d-flex p-2 justify-content-center align-items-center">
+                            Trasporto
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="transport d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                            Trasporto
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="pdu d-flex p-2 justify-content-center align-items-center"  style="height: 100%">
+                            Segmento o Datagram
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="network d-flex p-2 justify-content-center align-items-center">
+                            Rete
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="network d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                            Rete
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="pdu d-flex p-2 justify-content-center align-items-center"  style="height: 100%">
+                            Pacchetto
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="data_link d-flex p-2 justify-content-center align-items-center">
+                            Collegamento
+                        </div>
+                        <div class="physical d-flex p-2 justify-content-center align-items-center">
+                            Fisico
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="physical d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                            Fisico
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="pdu d-flex p-2 justify-content-center align-items-center"  style="height: 100%">
+                            Frame
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between mt-3">
+                    <div class="col-3">
+                        Il <mark class="green">modello ISO/OSI</mark> è un modello teorico a strati che suddivide in <mark class="yellow">7 livelli</mark> le funzionalità necessarie a realizzare reti di computer.
+                    </div>
+                    <div class="col-3">
+                        L'<mark class="green">architettura TCP/IP</mark> si basa solo su <mark class="yellow">4 livelli</mark> e prende il nome dai suoi due protocolli più importanti: <mark class="yellow">IP</mark> e <mark class="yellow">TCP</mark>
+                    </div>
+                    <div class="col-3">
+                        Il <mark class="green">Protocol Data Unit</mark> (<mark class="green">PDU</mark>) si identifica il messaggio scambiato tra peer entity, formato ad header e dati.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 border-0">
+            <div class="flex">
+                <h2>La comunicazione tra due host</h2>
+                Due host che voglio comunicare realizzano la stessa architettura a strati e implementano uno o più protocolli a ogni livello per consentire lo scambio di informazioni; i livelli N di mittente e destinatario prendono il nome di <mark class="yellow">peer level</mark>. Ogni elemento attivo, in grado cioè di inviare e ricevere informazioni in un livello è detto <mark class="yellow">entity</mark>; due entità paritarie vengono chiamate <mark class="yellow">peer entity</mark>.
+                <div class="card m-2">
+                    <div class="card-body p-2">
+                        Un <mark class="green">protocollo</mark> è un insieme di regole che definiscono la comunicazione tra due peer entity.
+                    </div>
+                </div>
+                Ogni livello fornisce un <mark class="green">servizio</mark> più astratto man mano che si procede dal basso (hardware) verso l'alto (applicazioni), svolgendo ciascuno compiti diversi dagli altri; tutti insieme concorrono a realizzare la <mark class="yellow">comunicazione tra i sistemi</mark>. Possiamo individuare due modalità di comunicazione:
+                <ul>
+                    <li>La <mark class="yellow">comunicazione logica tra peer entity</mark>, la quale avviene utilizzando i PDU.</li>
+                    <li>La <mark></mark></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

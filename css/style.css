@@ -2,27 +2,100 @@
     font-size: 1.25rem;
 }
 
+mark {
+    display: inline;
+    width: fit-content;
+    border-radius: 5px;
+}
+
 mark.green {
     background-color: palegreen;
-    border-radius: 5px;
 }
 
 mark.yellow {
     background-color: palegoldenrod;
-    border-radius: 5px;
 }
 
 mark.blue {
     background-color: paleturquoise;
-    border-radius: 5px;
 }
 
 mark.red {
     background-color: palevioletred;
-    border-radius: 5px;
 }
 
 div.comment {
     font-style: italic;
     color: gray;
+}
+
+.application {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71bb77;
+    font-weight: bolder;
+}
+
+.presentation {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #8dca92;
+    font-weight: bolder;
+}
+
+.session {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #aae0ae;
+    font-weight: bolder;
+}
+
+.transport {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #7dc2e2;
+    font-weight: bolder;
+}
+
+.network {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #e2e077;
+    font-weight: bolder;
+}
+
+.data_link {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #e2bf7d;
+    font-weight: bolder;
+}
+
+.physical {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #d19842;
+    font-weight: bolder;
+}
+
+.pdu {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    font-weight: bolder;
 }
