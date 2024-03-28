@@ -9,19 +9,19 @@ mark {
 }
 
 mark.green {
-    background-color: palegreen;
+    background-color: #98fb9880;
 }
 
 mark.yellow {
-    background-color: palegoldenrod;
+    background-color: #eee8aa80;
 }
 
 mark.blue {
-    background-color: paleturquoise;
+    background-color: #afeeee80;
 }
 
 mark.red {
-    background-color: palevioletred;
+    background-color: #d8709380;
 }
 
 div.comment {
