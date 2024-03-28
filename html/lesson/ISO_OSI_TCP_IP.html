@@ -118,7 +118,14 @@
                 Ogni livello fornisce un <mark class="green">servizio</mark> più astratto man mano che si procede dal basso (hardware) verso l'alto (applicazioni), svolgendo ciascuno compiti diversi dagli altri; tutti insieme concorrono a realizzare la <mark class="yellow">comunicazione tra i sistemi</mark>. Possiamo individuare due modalità di comunicazione:
                 <ul>
                     <li>La <mark class="yellow">comunicazione logica tra peer entity</mark>, la quale avviene utilizzando i PDU.</li>
-                    <li>La <mark></mark></li>
+                    <li>
+                        La <mark class="yellow">comunicazione fisica tra livelli adiacenti</mark>, la quale avviene in due modi:
+                        <ul>
+                            <li>In <b>trasimissione</b>, dove il livello N riceve il messaggio dal livello N+1, lo elabora e lo invia al livello N-1.</li>
+                            <li>In <b>ricezione</b>, dove il livello N riceve il messaggio dal livello N-1, lo elabora e lo invia al livello N+1.</li>
+                        </ul>
+                        L'interazione tra due livelli adiacenti avviene tramite un'<mark class="green">interfaccia</mark>, la quale definisce le regole secondo le quali un livello accede ai servizi offerti dal livello sottostante.
+                    </li>
                 </ul>
             </div>
         </div>
