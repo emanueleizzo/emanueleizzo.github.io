@@ -35,13 +35,13 @@
             cifre utilizzabili variano di valore in base alla posizione in cui si trovano. Questo diventa evidente se si
             osserva la <mark class="yellow">notazione polinomiale</mark> (o <mark class="yellow">espansa</mark>) di un
             qualsiasi numero; esempio:
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="math">
                 \[463,23=4\times100+6\times10+3\times1+2\times\frac{1}{10}+3\times\frac{1}{100}=4\times10^2+6\times10^6+3\times10^0+2\times10^{-1}+2\times10^{-3}\]
             </div>
             <div class="definition m-2 p-2">
                 Generalizzando, è possibile esprimere un numero \(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...\) in base
                 \(b\) come segue:
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="math">
                     \[(c_{n-1}c_{n-2}...c_1c_0,c_{-1}c_{-2}...)_b=c_{n-1}\times b^{n-1}+c_{n-2}\times
                     b^{n-2}+...+c_1\times b^1+c_0\times b^0+c_{-1}\times b^{-1}+c_{-2}\times b^{-2}+...\]
                 </div>
@@ -62,7 +62,7 @@
             <h3>Convertire da binario a decimale...</h3>
             Come il sistema decimale anche il sistema binario è un sistema posizionale, ossia ad ogni posizione è
             associata una specifica potenza di 2; esempio:
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="math">
                 \[1001011,1101_2=1\times2^6+1\times2^3+1\times2^1+1\times2^{-1}+1\times2^{-2}+1\times2^{-4}=64+8+2+1+0.5+0.25+0.0625=75,8125_{10}\]
             </div>
             Notare che utilizzando la notazione polinomiale è possibile passare dalla base 10 alla base, permettendoci
@@ -82,7 +82,7 @@
             questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2 fino ad
             avere zero come quoziente, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo
             generato). Esempio:
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="math">
                 \[156_{10}=10011100_2\]
             </div>
             <div class="row justify-content-around mb-3">
@@ -159,7 +159,7 @@
         intera dall'alto (primo generato) verso il basso (ultimo generato). Questa conversione viene detta <mark
             class="green">rappresentazione in virgola mobile ad \(n\) bit</mark>, dove \(n\) rappresenta il numero di
         bit usati sia per la parte intera che per la parte decimale. Esempio:
-        <div class="d-flex flex-column justify-content-center align-items-center mb-3">
+        <div class="math">
             \[210,762_{10}=111000110,_2\]
             <div class="comment">In questo caso viene usata una rappresentazione in virgola mobile a 8 bit.</div>
         </div>
@@ -284,13 +284,143 @@
         </div>
         Possiamo come prima definire anche qui un'intervallo di rappresentazione in base al numeo ri bit utilizzati.
         <div class="definition m-2 p-2">
-            Dati \(n\) utilizzabili per la parte intera ed \(n\) bit utilizzabili per la parte frazionaria, l'<mark class="green">intervallo di rappresentazione</mark> possibile è
+            Dati \(n\) utilizzabili per la parte intera ed \(n\) bit utilizzabili per la parte frazionaria, l'<mark
+                class="green">intervallo di rappresentazione</mark> possibile è
             \([0, 2^n-2^{-n}]\).
         </div>
     </div>
 
     <div class="mb-3 border-0">
         <h3>La rappresentazione in complemento a 2</h3>
-        
+        Abbiamo affrontato la rappresentazione di numeri interi e frazionari, ma abbiamo solo trattato numeri positivi;
+        per rappresentare i numeri razionali (ossia con il segno) dobbiamo decidere come trattare il segno. La soluzione
+        più semplice è quella di utilizzare il bit più significativo per rappresentare il segno, impostandolo a zero per
+        il più e ad uno per il meno. Esempio:
+        <div class="math">
+            \[01110011_2=+115_{10}\]
+            \[11110011_2=-115_{10}\]
+            <div class="comment">Appare subito evidente come il cambio del bit più significativo altera il segno ma non
+                il modulo del numero.</div>
+        </div>
+        Da qui possiamo notare instantaneamente che il range di rappresentazione viene alterato significativamente.
+        <div class="definition m-2 p-2">
+            Dati \(n\) utilizzabili per la rappresentazione in modulo e segno, l'<mark class="green">intervallo di
+                rappresentazione</mark> possibile è
+            \([-2^{n-1}+1, 2^{n-1}-1]\)
+        </div>
+        Questa rappresentazione presenta un dettaglio molto particolare: ponendo di avere a disposizione \(n\) bit, lo
+        zero presenta una doppia rappresentazione come:
+        <div class="math">
+            \[0\underbrace{00\cdots0_2}_{n-1\text{ bits}}=+0_{10}\]
+            \[1\underbrace{00\cdots0_2}_{n-1\text{ bits}}=-0_{10}\]
+        </div>
+        Per ovviare a questo problema viene utilizza una differente rappresentazione, ossia in <mark class="green">complemento a 2</mark>; questa rappresentazione funziona nel seguente modo: dopo aver convertito il numero come fatto finora si aggiunge uno zero subito prima del bit più significativo, e, se il numero è positivo viene lasciato così com'è, mentre se il numero è negativo tutti i bit vengono ribaltati (gli uno diventano zero e viceversa), e al numero ottenuto si aggiunge 1. Esempio:
+        <div class="math">
+            \[\begin{align*}
+                &+115_{10}=01110011\\
+                &-115_{10}=10001101_2\qquad115_{10}=01110011_2\rightarrow10001100_2+1_2=10001101_2
+            \end{align*}\]
+            <div class="comment">Notare come i due numeri presentino ora una rappresentazione completamente diversa.</div>
+        </div>
+        Con questa variazione anche l'invervallo di rappresentazione viene alterato.
+        <div class="definition m-2 p-2">
+            Dati \(n\) utilizzabili per la rappresentazione in complemento a 2, l'<mark class="green">intervallo di
+                rappresentazione</mark> possibile è
+            \([-2^{n-1}, 2^{n-1}-1]\)
+        </div>
+    </div>
+
+    <div class="mb-3 border-0">
+        <h2>Il sistema di numerazione ottale</h2>
+        <div class="definition m-2 p-2">
+            Il <mark class="green">sistema di numerazione ottale</mark>, o sistema in base 8, è un sistema
+            posizionale che utilizza le <mark class="green">cifre decimali da 0 a 7</mark>.
+        </div>
+        Il sistema di numerazione in ottale è come il sistema binario e decimale un sistema posizionale, ossia ad ogni posizione viene associata una differenza potenza di otto. Da qui appare subito evidente che le regole di conversione da ottale a decimale e da decimale ad ottale siano le stesse viste in binario.
+        <div class="row justify-content-around mb-3">
+            <div class="col-3">
+                <div class="math">
+                    \[\begin{align*}
+                        &+115_{10}=01110011\\
+                        &-115_{10}=10001101_2\qquad115_{10}=01110011_2\rightarrow10001100_2+1_2=10001101_2
+                    \end{align*}\]
+                    <div class="comment">Notare come i due numeri presentino ora una rappresentazione completamente diversa.</div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="math">
+                    \[\begin{align*}
+                        &+115_{10}=01110011\\
+                        &-115_{10}=10001101_2\qquad115_{10}=01110011_2\rightarrow10001100_2+1_2=10001101_2
+                    \end{align*}\]
+                    <div class="comment">Notare come i due numeri presentino ora una rappresentazione completamente diversa.</div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-around mb-3">
+            <div class="col-3">
+                <table class="table table-bordered m-0">
+                    <tbody>
+                        <tr>
+                            <td>0.762</td>
+                            <td>2</td>
+                            <td>1.524</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,524</td>
+                            <td>2</td>
+                            <td>1,048</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,048</td>
+                            <td>2</td>
+                            <td>0,096</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,096</td>
+                            <td>2</td>
+                            <td>0,192</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,192</td>
+                            <td>2</td>
+                            <td>0,384</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,384</td>
+                            <td>2</td>
+                            <td>0,768</td>
+                            <td><b>0</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,768</td>
+                            <td>2</td>
+                            <td>1,536</td>
+                            <td><b>1</b></td>
+                        </tr>
+                        <tr>
+                            <td>0,536</td>
+                            <td>2</td>
+                            <td>1,072</td>
+                            <td><b>1</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-3">
+                <div class="math">
+                    \[\begin{align*}
+                        &+115_{10}=01110011\\
+                        &-115_{10}=10001101_2\qquad115_{10}=01110011_2\rightarrow10001100_2+1_2=10001101_2
+                    \end{align*}\]
+                    <div class="comment">Notare come i due numeri presentino ora una rappresentazione completamente diversa.</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

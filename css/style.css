@@ -9,19 +9,19 @@ mark {
 }
 
 mark.green {
-    background-color: #98fb9880;
+    background-color: #98fb98aa;
 }
 
 mark.yellow {
-    background-color: #eee8aa80;
+    background-color: #eee8aaaa;
 }
 
 mark.blue {
-    background-color: #afeeee80;
+    background-color: #afeeeeaa;
 }
 
 mark.red {
-    background-color: #d8709380;
+    background-color: #d87093aa;
 }
 
 div.definition {
@@ -103,4 +103,17 @@ div.physical {
     border-color: black;
     border-radius: 10px;
     font-weight: bolder;
+}
+
+div.math {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+mjx-container.MathJax {
+    margin: 0px !important;
 }
