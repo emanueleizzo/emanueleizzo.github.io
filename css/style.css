@@ -24,6 +24,10 @@ mark.red {
     background-color: #d87093aa;
 }
 
+ul {
+    margin: 0em !important;
+}
+
 div.definition {
     border: 1px solid #a6a6a6;
     border-radius: 5px;

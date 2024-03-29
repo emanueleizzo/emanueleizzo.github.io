@@ -2,6 +2,33 @@
     <div class="col-md-12">
         <div class="mb-3 border-0">
             <h1>L'IEEE 754</h1>
+            Riprendiamo un attimo in mano la rappresentazione in virgola mobile: come abbiamo visto questa rappresentazione è relativamente limitata sul range di numeri rappresentabili (ricordiamo che dato \(n\) bit l'intervallo di rappresentazione è \([0, 2^n-2^{-n}]\)); un altro problema da considerare è che non è facilmente combinabile con la rappresentazione del segno (tramite per esempio con il complemento a 2). Per risolvere questo problema nel 1985 è stato introdotto lo standard IEEE 754.
+            <div class="definition m-2 p-2">
+                Lo standard <mark class="green">IEEE 754</mark> è utilizzato per rappresentare i numeri in <mark class="green">virgola mobile</mark> sfruttando la <mark class="yellow">notazione esponenziale</mark>. Questo standard utilizza 32 bit divisi in tre gruppi:
+                <ul>
+                    <li>Il primo bit è utilizzato per <mark class="yellow">rappresentare il segno</mark> (zero per il più, uno per il meno).</li>
+                    <li>I successivi 8 bit sono utilizzati per <mark class="yellow">rappresentare l'esponente in eccesso 127</mark>.</li>
+                    <li>I restanti 23 bit sono utilizzati per <mark class="yellow">la parte frazionaria della mantissa</mark>.</li>
+                </ul>
+            </div>
+            Prima di spiegare nel dettaglio come funziona è necessario introdurre un attimo la notazione esponenziale.
+            <div class="definition m-2 p-2">
+                La <mark class="green">notazione esponenziale</mark> (o <mark class="green">scientifica</mark>) è un metodo di rappresentazione dei numeri nella forma \(m\cdot10^e\), dove \(m\) prende il nome di <mark class="yellow">mantissa</mark>, ossia un numero compreso tra 1 (incluso) e 10 (escluso), mentre \(e\) prende il nome di esponente.
+            </div>
+            È importante dire che la definizione sopra può essere estesa a qualsiasi sistema numerazione: per fare ciò è sufficiente modificare la base della potenza con la base del sistema di numerazione, e porre che la mantissa ha come valore massimo la base del sistema (eslcusa). Definita la notazione esponenziale, possiamo ora descrivere come scrivere un numero in virgola mobile:
+            <ul>
+                <li>Il primo passaggio è quello di convertire il nostro numero in binario con le regole classiche viste precedentemente, ignorando momentaneamente il segno.</li>
+                <li>A questo punto è necessario riscrivere il nostro numero convertito in notazione esponenziale.</li>
+                <li>Fatto ciò, per gli 8 bit dell'esponente prendiamo l'esponente della nostra notazione esponenziale, lo sommiamo a 127 e lo convertiamo in binario.</li>
+                <li>Per i 23 bit della mantissa andiamo a prendere i primi 23 bit della mantissa subito dopo la virgola; nel caso in cui i bit che si hanno non sono sufficienti a coprire tutti i 23 bit possiamo aggiungere degli zero per riempire il vuoto.</li>
+                <li>Per concludere il primo bit viene impostato a zero se il segno del numero è zero, mentre viene impostato ad uno se invece è meno.</li>
+            </ul>
+            Possiamo fare alcune osservazioni riguardante i passaggi appena visti:
+            <ul>
+                <li>Partiamo dall'esponente: il fatto di esprimerlo in eccesso 127 ci permette di poter trattare anche gli esponenti negativi senza dover effettuare la conversione in complemento a 2 e apliare allo stesso tempo il range di numeri rappresentabili.</li>
+                <li>Per quello che riguarda la mantissa il fatto di ignorare l'uno prima della virgola non è banale: se riprendiamo la definizione di notazione esponenziale e la riadattiamo al sistema binario notiamo senza troppi problemi che il bit prima della virgola sarà sempre settato ad uno; sapendo questo possiamo non considerarlo nella scrittura dei 23 bit della mantissa.</li>
+            </ul>
+            Vediamo ora alcuni esempi:
             
         </div>
     </div>
