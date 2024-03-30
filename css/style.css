@@ -38,6 +38,33 @@ div.comment {
     color: gray;
 }
 
+div.sign {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71bb77;
+    font-weight: bolder;
+}
+
+div.exponent {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71b8bb;
+    font-weight: bolder;
+}
+
+div.mantissa {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #dcc25b;
+    font-weight: bolder;
+}
+
 div.application {
     border-style: solid;
     border-width: 2px;
