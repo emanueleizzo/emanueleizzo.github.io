@@ -1,11 +1,28 @@
 <div class="row">
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h1>Il modello ISO/OSI e lo stack TCP/IP</h1>
+            <h3>INDICE</h3>
+            <ul class="index">
+                <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) Il
+                            modello a strati o livelli</button></a></li>
+                <ul class="index">
+                    <li class="index-element"><a href="#1_1"><button type="button"
+                                class="btn btn-outline-secondary">1.1) L'incapsulamento e il decapsulamento</button></a>
+                    </li>
+                </ul>
+                <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2) Il
+                            modello ISO/OSI</button></a></li>
+                <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">3) Lo
+                            stack TCP/IP</button></a></li>
+                <li class="index-element"><a href="#4"><button type="button" class="btn btn-outline-secondary">4)
+                            ISO/OSI e TCP/IP a comparazione</button></a></li>
+            </ul>
         </div>
+    </div>
 
+    <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>Il modello a strati o livelli</h2>
+            <h1 id="1">1) Il modello a strati o livelli</h1>
             Il <mark class="green">modello a strati o livelli</mark> è un modello utilizzato per l'implementazione di
             internet, basato su una metodologia top-down e rappresentato in verticale. Due host che voglio comunicare
             realizzano la stessa architettura a strati e implementano uno o più protocolli a ogni livello per consentire
@@ -41,9 +58,11 @@
                 </li>
             </ul>
         </div>
+    </div>
 
+    <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>L'incapsulamento e il decapsulamento</h2>
+            <h2 id="1_1">1.1) L'incapsulamento e il decapsulamento</h2>
             L'<mark class="green">incapsulamento</mark> è una tecnina utilizzata per il passaggio di informazioni utili
             per lo svolgimento delle funzioni di quel livello. Quando il messaggio mandato dal mittente passa al livello
             inferiore viene modificato con l'aggiunta di informazioni e dati che prendono il nome di <mark
@@ -52,9 +71,11 @@
                 class="green">decapsulamento</mark> del messaggio, rimuovendo l'header che è stato aggiunto dal
             destinatario nel livello attuale.
         </div>
+    </div>
 
+    <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>Il modello ISO/OSI</h2>
+            <h1 id="2">2) Il modello ISO/OSI</h1>
             Il <mark class="green">modello ISO/OSI</mark> è un modello teorico a strati che suddivide in <mark
                 class="yellow">7 livelli</mark> le funzionalità necessarie a realizzare reti di computer. I sette
             livelli che compongono questo modello sono:
@@ -79,9 +100,11 @@
                     che offre un'interfaccia utente con la rete.</li>
             </ul>
         </div>
+    </div>
 
+    <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>Lo stack TCP/IP</h2>
+            <h1 id="3">3) Lo stack TCP/IP</h1>
             Lo <mark class="green">stack TCP/IP</mark> è un'applicazione pratica del modello ISO/OSI che prende il nome
             dai suoi due protocolli più importanti: <mark class="yellow">IP</mark> e <mark class="yellow">TCP</mark>.
             Rispetto al modello ISO/OSI lo stack TCP/IP è composto da soli 4 livelli:
@@ -101,9 +124,11 @@
                     per Internet.</li>
             </ul>
         </div>
+    </div>
 
+    <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>ISO/OSI e TCP/IP a comparazione</h2>
+            <h1 id="4">4) ISO/OSI e TCP/IP a comparazione</h1>
             <div class="my-3">
                 <div class="row justify-content-between mb-2">
                     <div class="col-3">
@@ -198,3 +223,4 @@
             </div>
         </div>
     </div>
+</div>

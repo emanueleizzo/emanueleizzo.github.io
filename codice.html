@@ -19,7 +19,7 @@
 
     <script type="text/javascript">
         const informazioni = {
-            "Problema_8_Regine": { "Nome": "per la risoluzione del Problema delle 8 Regine", "Descrizione": "Definizione del problema e realizzazione di un algoritmo in grado di trovare le soluzioni con Python." },
+            "Rompicapo_8_Regine": { "Nome": "per la risoluzione del Rompicapo delle 8 Regine", "Descrizione": "Definizione del problema e realizzazione di un algoritmo in grado di trovare le soluzioni con Python." },
         }
 
 	function change() {
@@ -31,7 +31,7 @@
                 .then(response => response.text())
                 .then((data) => {
                     document.getElementById("code").innerHTML = data;
-		    		document.getElementById("title").innerHTML = "Articolo " + informazioni[name]["Nome"];
+		    		document.getElementById("title").innerHTML = "Codice " + informazioni[name]["Nome"];
                     document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
 		    		MathJax.typeset();
 					Prism.highlightAll();
@@ -80,7 +80,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="articoli.html" class="nav-link text-secondary">
+							<a href="articoli.html" class="nav-link text-white">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
 									class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
 									<path
@@ -92,7 +92,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="codici.html" class="nav-link text-white">
+							<a href="codici.html" class="nav-link text-secondary">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
 									class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
 									<path
@@ -190,7 +190,7 @@
                         </li>
                         <li class="nav-item mb-2"><a href="articoli.html" class="nav-link p-0 text-muted">Articoli</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="codici.html" class="nav-link p-0 text-muted">Codici</a></li>>
+                        <li class="nav-item mb-2"><a href="codici.html" class="nav-link p-0 text-muted">Codici</a></li>
                         <li class="nav-item mb-2"><a href="insegnamento.html" class="nav-link p-0 text-muted">Insegnamento</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Racconti</a></li>
                         <li class="nav-item mb-2"><a href="podcast.html" class="nav-link p-0 text-muted">Podcast</a>

@@ -1,7 +1,31 @@
 <div class="row">
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h1>L'IEEE 754</h1>
+            <h3>INDICE</h3>
+            <ul class="index">
+                <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) L'IEEE
+                            754</button></a></li>
+                <ul class="index">
+                    <li class="index-element"><a href="#1_1"><button type="button"
+                                class="btn btn-outline-secondary">1.1) La notazione esponenziale</button></a></li>
+                    <li class="index-element"><a href="#1_2"><button type="button"
+                                class="btn btn-outline-secondary">1.2) Procedimento</button></a></li>
+                    <ul class="index">
+                        <li class="index-element"><a href="#1_2_1"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.1) Osservazioni importanti</button></a></li>
+                        <li class="index-element"><a href="#1_2_2"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.2) Esempi di conversione</button></a></li>
+                    </ul>
+                </ul>
+                <li class="index-element"><a href="#1_3"><button type="button" class="btn btn-outline-secondary">1.3)
+                            Precisione singola e precisione doppia</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h1 id="1">1) L'IEEE 754</h1>
             Riprendiamo un attimo in mano la rappresentazione in virgola mobile: come abbiamo visto questa
             rappresentazione è relativamente limitata sul range di numeri rappresentabili (ricordiamo che dato \(n\) bit
             l'intervallo di rappresentazione è \([0, 2^n-2^{-n}]\)); un altro problema da considerare è che non è
@@ -87,7 +111,7 @@
 
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>La notazione esponenziale</h2>
+            <h2 id="1_1">1.1) La notazione esponenziale</h2>
             Prima di spiegare nel dettaglio come funziona è necessario introdurre un attimo la notazione esponenziale.
             <div class="definition m-2 p-2">
                 La <mark class="green">notazione esponenziale</mark> (o <mark class="green">scientifica</mark>) è un
@@ -103,7 +127,7 @@
 
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>Procedimento</h2>
+            <h2 id="1_2">1.2) Procedimento</h2>
             Definita la notazione esponenziale, possiamo ora
             descrivere come scrivere un numero in virgola mobile:
             <ul>
@@ -123,7 +147,7 @@
 
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h3>Osservazioni importanti</h3>
+            <h3 id="1_2_1">1.2.1) Osservazioni importanti</h3>
             Possiamo fare alcune osservazioni riguardante i passaggi appena visti:
             <ul>
                 <li>Partiamo dall'esponente: il fatto di esprimerlo in eccesso 127 ci permette di poter trattare anche
@@ -139,7 +163,7 @@
 
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h3>Esempi di conversione</h3>
+            <h3 id="1_2_2">1.2.2) Esempi di conversione</h3>
             Vediamo ora alcuni esempi di conversione con due numeri: la vecolitàa della luce (un numero molto grande) e
             la costante di gravitazione universale (un numero molto piccolo).
         </div>
@@ -185,7 +209,7 @@
 
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h2>Precisione singola e precisione doppia</h2>
+            <h2 id="1_3">1.3)Precisione singola e precisione doppia</h2>
             Nel citare l'IEEE 754 non abbiamo discusso di una cosa interessante, ossa che a livello pratico fornisce due
             metodi di rappresentazione dei numeri:
             <ul>

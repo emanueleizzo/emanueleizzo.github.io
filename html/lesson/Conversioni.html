@@ -1,7 +1,43 @@
 <div class="row">
     <div class="col-md-12">
         <div class="mb-3 border-0">
-            <h1>Sistemi di numerazione</h1>
+            <h3>INDICE</h3>
+            <ul class="index">
+                <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1)
+                            Sistemi di numerazione</button></a></li>
+                <ul class="index">
+                    <li class="index-element"><a href="#1_1"><button type="button"
+                                class="btn btn-outline-secondary">1.1) Il sistema di numerazione decimale</button></a>
+                    </li>
+                    <li class="index-element"><a href="#1_2"><button type="button"
+                                class="btn btn-outline-secondary">1.2) Il sistema di numerazione binario</button></a>
+                    </li>
+                    <ul class="index">
+                        <li class="index-element"><a href="#1_2_1"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.1) Convertire da binario a
+                                    decimale...</button></a></li>
+                        <li class="index-element"><a href="#1_2_2"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.2) ... E da decimale a binario</button></a>
+                        </li>
+                        <li class="index-element"><a href="#1_2_3"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.2) La rappresentazione in virgola
+                                    fissa</button></a></li>
+                        <li class="index-element"><a href="#1_2_4"><button type="button"
+                                    class="btn btn-outline-secondary">1.2.2) La rappresentazione in complemento a
+                                    2</button></a></li>
+                    </ul>
+                </ul>
+                <li class="index-element"><a href="#1_3"><button type="button" class="btn btn-outline-secondary">1.3) Il
+                            sistema di numerazione esadecimale</button></a></li>
+                <li class="index-element"><a href="#1_4"><button type="button" class="btn btn-outline-secondary">1.4) Il
+                            sistema di numerazione esadecimale</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h1 id="1">1) Sistemi di numerazione</h1>
             Partiamo dal definire cosa è un sistema di numerazione:
             <div class="definition m-2 p-2">
                 Un <mark class="green">sistema di numerazione</mark> è un insieme di simboli e di regole con cui
@@ -24,7 +60,7 @@
         </div>
 
         <div class="mb-3 border-0">
-            <h2>Il sistema di numerazione decimale</h2>
+            <h2 id="1_2">1.1) Il sistema di numerazione decimale</h2>
             <div class="definition m-2 p-2">
                 Il <mark class="green">sistema di numerazione decimale</mark>, o sistema in base 10, è un sistema che
                 utilizza le <mark class="green">cifre da 0 a 9</mark>.
@@ -47,7 +83,7 @@
         </div>
 
         <div class="mb-3 border-0">
-            <h2>Il sistema di numerazione binario</h2>
+            <h2 id="1_2">1.2) Il sistema di numerazione binario</h2>
             <div class="definition m-2 p-2">
                 Il <mark class="green">sistema di numerazione binario</mark>, o sistema in base 2, è un sistema che
                 utilizza le <mark class="green">cifre 0 e 1</mark>.
@@ -57,7 +93,7 @@
         </div>
 
         <div class="mb-3 border-0">
-            <h3>Convertire da binario a decimale...</h3>
+            <h3 id="1_2_1">1.2.1) Convertire da binario a decimale...</h3>
             Come il sistema decimale anche il sistema binario è un sistema posizionale, ossia ad ogni posizione è
             associata una specifica potenza di 2; esempio:
             <div class="math">
@@ -75,7 +111,7 @@
         </div>
 
         <div class="mb-3 border-0">
-            <h3>... E da decimale a binario</h3>
+            <h3 id="1_2_2">1.2.2) ... E da decimale a binario</h3>
             La domanda che uno si potrebbe porre a questo punto è come effettuare la conversione da decimale a binario;
             questa si effettua con delle semplici <mark class="yellow">divisioni intere a cascata</mark> per 2 fino ad
             avere zero come quoziente, prendendo poi i resti ottenuti dal basso (ultimo generato) verso l'alto (primo
@@ -149,7 +185,7 @@
     </div>
 
     <div class="mb-3 border-0">
-        <h3>La rappresentazione in virgola fissa</h3>
+        <h3 id="1_2_3">1.2.3) La rappresentazione in virgola fissa</h3>
         Notare che per ora abbiamo solo trattato numeri interi. Per quello che riguarda i numeri con la virgola cambiano
         le meccaniche: per la parte intera si seguono le regole viste prima, mentre per la parte frazionaria si esegue
         una <mark class="yellow">moltiplicazione a cascata</mark> per 2 fino ad avere 1 come risultato (quindi senza la
@@ -289,7 +325,7 @@
     </div>
 
     <div class="mb-3 border-0">
-        <h3>La rappresentazione in complemento a 2</h3>
+        <h3 id="1_2_4">1.2.4) La rappresentazione in complemento a 2</h3>
         Abbiamo affrontato la rappresentazione di numeri interi e frazionari, ma abbiamo solo trattato numeri positivi;
         per rappresentare i numeri razionali (ossia con il segno) dobbiamo decidere come trattare il segno. La soluzione
         più semplice è quella di utilizzare il bit più significativo per rappresentare il segno, impostandolo a zero per
@@ -334,7 +370,7 @@
     </div>
 
     <div class="mb-3 border-0">
-        <h2>Il sistema di numerazione ottale</h2>
+        <h2 id="1_3">1.3) Il sistema di numerazione ottale</h2>
         <div class="definition m-2 p-2">
             Il <mark class="green">sistema di numerazione ottale</mark>, o sistema in base 8, è un sistema che utilizza
             le <mark class="green">cifre da 0 a 7</mark>.
@@ -479,7 +515,7 @@
     </div>
 
     <div class="mb-3 border-0">
-        <h2>Il sistema di numerazione esadecimale</h2>
+        <h2 id="1_4">1.4) Il sistema di numerazione esadecimale</h2>
         <div class="definition m-2 p-2">
             Il <mark class="green">sistema di numerazione esadecilame</mark>, o sistema in base 8, è un sistema che
             utilizza
