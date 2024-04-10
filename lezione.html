@@ -19,23 +19,30 @@
 
     <script type="text/javascript">
         const informazioni = {
-            "Conversioni": { "Nome": "sulle conversioni", "Descrizione": "Conversioni da decimale ad altre basi, conversioni da altre basi a decimale, e conversione tra diverse basi." },
-            "IEEE_754": { "Nome": "sull'IEEE 754", "Descrizione": "Defizione della rappresentazione in virgola mobile e sul come calcolare la conversione di un numero con l'IEEE 754." },
-            "ISO_OSI_TCP_IP": { "Nome": "sul modello ISO/OSI e lo stack TCP/IP", "Descrizione": "Definizione del modello ISO/OSI, dello stack TCP/IP, dell'incapsulamento e dei PDU." },
+            
+            "Goniometria_trigonometria": { "Materia": "matematica", "Nome": "sulla goniometria e la trigonometria", "Descrizione": "Definizione di seno, coseno, tangente e cotangete, delle formule e delle loro applicazioni." },
+            "Derivate": { "Materia": "matematica", "Nome": "sulle derivate", "Descrizione": "Definizione di derivata, derivate fondamentali e teoremi sulle derivate." },
+
+            "Conversioni": { "Materia": "informatica", "Nome": "sulle conversioni", "Descrizione": "Conversioni da decimale ad altre basi, conversioni da altre basi a decimale, e conversione tra diverse basi." },
+            "IEEE_754": { "Materia": "informatica", "Nome": "sull'IEEE 754", "Descrizione": "Defizione della rappresentazione in virgola mobile e sul come calcolare la conversione di un numero con l'IEEE 754." },
+
+            "Macchina_Von_Neumann": { "Materia": "sistemi_operatvi", "Nome": "sulla macchina di Von Neumann", "Descrizione": "Definizione della macchina e di tutti i suoi componenti." },
+
+            "ISO_OSI_TCP_IP": { "Materia": "reti_calcolatori", "Nome": "sul modello ISO/OSI e lo stack TCP/IP", "Descrizione": "Definizione del modello ISO/OSI, dello stack TCP/IP, dell'incapsulamento e dei PDU." },
         }
 
 	function change() {
             var name = window.location.search.substr(1).split("=")[1];
 
-            var path = "html/lesson/" + name + ".html";
+            var path = "html/lesson/" + informazioni[name]["Materia"] + "/" + name + ".html";
 
             fetch(path)
                 .then(response => response.text())
                 .then((data) => {
                     document.getElementById("lesson").innerHTML = data;
-		    document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
+		            document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
                     document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
-		    MathJax.typeset();
+		            MathJax.typeset();
                 });
         }
     </script>
@@ -177,6 +184,10 @@
                     
                 </div>
             </div>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0">
+            <a href="#index" class="btn btn-outline-secondary my-2">Torna all'indice</a>
         </div>
     </main>
 
