@@ -17,6 +17,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
+	<script>
+		var activeElementID = "";
+
+		function show(elementID) {
+			if (activeElementID != "") document.getElementById(activeElementID).className = "hidden";
+
+			document.getElementById(elementID).className = "visible";
+			activeElementID = elementID;
+		}
+	</script>
+
 	<title>Pagina di Emanuele Izzo</title>
 </head>
 
@@ -142,6 +153,105 @@
 			<h1 class="display-5 fw-bold text-center">Materiale didattico</h1>
 			<div class="col-lg-11 m-auto">
 				<p class="lead mb-4">Di seguito è riportato tutto il materiale didattico per le materie che insegno.</p>
+			</div>
+		</div>
+
+		<p class="d-flex display-5 m-3 justify-content-center">Materie</p>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card mb-3 border-0">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group w-100">
+									<a onclick="show('informatica')"
+										class="btn btn-sm btn-outline-secondary p-3">
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<p class="display-7 m-0 col-md-10">Italiano</p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" class="i d-block col-md-2" viewBox="0 0 30 30">
+												<path d="M28.25 2c-0-0.69-0.56-1.25-1.25-1.25h-19.8c-0.028-0.001-0.061-0.001-0.093-0.001-1.817 0-3.297 1.443-3.357 3.246l-0 0.005v24.389c0.114 1.606 1.445 2.867 3.070 2.867 0.063 0 0.126-0.002 0.188-0.006l-0.009 0h20c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0h-19.8c-0.024 0.002-0.051 0.004-0.079 0.004-0.441 0-0.807-0.325-0.871-0.749l-0.001-0.005v-1.223c0-0.090 0.266-0.361 0.746-0.361l20.004 0.057c0 0 0 0 0.001 0 0.515 0 0.956-0.311 1.148-0.756l0.003-0.008 0.007-0.034c0.056-0.132 0.089-0.286 0.092-0.447v-0.001l-0-0.002 0-0.002zM25.75 23.969l-14.5-0.041v-20.678h14.5zM6.25 24v-20c0.064-0.429 0.43-0.754 0.871-0.754 0.028 0 0.055 0.001 0.082 0.004l-0.003-0h1.55v20.671l-1.75-0.005c-0.267 0.002-0.525 0.033-0.774 0.089l0.024-0.005zM14 8.25h9c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0h-9c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0zM23 9.75h-9c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h9c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0z"/>
+											</svg>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card mb-3 border-0">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group w-100">
+									<a onclick="show('informatica')"
+										class="btn btn-sm btn-outline-secondary p-3">
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<p class="display-7 m-0 col-md-10">Matematica</p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" class="i d-block col-md-2" viewBox="0 0 56 56">
+												<path d="M 27.9266 43.8337 C 28.6400 43.8337 29.1436 43.4350 29.1436 42.7216 C 29.1436 42.4069 29.0597 42.2391 28.8289 41.7984 C 26.2691 37.8329 24.8213 33.2799 24.8213 28.3492 C 24.8213 23.5863 26.1852 18.8235 28.8289 14.8369 C 29.0597 14.3963 29.1436 14.2285 29.1436 13.9137 C 29.1436 13.2423 28.6400 12.8017 27.9266 12.8017 C 27.2343 12.8017 26.6677 13.1164 25.9963 14.0396 C 22.8491 18.0471 21.2545 23.0408 21.2545 28.3282 C 21.2545 33.6156 22.7861 38.4623 25.9963 42.5958 C 26.6677 43.5189 27.2343 43.8337 27.9266 43.8337 Z M 49.3490 43.8337 C 50.0413 43.8337 50.5870 43.5189 51.2582 42.5958 C 54.4685 38.4623 56 33.6156 56 28.3282 C 56 23.0408 54.4264 18.0471 51.2582 14.0396 C 50.5870 13.1164 50.0413 12.8017 49.3490 12.8017 C 48.6357 12.8017 48.1321 13.2423 48.1321 13.9137 C 48.1321 14.2285 48.1948 14.3963 48.4256 14.8369 C 51.0906 18.8235 52.4541 23.5863 52.4541 28.3492 C 52.4541 33.2799 50.9858 37.8329 48.4466 41.7984 C 48.1948 42.2391 48.1321 42.4069 48.1321 42.7216 C 48.1321 43.3931 48.6357 43.8337 49.3490 43.8337 Z M 2.8325 43.7917 C 6.9449 43.7917 8.8543 42.0292 9.8404 37.3084 L 12.2323 25.8314 L 16.0300 25.8314 C 17.2470 25.8314 18.0233 25.1809 18.0233 24.1318 C 18.0233 23.2296 17.4358 22.6631 16.4706 22.6631 L 12.9247 22.6631 L 13.5122 19.8096 C 14.0577 17.1449 14.8970 16.0539 17.2260 16.0539 C 17.5617 16.0539 17.8974 16.0329 18.1282 16.0119 C 19.1773 15.9070 19.6389 15.4244 19.6389 14.5222 C 19.6389 13.3472 18.6527 12.8227 16.6385 12.8227 C 12.6310 12.8227 10.5748 14.8160 9.6516 19.3060 L 8.9382 22.6631 L 6.3365 22.6631 C 5.1195 22.6631 4.3222 23.3136 4.3222 24.3626 C 4.3222 25.2648 4.9307 25.8314 5.8959 25.8314 L 8.2668 25.8314 L 5.9588 36.8048 C 5.3713 39.5534 4.5110 40.5605 2.2660 40.5605 C 1.9723 40.5605 1.6995 40.5815 1.4897 40.6025 C .5245 40.7284 0 41.2529 0 42.1342 C 0 43.2672 .9652 43.7917 2.8325 43.7917 Z M 32.3118 38.2735 C 33.0042 38.2735 33.4658 38.0427 33.9904 37.2874 L 38.5853 30.7411 L 38.6691 30.7411 L 43.3692 37.3923 C 43.8939 38.1267 44.3971 38.2735 44.9007 38.2735 C 45.9079 38.2735 46.5796 37.5601 46.5796 36.6999 C 46.5796 36.3012 46.4537 35.9236 46.1808 35.5669 L 40.8095 28.2652 L 46.1808 21.0685 C 46.4537 20.7118 46.5796 20.3341 46.5796 19.8935 C 46.5796 18.9913 45.8241 18.3619 44.9849 18.3619 C 44.2295 18.3619 43.7886 18.7396 43.3903 19.3480 L 38.9630 25.8314 L 38.8582 25.8314 L 34.4100 19.3270 C 34.0114 18.7185 33.5078 18.3619 32.7105 18.3619 C 31.7453 18.3619 31.0109 19.1382 31.0109 19.9774 C 31.0109 20.5859 31.1788 20.9636 31.4726 21.3203 L 36.5711 28.1603 L 31.1578 35.6508 C 30.8431 36.0495 30.7802 36.4062 30.7802 36.8258 C 30.7802 37.6441 31.4726 38.2735 32.3118 38.2735 Z"></path>
+											</svg>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card mb-3 border-0">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group w-100">
+									<a onclick="show('informatica')"
+										class="btn btn-sm btn-outline-secondary p-3">
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<p class="display-7 m-0 col-md-10">Informatica</p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+												<path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+											</svg>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card mb-3 border-0">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group w-100">
+									<a onclick="show('sistemi_operativi')"
+										class="btn btn-sm btn-outline-secondary p-3">
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<p class="display-7 m-0 col-md-10">Sistemi operativi</p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+												<path d="M6.555 1.375 0 2.237v5.45h6.555zM0 13.795l6.555.933V8.313H0zm7.278-5.4.026 6.378L16 16V8.395zM16 0 7.33 1.244v6.414H16z"/>
+											</svg>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="card mb-3 border-0">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group w-100">
+									<a onclick="show('reti_calcolatori')"
+										class="btn btn-sm btn-outline-secondary p-3">
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<p class="display-7 m-0 col-md-10">Reti di calcoaltori</p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+												<path d="M14 13.5v-7a.5.5 0 0 0-.5-.5H12V4.5a.5.5 0 0 0-.5-.5h-1v-.5A.5.5 0 0 0 10 3H6a.5.5 0 0 0-.5.5V4h-1a.5.5 0 0 0-.5.5V6H2.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5M3.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m2 0h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zM9.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z"/>
+												<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+											  </svg>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
