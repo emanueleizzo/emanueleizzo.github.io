@@ -21,19 +21,19 @@ ul {
 }
 
 mark.green {
-    background-color: #98fb98aa;
+    background-color: #98fb98c0;
 }
 
 mark.yellow {
-    background-color: #eee8aaaa;
+    background-color: #eee8aac0;
 }
 
 mark.blue {
-    background-color: #afeeeeaa;
+    background-color: #afeeeec0;
 }
 
 mark.red {
-    background-color: #d87093aa;
+    background-color: #d87093c0;
 }
 
 div.definition {
