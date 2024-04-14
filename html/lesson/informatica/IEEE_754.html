@@ -1,232 +1,211 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h3 id="index">INDICE</h3>
+<div class="mb-3 border-0">
+    <h3 id="index">INDICE</h3>
+    <ul class="index">
+        <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) L'IEEE
+                    754</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#1_1"><button type="button" class="btn btn-outline-secondary">1.1) La
+                        notazione esponenziale</button></a></li>
+            <li class="index-element"><a href="#1_2"><button type="button" class="btn btn-outline-secondary">1.2)
+                        Procedimento</button></a></li>
             <ul class="index">
-                <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) L'IEEE
-                            754</button></a></li>
-                <ul class="index">
-                    <li class="index-element"><a href="#1_1"><button type="button"
-                                class="btn btn-outline-secondary">1.1) La notazione esponenziale</button></a></li>
-                    <li class="index-element"><a href="#1_2"><button type="button"
-                                class="btn btn-outline-secondary">1.2) Procedimento</button></a></li>
-                    <ul class="index">
-                        <li class="index-element"><a href="#1_2_1"><button type="button"
-                                    class="btn btn-outline-secondary">1.2.1) Osservazioni importanti</button></a></li>
-                        <li class="index-element"><a href="#1_2_2"><button type="button"
-                                    class="btn btn-outline-secondary">1.2.2) Esempi di conversione</button></a></li>
-                    </ul>
-                </ul>
-                <li class="index-element"><a href="#1_3"><button type="button" class="btn btn-outline-secondary">1.3)
-                            Precisione singola e precisione doppia</button></a></li>
+                <li class="index-element"><a href="#1_2_1"><button type="button"
+                            class="btn btn-outline-secondary">1.2.1) Osservazioni importanti</button></a></li>
+                <li class="index-element"><a href="#1_2_2"><button type="button"
+                            class="btn btn-outline-secondary">1.2.2) Esempi di conversione</button></a></li>
             </ul>
+        </ul>
+        <li class="index-element"><a href="#1_3"><button type="button" class="btn btn-outline-secondary">1.3)
+                    Precisione singola e precisione doppia</button></a></li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="1">1) L'IEEE 754</h1>
+    Riprendiamo un attimo in mano la rappresentazione in virgola mobile: come abbiamo visto questa
+    rappresentazione è relativamente limitata sul range di numeri rappresentabili (ricordiamo che dato \(n\) bit
+    l'intervallo di rappresentazione è \([0, 2^n-2^{-n}]\)); un altro problema da considerare è che non è
+    facilmente combinabile con la rappresentazione del segno (tramite per esempio con il complemento a 2). Per
+    risolvere questo problema nel 1985 è stato introdotto lo standard IEEE 754.
+    <div class="definition m-2 p-2">
+        Lo standard <mark class="green">IEEE 754</mark> è utilizzato per rappresentare i numeri in <mark
+            class="green">virgola mobile</mark> sfruttando la <mark class="yellow">notazione
+            esponenziale</mark>. Questo standard utilizza 32 bit divisi in tre gruppi:
+        <ul>
+            <li>Il primo bit è utilizzato per <mark class="yellow">rappresentare il segno</mark> (zero per il
+                più, uno per il meno).</li>
+            <li>I successivi 8 bit sono utilizzati per <mark class="yellow">rappresentare l'esponente in eccesso
+                    127</mark>.</li>
+            <li>I restanti 23 bit sono utilizzati per <mark class="yellow">la parte frazionaria della
+                    mantissa</mark>.</li>
+        </ul>
+    </div>
+    <div class="row justify-content-around mb-3">
+        <div class="col-12">
+            <table class="table-borderless w-100 m-0">
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">
+                            <div class="sign d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                                Segno
+                            </div>
+                        </td>
+                        <td class="p-0" colspan="8">
+                            <div class="exponent d-flex p-2 justify-content-center align-items-center"
+                                style="height: 100%">
+                                Esponente
+                            </div>
+                        </td>
+                        <td class="p-0" colspan="23">
+                            <div class="mantissa d-flex p-2 justify-content-center align-items-center"
+                                style="height: 100%">
+                                Mantissa
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h1 id="1">1) L'IEEE 754</h1>
-            Riprendiamo un attimo in mano la rappresentazione in virgola mobile: come abbiamo visto questa
-            rappresentazione è relativamente limitata sul range di numeri rappresentabili (ricordiamo che dato \(n\) bit
-            l'intervallo di rappresentazione è \([0, 2^n-2^{-n}]\)); un altro problema da considerare è che non è
-            facilmente combinabile con la rappresentazione del segno (tramite per esempio con il complemento a 2). Per
-            risolvere questo problema nel 1985 è stato introdotto lo standard IEEE 754.
-            <div class="definition m-2 p-2">
-                Lo standard <mark class="green">IEEE 754</mark> è utilizzato per rappresentare i numeri in <mark
-                    class="green">virgola mobile</mark> sfruttando la <mark class="yellow">notazione
-                    esponenziale</mark>. Questo standard utilizza 32 bit divisi in tre gruppi:
-                <ul>
-                    <li>Il primo bit è utilizzato per <mark class="yellow">rappresentare il segno</mark> (zero per il
-                        più, uno per il meno).</li>
-                    <li>I successivi 8 bit sono utilizzati per <mark class="yellow">rappresentare l'esponente in eccesso
-                            127</mark>.</li>
-                    <li>I restanti 23 bit sono utilizzati per <mark class="yellow">la parte frazionaria della
-                            mantissa</mark>.</li>
-                </ul>
-            </div>
-            <div class="row justify-content-around mb-3">
-                <div class="col-12">
-                    <table class="table m-0">
-                        <tbody style="border-style: none;">
-                            <tr>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>10</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>13</td>
-                                <td>14</td>
-                                <td>15</td>
-                                <td>16</td>
-                                <td>17</td>
-                                <td>18</td>
-                                <td>19</td>
-                                <td>20</td>
-                                <td>21</td>
-                                <td>22</td>
-                                <td>23</td>
-                                <td>24</td>
-                                <td>25</td>
-                                <td>26</td>
-                                <td>27</td>
-                                <td>28</td>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>31</td>
-                            </tr>
-                            <tr>
-                                <td class="p-0">
-                                    <div class="sign d-flex p-2 justify-content-center align-items-center"
-                                        style="height: 100%">
-                                        Segno
-                                    </div>
-                                </td>
-                                <td class="p-0" colspan="8">
-                                    <div class="exponent d-flex p-2 justify-content-center align-items-center"
-                                        style="height: 100%">
-                                        Esponente
-                                    </div>
-                                </td>
-                                <td class="p-0" colspan="23">
-                                    <div class="mantissa d-flex p-2 justify-content-center align-items-center"
-                                        style="height: 100%">
-                                        Mantissa
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+<div class="mb-3 border-0">
+    <h2 id="1_1">1.1) La notazione esponenziale</h2>
+    Prima di spiegare nel dettaglio come funziona è necessario introdurre un attimo la notazione esponenziale.
+    <div class="definition m-2 p-2">
+        La <mark class="green">notazione esponenziale</mark> (o <mark class="green">scientifica</mark>) è un
+        metodo di rappresentazione dei numeri nella forma \(m\cdot10^e\), dove \(m\) prende il nome di <mark
+            class="yellow">mantissa</mark>, ossia un numero compreso tra 1 (incluso) e 10 (escluso), mentre
+        \(e\) prende il nome di esponente.
     </div>
+    È importante dire che la definizione sopra può essere estesa a qualsiasi sistema numerazione: per fare ciò è
+    sufficiente modificare la base della potenza con la base del sistema di numerazione, e porre che la mantissa
+    ha come valore massimo la base del sistema (eslcusa).
+</div>
 
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h2 id="1_1">1.1) La notazione esponenziale</h2>
-            Prima di spiegare nel dettaglio come funziona è necessario introdurre un attimo la notazione esponenziale.
-            <div class="definition m-2 p-2">
-                La <mark class="green">notazione esponenziale</mark> (o <mark class="green">scientifica</mark>) è un
-                metodo di rappresentazione dei numeri nella forma \(m\cdot10^e\), dove \(m\) prende il nome di <mark
-                    class="yellow">mantissa</mark>, ossia un numero compreso tra 1 (incluso) e 10 (escluso), mentre
-                \(e\) prende il nome di esponente.
-            </div>
-            È importante dire che la definizione sopra può essere estesa a qualsiasi sistema numerazione: per fare ciò è
-            sufficiente modificare la base della potenza con la base del sistema di numerazione, e porre che la mantissa
-            ha come valore massimo la base del sistema (eslcusa).
-        </div>
-    </div>
+<div class="mb-3 border-0">
+    <h2 id="1_2">1.2) Procedimento</h2>
+    Definita la notazione esponenziale, possiamo ora
+    descrivere come scrivere un numero in virgola mobile:
+    <ul>
+        <li>Il primo passaggio è quello di convertire il nostro numero in binario con le regole classiche viste
+            precedentemente, ignorando momentaneamente il segno.</li>
+        <li>A questo punto è necessario riscrivere il nostro numero convertito in notazione esponenziale.</li>
+        <li>Fatto ciò, per gli 8 bit dell'esponente prendiamo l'esponente della nostra notazione esponenziale,
+            lo sommiamo a 127 e lo convertiamo in binario.</li>
+        <li>Per i 23 bit della mantissa andiamo a prendere i primi 23 bit della mantissa subito dopo la virgola;
+            nel caso in cui i bit che si hanno non sono sufficienti a coprire tutti i 23 bit possiamo aggiungere
+            degli zero per riempire il vuoto.</li>
+        <li>Per concludere il primo bit viene impostato a zero se il segno del numero è zero, mentre viene
+            impostato ad uno se invece è meno.</li>
+    </ul>
+</div>
 
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h2 id="1_2">1.2) Procedimento</h2>
-            Definita la notazione esponenziale, possiamo ora
-            descrivere come scrivere un numero in virgola mobile:
+<div class="mb-3 border-0">
+    <h3 id="1_2_1">1.2.1) Osservazioni importanti</h3>
+    Possiamo fare alcune osservazioni riguardante i passaggi appena visti:
+    <ul>
+        <li>Partiamo dall'esponente: il fatto di esprimerlo in eccesso 127 ci permette di poter trattare anche
+            gli esponenti negativi senza dover effettuare la conversione in complemento a 2 e apliare allo
+            stesso tempo il range di numeri rappresentabili.</li>
+        <li>Per quello che riguarda la mantissa il fatto di ignorare l'uno prima della virgola non è banale: se
+            riprendiamo la definizione di notazione esponenziale e la riadattiamo al sistema binario notiamo
+            senza troppi problemi che il bit prima della virgola sarà sempre settato ad uno; sapendo questo
+            possiamo non considerarlo nella scrittura dei 23 bit della mantissa.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h3 id="1_2_2">1.2.2) Esempi di conversione</h3>
+    Vediamo ora alcuni esempi di conversione con due numeri: la vecolitàa della luce (un numero molto grande) e
+    la costante di gravitazione universale (un numero molto piccolo).
+</div>
+
+<div class="mb-3 border-0">
+    <h4>Conversione del valore della velocità della luce</h4>
+    Proviamo a convertire il valore della velocità della luce, ossia \(299792458\,m/s\).
+    <ul>
+        <li>Il segno del valore è più, quindi il primo bit varrà 0.</li>
+        <li>Il numero convertito in binario è pari a \(10001110111100111100001001010_2\).</li>
+        <li>Portato in notazione esponenziale diventa \(1,0001110111100111100001001010_2\cdot2^{28}\).</li>
+        <li>\(28+127=155\), che convertito in binario diventa \(10011011_2\); questa sequenza occuperà i
+            successivi 8 bit.</li>
+        <li>A questo punto non manca altro che prendere la parte dopo la virgola della mantissa e trascriverla
+            nei 23 bit rimanenti, avendo quindi \(00011101111001111000010_2\)</li>
+    </ul>
+    Il nostro numero convertito in binario con IEEE 754 diventa quindi \(01001101100011101111001111000010_2\).
+    Se andiamo a convertire questo numero in esadecimale otteniamo \(4D8EF3C2_H\)
+</div>
+
+<div class="mb-3 border-0">
+    <h4>Conversione del valore della costante di gravitazione universale</h4>
+    Proviamo a convertire il valore della costante di gravitazione universale, ossia
+    \(6,67430\cdot10^{-11}\,\frac{N\cdot m^2}{kg}\).
+    <ul>
+        <li>Il segno del valore è più, quindi il primo bit varrà 0.</li>
+        <li>Il numero convertito in binario è pari a
+            \(0,000000000000000000000000000000101101110111011000110101_2\).</li>
+        <li>Portato in notazione esponenziale diventa \(1,01101110111011000110101_2\cdot2^{-31}\).</li>
+        <li>\(-31+127=96\), che convertito in binario diventa \(01100000_2\); questa sequenza occuperà i
+            successivi 8 bit.</li>
+        <li>A questo punto non manca altro che prendere la parte dopo la virgola della mantissa e trascriverla
+            nei 23 bit rimanenti, avendo quindi \(01101110111011000110101_2\)</li>
+    </ul>
+    Il nostro numero convertito in binario con IEEE 754 diventa quindi \(00110000001101110111011000110101_2\).
+    Se andiamo a convertire questo numero in esadecimale otteniamo \(30377635_H\)
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="1_3">1.3)Precisione singola e precisione doppia</h2>
+    Nel citare l'IEEE 754 non abbiamo discusso di una cosa interessante, ossa che a livello pratico fornisce due
+    metodi di rappresentazione dei numeri:
+    <ul>
+        <li>Uno che è quello che abbiamo visto ora, ossia a <mark class="green">32 bit</mark>, che viene
+            chiamato a <mark class="green">precisione singola</mark>.</li>
+        <li>L'altro che viene chiamato a <mark class="green">precisione doppia</mark> che utilizza <mark
+                class="green">64 bit</mark> divisi come segue:
             <ul>
-                <li>Il primo passaggio è quello di convertire il nostro numero in binario con le regole classiche viste
-                    precedentemente, ignorando momentaneamente il segno.</li>
-                <li>A questo punto è necessario riscrivere il nostro numero convertito in notazione esponenziale.</li>
-                <li>Fatto ciò, per gli 8 bit dell'esponente prendiamo l'esponente della nostra notazione esponenziale,
-                    lo sommiamo a 127 e lo convertiamo in binario.</li>
-                <li>Per i 23 bit della mantissa andiamo a prendere i primi 23 bit della mantissa subito dopo la virgola;
-                    nel caso in cui i bit che si hanno non sono sufficienti a coprire tutti i 23 bit possiamo aggiungere
-                    degli zero per riempire il vuoto.</li>
-                <li>Per concludere il primo bit viene impostato a zero se il segno del numero è zero, mentre viene
-                    impostato ad uno se invece è meno.</li>
+                <li>Il primo bit è utilizzato per <mark class="yellow">rappresentare il segno</mark> (zero per
+                    il più, uno per il meno).</li>
+                <li>I successivi 11 bit sono utilizzati per <mark class="yellow">rappresentare l'esponente in
+                        eccesso 1023</mark>.</li>
+                <li>I restanti 52 bit sono utilizzati per <mark class="yellow">la parte frazionaria della
+                        mantissa</mark>.</li>
             </ul>
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h3 id="1_2_1">1.2.1) Osservazioni importanti</h3>
-            Possiamo fare alcune osservazioni riguardante i passaggi appena visti:
-            <ul>
-                <li>Partiamo dall'esponente: il fatto di esprimerlo in eccesso 127 ci permette di poter trattare anche
-                    gli esponenti negativi senza dover effettuare la conversione in complemento a 2 e apliare allo
-                    stesso tempo il range di numeri rappresentabili.</li>
-                <li>Per quello che riguarda la mantissa il fatto di ignorare l'uno prima della virgola non è banale: se
-                    riprendiamo la definizione di notazione esponenziale e la riadattiamo al sistema binario notiamo
-                    senza troppi problemi che il bit prima della virgola sarà sempre settato ad uno; sapendo questo
-                    possiamo non considerarlo nella scrittura dei 23 bit della mantissa.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h3 id="1_2_2">1.2.2) Esempi di conversione</h3>
-            Vediamo ora alcuni esempi di conversione con due numeri: la vecolitàa della luce (un numero molto grande) e
-            la costante di gravitazione universale (un numero molto piccolo).
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h4>Conversione del valore della velocità della luce</h4>
-            Proviamo a convertire il valore della velocità della luce, ossia \(299792458\,m/s\).
-            <ul>
-                <li>Il segno del valore è più, quindi il primo bit varrà 0.</li>
-                <li>Il numero convertito in binario è pari a \(10001110111100111100001001010_2\).</li>
-                <li>Portato in notazione esponenziale diventa \(1,0001110111100111100001001010_2\cdot2^{28}\).</li>
-                <li>\(28+127=155\), che convertito in binario diventa \(10011011_2\); questa sequenza occuperà i
-                    successivi 8 bit.</li>
-                <li>A questo punto non manca altro che prendere la parte dopo la virgola della mantissa e trascriverla
-                    nei 23 bit rimanenti, avendo quindi \(00011101111001111000010_2\)</li>
-            </ul>
-            Il nostro numero convertito in binario con IEEE 754 diventa quindi \(01001101100011101111001111000010_2\).
-            Se andiamo a convertire questo numero in esadecimale otteniamo \(4D8EF3C2_H\)
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h4>Conversione del valore della costante di gravitazione universale</h4>
-            Proviamo a convertire il valore della costante di gravitazione universale, ossia
-            \(6,67430\cdot10^{-11}\,\frac{N\cdot m^2}{kg}\).
-            <ul>
-                <li>Il segno del valore è più, quindi il primo bit varrà 0.</li>
-                <li>Il numero convertito in binario è pari a
-                    \(0,000000000000000000000000000000101101110111011000110101_2\).</li>
-                <li>Portato in notazione esponenziale diventa \(1,01101110111011000110101_2\cdot2^{-31}\).</li>
-                <li>\(-31+127=96\), che convertito in binario diventa \(01100000_2\); questa sequenza occuperà i
-                    successivi 8 bit.</li>
-                <li>A questo punto non manca altro che prendere la parte dopo la virgola della mantissa e trascriverla
-                    nei 23 bit rimanenti, avendo quindi \(01101110111011000110101_2\)</li>
-            </ul>
-            Il nostro numero convertito in binario con IEEE 754 diventa quindi \(00110000001101110111011000110101_2\).
-            Se andiamo a convertire questo numero in esadecimale otteniamo \(30377635_H\)
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="mb-3 border-0">
-            <h2 id="1_3">1.3)Precisione singola e precisione doppia</h2>
-            Nel citare l'IEEE 754 non abbiamo discusso di una cosa interessante, ossa che a livello pratico fornisce due
-            metodi di rappresentazione dei numeri:
-            <ul>
-                <li>Uno che è quello che abbiamo visto ora, ossia a <mark class="green">32 bit</mark>, che viene
-                    chiamato a <mark class="green">precisione singola</mark>.</li>
-                <li>L'altro che viene chiamato a <mark class="green">precisione doppia</mark> che utilizza <mark
-                        class="green">64 bit</mark> divisi come segue:
-                    <ul>
-                        <li>Il primo bit è utilizzato per <mark class="yellow">rappresentare il segno</mark> (zero per
-                            il più, uno per il meno).</li>
-                        <li>I successivi 11 bit sono utilizzati per <mark class="yellow">rappresentare l'esponente in
-                                eccesso 1023</mark>.</li>
-                        <li>I restanti 52 bit sono utilizzati per <mark class="yellow">la parte frazionaria della
-                                mantissa</mark>.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>

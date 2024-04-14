@@ -17,28 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <script type="text/javascript">
-        const informazioni = {
-            "Rompicapo_8_Regine": { "Nome": "per la risoluzione del Rompicapo delle 8 Regine", "Descrizione": "Definizione del problema e realizzazione di un algoritmo in grado di trovare le soluzioni con Python." },
-        }
-
-	function change() {
-            var name = window.location.search.substr(1).split("=")[1];
-
-            var path = "html/code/" + name + ".html";
-
-            fetch(path)
-                .then(response => response.text())
-                .then((data) => {
-                    document.getElementById("code").innerHTML = data;
-		    		document.getElementById("title").innerHTML = "Codice " + informazioni[name]["Nome"];
-                    document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
-		    		MathJax.typeset();
-					Prism.highlightAll();
-                });
-        }
-    </script>
-
 	<title>Pagina di Emanuele Izzo</title>
 </head>
 

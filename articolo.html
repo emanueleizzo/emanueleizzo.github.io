@@ -17,28 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <script type="text/javascript">
-        const informazioni = {
-            "Stick_Breaking_Problem": { "Nome": "sullo Stick Breaking Problem", "Descrizione": "Definizione del problema e realizzazione di un simulatore con Python." },
-        }
-
-	function change() {
-            var name = window.location.search.substr(1).split("=")[1];
-
-            var path = "html/article/" + name + ".html";
-
-            fetch(path)
-                .then(response => response.text())
-                .then((data) => {
-                    document.getElementById("article").innerHTML = data;
-		    		document.getElementById("title").innerHTML = "Articolo " + informazioni[name]["Nome"];
-                    document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
-		    		MathJax.typeset();
-					Prism.highlightAll();
-                });
-        }
-    </script>
-
 	<title>Pagina di Emanuele Izzo</title>
 </head>
 

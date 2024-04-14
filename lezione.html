@@ -4,54 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js https://polyfill.io/v3/polyfill.min.js">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js https://polyfill.io/v3/polyfill.min.js https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/prism.css">
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
 
+    <script type="text/javascript" language="javascript" src="js/change.js"></script>
+    <script type="text/javascript" language="javascript" src="js/database.js"></script>
+    <script type="text/javascript" language="javascript" src="js/plot.js"></script>
     <script type="text/javascript" language="javascript" src="js/prism.js"></script>
     <script type="text/javascript" language="javascript" src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-    <script type="text/javascript">
-        const informazioni = {
-            
-            "Goniometria_trigonometria": { "Materia": "matematica", "Nome": "sulla goniometria e la trigonometria", "Descrizione": "Definizione di seno, coseno, tangente e cotangete, delle formule e delle loro applicazioni." },
-            "Derivate": { "Materia": "matematica", "Nome": "sulle derivate", "Descrizione": "Definizione di derivata, derivate fondamentali e teoremi sulle derivate." },
-
-            "Conversioni": { "Materia": "informatica", "Nome": "sulle conversioni", "Descrizione": "Conversioni da decimale ad altre basi, conversioni da altre basi a decimale, e conversione tra diverse basi." },
-            "IEEE_754": { "Materia": "informatica", "Nome": "sull'IEEE 754", "Descrizione": "Defizione della rappresentazione in virgola mobile e sul come calcolare la conversione di un numero con l'IEEE 754." },
-
-            "Macchina_Von_Neumann": { "Materia": "sistemi_operatvi", "Nome": "sulla macchina di Von Neumann", "Descrizione": "Definizione della macchina e di tutti i suoi componenti." },
-
-            "ISO_OSI_TCP_IP": { "Materia": "reti_calcolatori", "Nome": "sul modello ISO/OSI e lo stack TCP/IP", "Descrizione": "Definizione del modello ISO/OSI, dello stack TCP/IP, dell'incapsulamento e dei PDU." },
-            "Livello_rete": { "Materia": "reti_calcolatori", "Nome": "sul livello di rete", "Descrizione": "introduzione sul livello di rete e sul protocollo IP, definizione dell'indirizzo IP e del routing." },
-        }
-
-	function change() {
-            var name = window.location.search.substr(1).split("=")[1];
-
-            var path = "html/lesson/" + informazioni[name]["Materia"] + "/" + name + ".html";
-
-            fetch(path)
-                .then(response => response.text())
-                .then((data) => {
-                    document.getElementById("lesson").innerHTML = data;
-		            document.getElementById("title").innerHTML = "Lezione " + informazioni[name]["Nome"];
-                    document.getElementById("description").innerHTML = informazioni[name]["Descrizione"];
-		            MathJax.typeset();
-                });
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <title>Pagina di Emanuele Izzo</title>
 </head>
 
-<body onload="change()">
+<body onload="change('lessons')">
     <header>
         <div class="px-3 py-2 bg-dark text-white">
             <div class="container">
@@ -179,16 +153,14 @@
             </div>
         </section>
 
-        <div class="py-5">
-            <div class="container">
-                <div class="row" id="lesson">
+        <div class="container">
+            <div class="row" id="lesson">
                     
-                </div>
             </div>
         </div>
 
         <div class="position-fixed bottom-0 end-0">
-            <a href="#index" class="btn btn-outline-secondary my-2">Torna all'indice</a>
+            <a href="#index" class="btn btn-secondary my-2">Torna all'indice</a>
         </div>
     </main>
 
