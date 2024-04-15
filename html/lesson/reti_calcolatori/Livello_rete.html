@@ -7,6 +7,10 @@
                     protocollo IP</button></a></li>
         <ul class="index">
             <li class="index-element"><a href="#2_1"><button type="button" class="btn btn-outline-secondary">2.1) L'indirizzo IP</button></a></li>
+            <li class="index-element"><a href="#2_2"><button type="button" class="btn btn-outline-secondary">2.2) L'indirizzo IPv4</button></a></li>
+            <ul class="index">
+                <li class="index-element"><a href="#2_2_1"><button type="button" class="btn btn-outline-secondary">2.2.1) La tecnica di inidirizzamento classful</button></a></li>
+            </ul>
         </ul>
     </ul>
 </div>
@@ -61,7 +65,7 @@
 </div>
 
 <div class="mb-3 border-0">
-    <h3 class="2_1_1">2.1.1) L'indirizzo IPv4</h3>
+    <h2 id="2_2">2.2) L'indirizzo IPv4</h2>
     <div class="definition m-2 p-2">
         Un <mark class="green">indirizzo IPv4</mark> è un numero di <mark class="green">32 bit</mark> suddiviso in <mark class="green">4 byte</mark> (anche detti <mark class="green">ottetti</mark>). Viene solitamente espresso nella notazione decimale puntata costituita da 4 numeri decimali compresi tra 0 e 255, separati da un punto.
     </div>
@@ -70,4 +74,37 @@
         <li>Il <mark class="green">NetID</mark> (o <mark class="green">NetworkID</mark>), ossia la rete in cui si trova l'host.</li>
         <li>L'<mark class="green">HostID</mark>, ossia l'indirizzo dell'host all'interno della rete.</li>
     </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h3 id="2_2_1">2.2.1) La tecnica di indirizzamento classful</h3>
+    La tecnica di indirizzamento classful si basa sul dividere gli IP in 5 classi differenti in base al valore dei bit più significativi come segue:
+    <div class="my-2">
+        <div class="row justify-content-around">
+            <div class="col-4">
+                <div class="definition my-2 p-2">
+                    <h4>Classe A</h4>
+                    <ul>
+                        <li>Gli IP della classe A presentano <mark class="green"> il primo bit del primo ottetto fisso al valore 0</mark>, dedicando <mark class="green">il primo ottetto alla rete e gli altri 3 agli host</mark> (è quindi nella forma <mark class="yellow">N.H.H.H</mark>).</li>
+                        <li>Ha un range di indirizzi da 0.0.0.0 a 127.255.255.255, potendo indirizzare \(2^7-2=126\) reti e \(2^24-2=16777214\) host, e utilizzabili quindi su reti di grandi dimensioni.</li>
+                        <li>e due reti \(0.X.X.X\) (this network) e \(127.X.X.X\) (loopback net) non possono essere assegnate, come gli host \(X.0.0.0\) (this host) e \(X.255.255.255\) (broadcast).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="definition my-2 p-2"><h4>Classe B</h4></div>
+            </div>
+            <div class="col-4">
+                <div class="definition my-2 p-2"><h4>Classe C</h4></div>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-6">
+                <div class="definition my-2 p-2"><h4>Classe D</h4></div>
+            </div>
+            <div class="col-6">
+                <div class="definition my-2 p-2"><h4>Classe E</h4></div>
+            </div>
+        </div>
+    </div>
 </div>
