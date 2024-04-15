@@ -1,8 +1,7 @@
 const tables = {
-    lessons: {       
+    lesson: {       
         Goniometria_trigonometria: { Materia: "matematica", Nome: "sulla goniometria e la trigonometria", Descrizione: "Definizione di seno, coseno, tangente e cotangete, delle formule e delle loro applicazioni." },
-        "Derivate": { Materia: "matematica", Nome: "sulle derivate", Descrizione: "Definizione di derivata, derivate fondamentali e teoremi sulle derivate.",
-        plots: [
+        Derivate: { Materia: "matematica", Nome: "sulle derivate", Descrizione: "Definizione di derivata, derivate fondamentali e teoremi sulle derivate.", Plots: [
             ["rapporto_incrementale", [
                 ["x**3+2*x**2-2*x-2", "rgba(255,0,0,0.5)"],
                 ["-x", "rgba(0,0,255,0.5)"]
@@ -18,12 +17,12 @@ const tables = {
         Livello_rete: { Materia: "reti_calcolatori", Nome: "sul livello di rete", Descrizione: "introduzione sul livello di rete e sul protocollo IP, definizione dell'indirizzo IP e del routing." },
     },
 
-    articles: {
-        Stick_Breaking_Problem: { "Nome": "sullo Stick Breaking Problem", "Descrizione": "Definizione del problema e realizzazione di un simulatore con Python." },
+    article: {
+        Stick_Breaking_Problem: { Nome: "sullo Stick Breaking Problem", Descrizione: "Definizione del problema e realizzazione di un simulatore con Python." },
     },
 
-    codes: {
-        Rompicapo_8_Regine: { "Nome": "per la risoluzione del Rompicapo delle 8 Regine", "Descrizione": "Definizione del problema e realizzazione di un algoritmo in grado di trovare le soluzioni con Python." },
+    code: {
+        Rompicapo_8_Regine: { Nome: "per la risoluzione del Rompicapo delle 8 Regine", Descrizione: "Definizione del problema e realizzazione di un algoritmo in grado di trovare le soluzioni con Python." },
     }
 };
 

@@ -5,6 +5,9 @@
                     livello di rete</button></a></li>
         <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2) Il
                     protocollo IP</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#2_1"><button type="button" class="btn btn-outline-secondary">2.1) L'indirizzo IP</button></a></li>
+        </ul>
     </ul>
 </div>
 
@@ -40,4 +43,27 @@
         6, si occupa dell'instradamento, della suddivisione in pacchetti e del trasferimento dei dati che arrivano dal
         transport layer.
     </div>
+    IP è <mark class="green">connectionless</mark>, dunque constente a due hosti di scambiarsi PDU, denominate <mark class="green">IP datagram</mark>, senza stabilire una connessione. La consegna non è garantita a questo livello.
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="2_1">2.1) L'indirizzo IP</h2>
+    Il protocollo IP fornisce l'indirizzo logico degli host di una rete TCP/IP. Due dettagli importanti da fissare:
+    <ul>
+        <li>L'indirizzo IP assegnato ad un host, in coppia con la subnet mask, rappresenta anche su quale sottorete logica si trovi.</li>
+        <li>Un indirizzo IP non identifica esattamente un host, ma bensì la sua interfaccia di rete. Nel caso in cui un nodo abbia più interfacce verso la rete, ogni interfaccia avrà un indirizzo diverso.</li>
+    </ul>
+    Esistono due tipologie di indirizzi IP utilizzabili, in relazione ovviamente alle due versioni del protocollo IP:
+    <ul>
+        <li>L'<mark class="green">indirizzo IPv4</mark> utilizzato dal protocollo IPv4.</li>
+        <li>L'<mark class="green">indirizzo IPv6</mark> utilizzato dal protocollo IPv6.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h3 class="2_1_1">2.1.1) L'indirizzo IPv4</h3>
+    <div class="definition m-2 p-2">
+        Un <mark class="green">indirizzo IPv4</mark> è un numero di <mark class="green">32 bit</mark> suddiviso in <mark class="green">4 byte</mark> (anche detti <mark class="green">ottetti</mark>). Viene solitamente espresso nella notazione decimale puntata costituita da 4 numeri decimali compresi tra 0 e 255, separati da un punto.
+    </div>
+    
 </div>
