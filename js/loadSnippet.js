@@ -1,4 +1,4 @@
-function change(type) {
+function loadSnippet(type) {
     var name = window.location.search.split("=")[1];
 
     var path;

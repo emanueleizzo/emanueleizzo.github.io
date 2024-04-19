@@ -15,6 +15,9 @@ const tables = {
 
         ISO_OSI_TCP_IP: { Materia: "reti_calcolatori", Nome: "sul modello ISO/OSI e lo stack TCP/IP", Descrizione: "Definizione del modello ISO/OSI, dello stack TCP/IP, dell'incapsulamento e dei PDU." },
         Livello_rete: { Materia: "reti_calcolatori", Nome: "sul livello di rete", Descrizione: "introduzione sul livello di rete e sul protocollo IP, definizione dell'indirizzo IP e del routing." },
+
+        Introduzione: { Materia: "prolog", Nome: "su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato."
+        },
     },
 
     article: {
