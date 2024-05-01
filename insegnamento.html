@@ -183,7 +183,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('inglese')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Inglese')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Inglese</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -207,7 +207,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="loadSubSnippet('matematica')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Matematica')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Matematica</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -225,7 +225,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('informatica')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Informatica')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Informatica</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -242,7 +242,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('sistemi_operativi')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Sistemi_operativi')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Sistemi operativi</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -259,7 +259,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('reti_calcolatori')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Reti_calcolatori')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Reti di calcoaltori</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -278,7 +278,7 @@
 					<div class="col-md-3 card mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('cpp')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Cpp')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">C++</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -296,7 +296,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('java')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Java')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Java</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -335,7 +335,7 @@
 					<div class="col-md-3 mb-3 border-0">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="btn-group w-100">
-								<a onclick="show('prolog')" class="btn btn-sm btn-outline-secondary p-3">
+								<a onclick="loadSubSnippet('Prolog')" class="btn btn-sm btn-outline-secondary p-3">
 									<div class="d-flex flex-row justify-content-between align-items-center">
 										<p class="display-7 m-0 col-md-10">Prolog</p>
 										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
@@ -355,137 +355,6 @@
 
 		<div id="subject">
 			
-		</div>
-
-		<div id="informatica" class="hidden">
-			<p class="d-flex display-5 m-3 justify-content-center">Informatica</p>
-
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=Conversioni"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">Conversioni</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=IEEE_754"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">IEEE 754</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="sistemi_operativi" class="hidden">
-			<p class="d-flex display-5 m-3 justify-content-center">Sistemi operativi</p>
-
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=Macchina_Von_Neumann"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">Macchina di Von Neumann</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="reti_calcolatori" class="hidden">
-			<p class="d-flex display-5 m-3 justify-content-center">Reti di calcolatori</p>
-
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=ISO_OSI_TCP_IP"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">ISO/OSI e TCP/IP</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=Livello_fisico"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">Livello fisico</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=Livello_rete"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">Livello di rete</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="prolog" class="hidden">
-			<p class="d-flex display-5 m-3 justify-content-center">Prolog</p>
-
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card mb-3 border-0">
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group w-100">
-										<a href="lezione.html?name=Introduzione"
-											class="btn btn-sm btn-outline-secondary p-3">
-											<p class="display-7 m-0">Introduzione</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</main>
 
