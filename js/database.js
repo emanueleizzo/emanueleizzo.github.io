@@ -14,10 +14,12 @@ const tables = {
         Macchina_Von_Neumann: { Materia: "sistemi_operatvi", Nome: "sulla macchina di Von Neumann", Descrizione: "Definizione della macchina e di tutti i suoi componenti." },
 
         ISO_OSI_TCP_IP: { Materia: "reti_calcolatori", Nome: "sul modello ISO/OSI e lo stack TCP/IP", Descrizione: "Definizione del modello ISO/OSI, dello stack TCP/IP, dell'incapsulamento e dei PDU." },
-        Livello_rete: { Materia: "reti_calcolatori", Nome: "sul livello di rete", Descrizione: "introduzione sul livello di rete e sul protocollo IP, definizione dell'indirizzo IP e del routing." },
+        Livello_rete: { Materia: "reti_calcolatori", Nome: "sul livello di rete", Descrizione: "Introduzione sul livello di rete e sul protocollo IP, definizione dell'indirizzo IP e del routing." },
+        IPv4: { Materia: "reti_calcolatori", Nome: "sull'indirizzo IPv4", Descrizione: "Definizione dell'indirizzo IPv4 e della sua struttura, definizione della subnet mask, degli indirizzi classful e classless, del subnetting e del spuernetting." },
+        IPv6: { Materia: "reti_calcolatori", Nome: "sull'indirizzo IPv6", Descrizione: "Definizione dell'indirizzo IPv6 e della sua struttura, differenze tra IPv4 e IPv6." },
+        Routing: { Materia: "reti_calcolatori", Nome: "sul routing", Descrizione: "" },
 
-        Introduzione: { Materia: "prolog", Nome: "su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato."
-        },
+        Prolog: { Materia: "prolog", Nome: " di introduzione su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato." },
     },
 
     article: {
