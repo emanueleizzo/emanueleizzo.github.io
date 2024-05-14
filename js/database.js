@@ -28,6 +28,7 @@ const tables = {
 
     code: {
         Rompicapo_8_Regine: { Nome: "per la risoluzione del Rompicapo delle 8 Regine", Descrizione: "Definizione del problema e realizzazione di due codici: uno in Python in grado di generare tutte le soluzioni possibili data una scacchiera di lato \\(k\\) e uno in Prolog in grado di verificare che una soluzione sia valida." },
+        Passeggiata_Cavallo: { Nome: "per la risoluzione della Passeggiata del Cavallo", Descrizione: "Definizione del problema e realizzazione di due codici: uno in Python in grado di generare tutte le soluzioni possibili data una scacchiera di lato \\(k\\) e uno in Prolog in grado di verificare che una soluzione sia valida." },
     }
 };
 

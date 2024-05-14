@@ -1,5 +1,5 @@
 <div class="row mb-5 border-0 justify-content-around">
-    <a onclick="showSubSnippet('python', true)" class="col-5 btn btn-sm btn-outline-secondary p-3">
+    <a onclick="showSubSnippet(['python', 'prolog'], 'python', true)" class="col-5 btn btn-sm btn-outline-secondary p-3">
         <div class="d-flex flex-row justify-content-between align-items-center">
             <p class="display-7 m-0 col-md-10">Python</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor"
@@ -16,7 +16,7 @@
             </svg>
         </div>
     </a>
-    <a onclick="showSubSnippet('prolog', true)" class="col-5 btn btn-sm btn-outline-secondary p-3">
+    <a onclick="showSubSnippet(['python', 'prolog'], 'prolog', true)" class="col-5 btn btn-sm btn-outline-secondary p-3">
         <div class="d-flex flex-row justify-content-between align-items-center">
             <p class="display-7 m-0 col-md-10">Prolog</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" fill="currentColor"
@@ -30,7 +30,7 @@
 </div>
 
 <div class="mb-3 border-0">
-    <h3>INDICE</h3>
+    <h3 id="index">INDICE</h3>
     <ul class="index">
         <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1)
                     Gli scacchi</button></a></li>
@@ -79,20 +79,17 @@
         </li>
         <ul class="index">
             <li class="index-element"><a href="#3_1_pl"><button type="button" class="btn btn-outline-secondary">3.1)
-                        Controllo della colonna</button></a></li>
+                        Controllo della coppia di regine</button></a></li>
             <li class="index-element"><a href="#3_2_pl"><button type="button" class="btn btn-outline-secondary">3.2)
-                        Controllo della riga</button></a>
+                Controllo delle diagonali</button></a>
             </li>
             <li class="index-element"><a href="#3_3_pl"><button type="button" class="btn btn-outline-secondary">3.3)
-                        Controllo delle diagonali</button></a>
+                Controllo delle coppie di regine</button></a>
             </li>
             <li class="index-element"><a href="#3_4_pl"><button type="button" class="btn btn-outline-secondary">3.4)
-                        Controllo delle coppie di regine</button></a>
+                Controllo della soluzione</button></a>
             </li>
             <li class="index-element"><a href="#3_5_pl"><button type="button" class="btn btn-outline-secondary">3.5)
-                        Controllo della soluzione</button></a>
-            </li>
-            <li class="index-element"><a href="#3_6_pl"><button type="button" class="btn btn-outline-secondary">3.6)
                         Esempio di esecuzione</button></a>
         </ul>
         </div>
@@ -240,7 +237,7 @@
         </ul>
 </div>
 
-<div id="python" style="display: none;">
+<div id="python" style="display: block;">
     <div class="mb-3 border-0">
         <h1 id="3_py">3) Implementazione in Python</h1>
         L'implementazione riportata di seguito si divide nei seguenti punti:
@@ -2158,16 +2155,13 @@ Soluzione 92:
     <div class="mb-3 border-0">
         <h2 id="3_3_pl">3.3) Controllo delle coppie di regine</h2>
         Il controllo della soluzione sfrutta un ragionamento per induzione: se la lista di regine contiene solo una
-        regina,
-        allora quella regina è in una posizione valida, mentre se sono presenti due o più regine da confrontare, allora
-        dovrò restituire vero se la regina di riferimento e la prima della lista non possono mangiarsi e se le regine
-        restanti con quella di riferimento non si possono mangiare.
-        <pre class="line-numbers"><code class="language-python">controlloCoppie([_]).
+        regina, allora quella regina è in una posizione valida, mentre se sono presenti due o più regine da confrontare, allora dovrò restituire vero se la regina di riferimento e la prima della lista non possono mangiarsi e se le regine restanti con quella di riferimento non si possono mangiare.
+        <pre class="line-numbers"><code class="language-prolog">controlloCoppie([_]).
             
 controlloCoppie([A, B|T]):-
-controlloCoppia(A, B),
-controlloDiagonale(A, B),
-controlloCoppie([A|T]).</code></pre>
+    controlloCoppia(A, B),
+    controlloDiagonale(A, B),
+    controlloCoppie([A|T]).</code></pre>
     </div>
 
     <div class="mb-3 border-0">
@@ -2177,20 +2171,27 @@ controlloCoppie([A|T]).</code></pre>
         allora quella regina è in una posizione valida, mentre se sono presenti due o più regine da confrontare, allora
         dovrò restituire vero se la regina di riferimento e la prima della lista non possono mangiarsi e se le regine
         restanti con quella di riferimento non si possono mangiare.
-        <pre class="line-numbers"><code class="language-python">controlloSoluzione([_]).
+        <pre class="line-numbers"><code class="language-prolog">controlloSoluzione([_]).
             
 controlloSoluzione([A|T]):-
-controlloCoppie([A|T]),
-controlloSoluzione([T]).</code></pre>
+    controlloCoppie([A|T]),
+    controlloSoluzione([T]).</code></pre>
     </div>
 
     <div class="mb-3 border-0">
         <h1 id="3_5_pl">3.5) Esempio di esecuzione</h1>
         Definito il codice e il suo funzionamento, possiamo eseguirlo per generare tutte le soluzioni dei problema; di
         seguito è riportato l'output del codice nel caso in cui la grandezza (o numero delle regine) è impostato ad 8.
-        <pre style="height: 500px"><code class="language-plaintext">Soluzione 1:
-</code></pre>
+        <pre><code class="language-plaintext">Esecuzione 1:
+? controlloSoluzione(1/6, 2/1, 3/5, 4/2, 5/8, 6/3, 7/7, 8/4).
+  true
+
+Esecuzione 2:
+? controlloSoluzione(1/2, 2/4, 3/6, 4/8, 5/3, 6/1, 7/7, 8/5).
+  true
+
+Esecuzione 3:
+? controlloSoluzione(1/5, 2/7, 3/2, 4/8, 5/5, 6/1, 7/3, 8/4).
+  false</code></pre>
     </div>
 </div>
-
-<script>showSubSnippet("python", true);</script>
