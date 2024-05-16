@@ -218,19 +218,17 @@
             <div class="definition m-2 p-2">
                 Sia \(k\geq5\), dato un grafo del cavallo \(G_k:=(V_k, E)\), trovare un percorso hamiltoniano sul seguente grafo.
             </div>
-            Nell'immagine a fianco è rappresentato un esempio di grafo del cavallo con un scacchiera \(8\cdot8\); la particolarità è che per ogni nodo viene associata un'etichetta che indica il numero di mosse possibili da quella posizione, o in altre parole il grado di ogni nodo.
+            Nell'immagine a fianco è rappresentato un esempio di grafo del cavallo con un scacchiera \(8\cdot8\); la particolarità è che per ogni nodo viene associata un'etichetta che indica il numero di mosse possibili da quella posizione, o in altre parole il grado di ogni nodo. Qquesta rappresentazione verrà usata nella regola di Warnsdorf, ossia un'euristica che è in grado di risolvere il nostro problema. Prima di procedere è giusto spendere due parole sul perchè \(k\geq5\); prendendo \(k<5\), abbiamo solo 3
+            possibili casi: <ul>
+            <li>Per \(k=1\) il problema è risolvibile ma banale.</li>
+            <li>Per \(k=2\), \(k=3\) e \(k=4\) il problema non è risolvibile (a prescindere da dove partiamo, non è possibile attraversare tutta la scacchiera, o perché alcune caselle risultano irraggiungibili, o perché è necessario ripassare su caselle già attraversate).</li>
+            </ul>
         </div>
         <div class="col-3">
             <img src="img/Passeggiata_Cavallo/Grafo_cavallo.png" class="img-fluid">
         </div>
     </div>
-    Quest'ultima definizione del problema ci sarà utile nel definire un sistema per generare tutte le possibili
-    soluzioni. Prima di procedere è giusto spendere due parole sul perchè \(k\geq4\); prendendo \(k<4\), abbiamo solo 3
-        possibili casi: <ul>
-        <li>Per \(k=1\) il problema è risolvibile ma banale.</li>
-        <li>Per \(k=2\) e \(k=3\) il problema non è risolvibile (a prescindere come posizioniamo le regine,
-            saranno sempre in grado di mangiarsi a vicenda con una sola mossa).</li>
-        </ul>
+    
 </div>
 
 <div id="python" style="display: block;">
