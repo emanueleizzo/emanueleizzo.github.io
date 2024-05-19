@@ -8,12 +8,6 @@
                     protocollo IP</button></a></li>
         </ul>
         <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2) L'indirizzo IP</button></a></li>
-        <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">3) L'indirizzo IPv4</button></a></li>    
-        <ul class="index">
-            <li class="index-element"><a href="#3_1"><button type="button" class="btn btn-outline-secondary">3.1) La tecnica di inidirizzamento classful</button></a></li>
-            <ul class="index">
-            </ul>
-        </ul>
     </ul>
 </div>
 
@@ -66,76 +60,3 @@
     </ul>
 </div>
 
-<div class="mb-3 border-0">
-    <h1 id="3">3) L'indirizzo IPv4</h1>
-    <div class="definition m-2 p-2">
-        Un <mark class="green">indirizzo IPv4</mark> è un numero di <mark class="green">32 bit</mark> suddiviso in <mark class="green">4 byte</mark> (anche detti <mark class="green">ottetti</mark>). Viene solitamente espresso nella notazione decimale puntata costituita da 4 numeri decimali compresi tra 0 e 255, separati da un punto.
-    </div>
-    Come detto sopra, la subnet mask permette di definire sia l'interfaccia di rete che la rete in cui si trova. Questo viene fatto dividendo l'IP in due blocchi logici:
-    <ul>
-        <li>Il <mark class="green">NetID</mark> (o <mark class="green">NetworkID</mark>), ossia la rete in cui si trova l'host.</li>
-        <li>L'<mark class="green">HostID</mark>, ossia l'indirizzo dell'host all'interno della rete.</li>
-    </ul>
-</div>
-
-<div class="mb-3 border-0">
-    <h2 id="3_1">3.1) La tecnica di indirizzamento classful</h2>
-    La tecnica di indirizzamento classful si basa sul dividere gli IP in 5 classi differenti in base al valore dei bit più significativi come segue:
-    <div class="m-2">
-        <div class="row justify-content-around mb-2">
-            <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
-                    <h4>Classe A</h4>
-                    <ul>
-                        <li>Gli IP della classe A presentano <mark class="green">il primo bit del primo ottetto fisso al valore 0</mark>, dedicando <mark class="green">il primo ottetto alla rete e gli altri 3 agli host</mark> (è quindi nella forma <mark class="yellow">N.H.H.H</mark>).</li>
-                        <li>Ha un range di indirizzi da \(0.0.0.0\) a \(127.255.255.255\), potendo indirizzare \(2^7-2=126\) reti e \(2^{24}-2=16777214\) host, utilizzabile quindi su reti di grandi dimensioni.</li>
-                        <li>Le due reti \(0.X.X.X\) (this network) e \(127.X.X.X\) (loopback net) non possono essere assegnate, come gli host \(X.0.0.0\) (this host) e \(X.255.255.255\) (broadcast).</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
-                    <h4>Classe B</h4>
-                    <ul>
-                        <li>Gli IP della classe B presentano <mark class="green">i primi 2 bit del primo ottetto fissi al valore 10</mark>, dedicando <mark class="green">i primi 2 ottetti alla rete e gli altri 2 agli host</mark> (è quindi nella forma <mark class="yellow">N.N.H.H</mark>).</li>
-                        <li>Ha un range di indirizzi da \(128.0.0.0\) a \(191.255.255.255\), potendo indirizzare \(2^{14}=16384\) reti e \(2^{16}-2=65534\) host, utilizzabile quindi su reti di medie dimensioni.</li>
-                        <li>Gli host \(X.X.0.0\) (this host) e \(X.X.255.255\) (broadcast) non possono essere assegnati.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
-                    <h4>Classe C</h4>
-                    <ul>
-                        <li>Gli IP della classe B presentano <mark class="green">i primi 3 bit del primo ottetto fissi al valore 110</mark>, dedicando <mark class="green">i primi 3 ottetti alla rete e l'ultimo agli host</mark> (è quindi nella forma <mark class="yellow">N.N.N.H</mark>).</li>
-                        <li>Ha un range di indirizzi da \(192.0.0.0\) a \(223.255.255.255\), potendo indirizzare \(2^{21}=2097152\) reti e \(2^{8}-2=254\) host, utilizzabile quindi su reti di piccole dimensioni.</li>
-                        <li>Gli host \(X.X.X.0\) (this host) e \(X.X.X.255\) (broadcast) non possono essere assegnati.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-around">
-            <div class="col-6">
-                <div class="definition my-2 p-2">
-                    <h4>Classe D</h4>
-                    <ul>
-                        <li>Gli IP della classe D presentano <mark class="green">i primi 4 bit del primo ottetto fissi al valore 1110</mark>.</li>
-                        <li>Ha un range di indirizzi da \(224.0.0.0\) a \(239.255.255.255\).</li>
-                        <li>Non sono indirizzi assegnabili ai singoli host, e vengono utilizzati per il multicasting.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="definition my-2 p-2">
-                    <h4>Classe E</h4>
-                    <ul>
-                        <li>Gli IP della classe D presentano <mark class="green">i primi 4 bit del primo ottetto fissi al valore 1111</mark>.</li>
-                        <li>Ha un range di indirizzi da \(240.0.0.0\) a \(255.255.255.255\).</li>
-                        <li>Non sono indirizzi assegnabili ai singoli host, e sono indirizzi riservati per usi futuri o per scopi sperimentali.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    È necessario specificare che nei blocchi appena definiti non è possibile utilizza
-</div>

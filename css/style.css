@@ -51,7 +51,7 @@ div.comment {
     color: gray;
 }
 
-div.sign {
+div.green {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -60,34 +60,7 @@ div.sign {
     font-weight: bolder;
 }
 
-div.exponent {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 10px;
-    background-color: #71b8bb;
-    font-weight: bolder;
-}
-
-div.mantissa {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 10px;
-    background-color: #dcc25b;
-    font-weight: bolder;
-}
-
-div.application {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 10px;
-    background-color: #71bb77;
-    font-weight: bolder;
-}
-
-div.presentation {
+div.light-green {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -96,7 +69,7 @@ div.presentation {
     font-weight: bolder;
 }
 
-div.session {
+div.pale-green {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -105,7 +78,16 @@ div.session {
     font-weight: bolder;
 }
 
-div.transport {
+div.cyan {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71b8bb;
+    font-weight: bolder;
+}
+
+div.light-blue {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -114,7 +96,16 @@ div.transport {
     font-weight: bolder;
 }
 
-div.network {
+div.dark-yellow {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #dcc25b;
+    font-weight: bolder;
+}
+
+div.yellow {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -123,16 +114,7 @@ div.network {
     font-weight: bolder;
 }
 
-div.data_link {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 10px;
-    background-color: #e2bf7d;
-    font-weight: bolder;
-}
-
-div.physical {
+div.orange {
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -141,7 +123,16 @@ div.physical {
     font-weight: bolder;
 }
 
-div.pdu {
+div.light-orange {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #e2bf7d;
+    font-weight: bolder;
+}
+
+div.border-black {
     border-style: solid;
     border-width: 2px;
     border-color: black;

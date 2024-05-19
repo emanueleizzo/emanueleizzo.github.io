@@ -1,0 +1,244 @@
+<div class="mb-3 border-0">
+    <h3 id="index">INDICE</h3>
+    <ul class="index">
+        <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) L'indirizzo IPv4</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#1_1"><button type="button" class="btn btn-outline-secondary">1.1) La tecnica di indirizzamento classful</button></a></li>
+            <ul class="index">
+                <li class="index-element"><a href="#1_1_1"><button type="button" class="btn btn-outline-secondary">1.1.1) Indirizzi riservati o speciali</button></a></li>
+                <li class="index-element"><a href="#1_1_2"><button type="button" class="btn btn-outline-secondary">1.1.2) Indirizzi pubblici/privati e statici/dinamici</button></a></li>
+                <li class="index-element"><a href="#1_1_3"><button type="button" class="btn btn-outline-secondary">1.1.3) Il subnetting</button></a></li>
+            </ul>
+        </ul>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="1">1) L'indirizzo IPv4</h1>
+    <div class="definition m-2 p-2">
+        Un <mark class="green">indirizzo IPv4</mark> è un numero di <mark class="green">32 bit</mark> suddiviso in <mark class="green">4 byte</mark> (anche detti <mark class="green">ottetti</mark>). Viene solitamente espresso nella notazione decimale puntata costituita da 4 numeri decimali compresi tra 0 e 255, separati da un punto.
+    </div>
+    Come detto sopra, la subnet mask permette di definire sia l'interfaccia di rete che la rete in cui si trova. Questo viene fatto dividendo l'IP in due blocchi logici:
+    <ul>
+        <li>Il <mark class="green">NetID</mark> (o <mark class="green">NetworkID</mark>), ossia la rete in cui si trova l'host.</li>
+        <li>L'<mark class="green">HostID</mark>, ossia l'indirizzo dell'host all'interno della rete.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="1_1">1.1) La tecnica di indirizzamento classful</h2>
+    La tecnica di indirizzamento classful si basa sul dividere gli IP in 5 classi differenti in base al valore dei bit più significativi come segue:
+    <div class="m-2">
+        <div class="row justify-content-around mb-2">
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    <h4>Classe A</h4>
+                    <ul>
+                        <li>Gli IP della classe A presentano <mark class="green">il primo bit del primo ottetto fisso al valore 0</mark>, dedicando <mark class="green">il primo ottetto alla rete e gli altri 3 agli host</mark> (è quindi nella forma <mark class="yellow">N.H.H.H</mark>).</li>
+                        <li>Ha un range di indirizzi da 0.0.0.0 a 127.255.255.255, potendo indirizzare \(2^7-2=126\) reti e \(2^{24}-2=16777214\) host, utilizzabile quindi su reti di grandi dimensioni.</li>
+                        <li>Le due reti 0.X.X.X (this network) e 127.X.X.X (loopback net) non possono essere assegnate, come gli host X.0.0.0 (this host) e X.255.255.255 (broadcast).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    <h4>Classe B</h4>
+                    <ul>
+                        <li>Gli IP della classe B presentano <mark class="green">i primi 2 bit del primo ottetto fissi al valore 10</mark>, dedicando <mark class="green">i primi 2 ottetti alla rete e gli altri 2 agli host</mark> (è quindi nella forma <mark class="yellow">N.N.H.H</mark>).</li>
+                        <li>Ha un range di indirizzi da 128.0.0.0 a 191.255.255.255, potendo indirizzare \(2^{14}=16384\) reti e \(2^{16}-2=65534\) host, utilizzabile quindi su reti di medie dimensioni.</li>
+                        <li>Gli host X.X.0.0 (this host) e X.X.255.255 (broadcast) non possono essere assegnati.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    <h4>Classe C</h4>
+                    <ul>
+                        <li>Gli IP della classe B presentano <mark class="green">i primi 3 bit del primo ottetto fissi al valore 110</mark>, dedicando <mark class="green">i primi 3 ottetti alla rete e l'ultimo agli host</mark> (è quindi nella forma <mark class="yellow">N.N.N.H</mark>).</li>
+                        <li>Ha un range di indirizzi da 192.0.0.0 a 223.255.255.255, potendo indirizzare \(2^{21}=2097152\) reti e \(2^{8}-2=254\) host, utilizzabile quindi su reti di piccole dimensioni.</li>
+                        <li>Gli host X.X.X.0 (this host) e X.X.X.255 (broadcast) non possono essere assegnati.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-6">
+                <div class="definition my-2 p-2 h-100">
+                    <h4>Classe D</h4>
+                    <ul>
+                        <li>Gli IP della classe D presentano <mark class="green">i primi 4 bit del primo ottetto fissi al valore 1110</mark>.</li>
+                        <li>Ha un range di indirizzi da 224.0.0.0 a 239.255.255.255.</li>
+                        <li>Non sono indirizzi assegnabili ai singoli host, e vengono utilizzati per il multicasting.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="definition my-2 p-2 h-100">
+                    <h4>Classe E</h4>
+                    <ul>
+                        <li>Gli IP della classe D presentano <mark class="green">i primi 4 bit del primo ottetto fissi al valore 1111</mark>.</li>
+                        <li>Ha un range di indirizzi da 240.0.0.0 a 255.255.255.255.</li>
+                        <li>Non sono indirizzi assegnabili ai singoli host, e sono indirizzi riservati per usi futuri o per scopi sperimentali.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-3 border-0">
+    <h3 id="1_1_1">1.1.1) Indirizzi riservati o speciali</h3>
+    È necessario dire che alcuni indirizzi delle varie classi non sono utilizzabili; tra questi abbiamo:
+    <div class="m-2">
+        <div class="row justify-content-around mb-2">
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    Gli <mark class="green">indirizzi di rete</mark>, ossia gli indirizzi che hanno <mark class="yellow">tutti 0 nella parte dedicata agli host</mark>.
+                    <ul>
+                        <li><b>Classe A</b>: X.0.0.0</li>
+                        <li><b>Classe B</b>: X.Y.0.0</li>
+                        <li><b>Classe C</b>: X.Y.Z.0</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    Gli <mark class="green">indirizzi di host sulla rete corrente</mark>, ossia gli indirizzi che hanno <mark class="yellow">tutti 0 nella parte dedicata alla rete</mark>.
+                    <ul>
+                        <li><b>Classe A</b>: 0.X.Y.Z</li>
+                        <li><b>Classe B</b>: 0.0.Y.Z</li>
+                        <li><b>Classe C</b>: 0.0.0.Z</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="definition my-2 p-2 h-100">
+                    Gli <mark class="green">indirizzi di broadcast</mark>, ossia gli indirizzi che hanno <mark class="yellow">tutti 1 nella parte dedicata agli host</mark>.
+                    <ul>
+                        <li><b>Classe A</b>: X.255.255.255</li>
+                        <li><b>Classe B</b>: X.Y.255.255</li>
+                        <li><b>Classe C</b>: X.Y.Z.255</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-around mb-2">
+            <div class="col-3">
+                <div class="definition my-2 p-2 h-100">
+                    L'<mark class="green">indirizzo di rete di default</mark>, ossia l'indirizzo <mark class="yellow">con tutti 0</mark> (0.0.0.0).
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="definition my-2 p-2 h-100">
+                    L'<mark class="green">indirizzo di broadcast di default</mark>, ossia l'indirizzo <mark class="yellow">con tutti 255</mark> (255.255.255.255).
+                </div>
+            </div>
+            
+            <div class="col-3">
+                <div class="definition my-2 p-2 h-100">
+                    L'<mark class="green">indirizzo di loopback</mark>, ossia l'indirizzo che rappresenta il <mark class="yellow">localhost</mark> (127.0.0.1).
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="definition my-2 p-2 h-100">
+                    Gli <mark class="green">indirizzi APIPA</mark>, ossia il range di indirizzi da 169.254.0.0 a 169.254.255.255 e sono usati per <mark class="yellow">l'autoconfigurtazione degli host</mark>.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-3 border-0">
+    <h3 id="1_1_2">1.1.2) Indirizzi pubblici/privati e statici/dinamici</h3>
+    Gli indirizzi che si affacciano sulla rete Internet sono detti <mark class="green">indirizzi pubblici</mark> e sono univoci in tutto il pianeta, mentre gli indirizzi utilzizati per indirizzare gli host delle reti private sono detti <mark class="green">indirizzi privati</mark>. Gli host con indirizzi privati si connettono a Internet mediante un indirizzo pobblico gesttio da un <mark class="yellow">proxy server</mark> o mediante un <mark class="yellow">router NAT</mark> (<mark class="yellow">Network Address Translator</mark>). I range di indirizzi privati sono definiti nell'<mark class="blue">RFC 1918 "Address Allocatrion for Private Internets"</mark> e sono:
+    <ul>
+        <li>Per la classe A da 10.0.0.0 a 10.25.255.255, ossia un blocco di \(2^{24}\) indirizzi.</li>
+        <li>Per la classe B da 172.16.0.0 a 172.16.255.255, ossia un blocco di \(2^{20}\) indirizzi.</li>
+        <li>Per la classe C da 192.168.0.0 a 192.168.255.255, ossia un blocco di \(2^{16}\) indirizzi.</li>
+    </ul>
+    Una tecnica che viene utilizzata è quella di assegnare a agli utenti privati degli indirizzi pubblici <mark class="green">dinamici</mark>, cioè degli indirizzi che cambiano ogni volta che ci si collega ad Internet; alle aziende invece vengono assegnati degli indirizzi pubblici <mark class="green">statici</mark>, cioè fissati una volta per tutte.
+</div>
+
+<div class="mb-3 border-0">
+    <h3 id="1_1_3">1.1.3) Il subnetting</h3>
+    Per ottimizzare il traffico in una rete risulta particolarmente utile suddividerla in una serie di sottoreti logiche; per fare ciò possiamo utilizzare il <mark class="green">subnetting</mark>, definito nell'<mark class="blue">RFC 950</mark> del <mark class="blue">1985</mark>, che si basa sul sacrificare alcuni bit che le classi A, B e C dedicano agli host per definire un indirizzo di sottorete. Di seguito è riportato un esempio di <mark class="red">divisione tra NetID e Host di un indirizzo di classe A e un possibile indirizzo sempre di classe A ma con 6 bit dedicati al SubnetID</mark>.
+    <div class="row justify-content-around my-3">
+        <div class="col-12">
+            <table class="table-borderless w-100 m-0">
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td class="p-0" colspan="8">
+                            <div class="green d-flex p-2 mt-2 justify-content-center align-items-center" style="height: 100%">
+                                NetID
+                            </div>
+                        </td>
+                        <td class="p-0" colspan="24">
+                            <div class="light-blue d-flex p-2 mt-2 justify-content-center align-items-center"
+                                style="height: 100%">
+                                HostID
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-0" colspan="8">
+                            <div class="green d-flex p-2 mt-2 justify-content-center align-items-center" style="height: 100%">
+                                NetID
+                            </div>
+                        </td>
+                        <td class="p-0" colspan="6">
+                            <div class="orange d-flex p-2 mt-2 justify-content-center align-items-center"
+                                style="height: 100%">
+                                SubnetID
+                            </div>
+                        </td>
+                        <td class="p-0" colspan="18">
+                            <div class="light-blue d-flex p-2 mt-2 justify-content-center align-items-center"
+                                style="height: 100%">
+                                HostID
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
