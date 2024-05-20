@@ -374,18 +374,34 @@ def trovaSoluzioni():
         <h1 id="3_pl">3) Implementazione in Prolog</h1>
         L'implementazione riportata di seguito si divide nei seguenti punti:
         <ul>
-            <li>Per prima cosa andremo a definire i vari predicati sulle condizioni di validità di una soluzione.</li>
-            <li>Successivamente andremo a definire il predicato per il controllo complessivo della soluzione.</li>
+            <li>Per prima cosa andremo a definire i vari predicati sulla validità di una mossa.</li>
+            <li>Successivamente andremo a definire un predicato per verificare l'unicità delle caselle.</li>
+            <li>Per concludere definiremo un predicato per verificare che la sequenza di caselle sia una soluzione valida.</li>
         </ul>
     </div>
 
     <div class="mb-3 border-0">
         <h2 id="3_1_pl">3.1) Controllo delle posizioni</h2>
-        Il predicato <code class="language-prolog">controlloCoppia(_, _)</code> prende le coordinate di due regine e
-        restituisce semplicemente vero se le due regine non hanno nessun valore delle coordinate in comune, o falso
-        altrimenti.
+        Il predicato <code class="language-prolog">controlloCaselle(_, _)</code> prende le coordinate di due caselle e restiuisce vero se le due caselle sono differenti (almeno una delle due coordinate è differente). Si possono notare due dettagli interessanti:
+        <ul>
+            <li>Il predicato sfrutta la ricorsione per verificare che una cella non sia </li>
+        </ul>
+        <pre class="line-numbers"><code class="language-prolog">controlloCaselle(_, []).
 
-        <pre class="line-numbers"><code class="language-prolog">controlloCoppia(_/_, _/_).</code></pre>
+controlloCaselle(A/B, [_/_|T]):-
+    controlloCaselle(A/B, T).
+
+controlloCaselle(A/B, [A/_|T]):-
+    controlloCaselle(A/B, T).
+
+controlloCaselle(A/B, [_/A|T]):-
+    controlloCaselle(A/B, T).
+
+controlloCaselle(A/B, [B/_|T]):-
+    controlloCaselle([A, B], T).
+
+controlloCaselle([A/B], [_/B|T]):-
+    controlloCaselle(A/B, T).</code></pre>
     </div>
 
     <div class="mb-3 border-0">
