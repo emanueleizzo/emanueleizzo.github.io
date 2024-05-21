@@ -79,12 +79,12 @@
         </li>
         <ul class="index">
             <li class="index-element"><a href="#3_1_pl"><button type="button" class="btn btn-outline-secondary">3.1)
-                        Controllo della coppia di regine</button></a></li>
+                        Controllo della coppia di caselle</button></a></li>
             <li class="index-element"><a href="#3_2_pl"><button type="button" class="btn btn-outline-secondary">3.2)
-                Controllo delle diagonali</button></a>
+                Controllo dell'unicità delle caselle</button></a>
             </li>
             <li class="index-element"><a href="#3_3_pl"><button type="button" class="btn btn-outline-secondary">3.3)
-                Controllo delle coppie di regine</button></a>
+                Controllo delle mosse</button></a>
             </li>
             <li class="index-element"><a href="#3_4_pl"><button type="button" class="btn btn-outline-secondary">3.4)
                 Controllo della soluzione</button></a>
@@ -116,7 +116,7 @@
             suo posto. Si dice che un pezzo ”attacca” o ”minaccia” una casa se esso può muoversi su di essa.
         </div>
         <div class="col-3">
-            <img src="img/Rompicapo_8_Regine/Scacchi.png" class="img-fluid">
+            <img src="img/Passeggiata_Cavallo/Scacchi.png" class="img-fluid">
         </div>
     </div>
 </div>
@@ -228,7 +228,6 @@
             <img src="img/Passeggiata_Cavallo/Grafo_cavallo.png" class="img-fluid">
         </div>
     </div>
-    
 </div>
 
 <div id="python" style="display: block;">
@@ -382,10 +381,7 @@ def trovaSoluzioni():
 
     <div class="mb-3 border-0">
         <h2 id="3_1_pl">3.1) Controllo delle posizioni</h2>
-        Il predicato <code class="language-prolog">controlloCaselle(_, _)</code> prende le coordinate di due caselle e restiuisce vero se le due caselle sono differenti (almeno una delle due coordinate è differente). Si possono notare due dettagli interessanti:
-        <ul>
-            <li>Il predicato sfrutta la ricorsione per verificare che una cella non sia </li>
-        </ul>
+        Il predicato <code class="language-prolog">controlloCaselle(X, L)</code> prende le coordinate di una casella <code class="language-prolog">X</code> e una lista di caselle <code class="language-prolog">L</code>, e restiuisce vero se la casella presa in esame e la prima casella della lista presentano coordinate diverse (almeno una delle due coordinate è differente). Si può notare che il predicato sfrutta la ricorsione per verificare che una cella non sia presente due volte nella lista.
         <pre class="line-numbers"><code class="language-prolog">controlloCaselle(_, []).
 
 controlloCaselle(A/B, [_/_|T]):-
@@ -405,57 +401,60 @@ controlloCaselle([A/B], [_/B|T]):-
     </div>
 
     <div class="mb-3 border-0">
-        <h2 id="3_2_pl">3.2) Controllo delle diagonali</h2>
-        Per il controllo delle diagonali possiamo usare la definizione della condizione vista sopra: preso un
-        \(\delta\in[1, k]\), una soluzione valida ha che per ogni coppia di regine diverse \(q_i=(x_i, y_i)\) e
-        \(q_j=(x_j, y_j)\) abbiamo \(|x_i-x_j|\neq|y_i-y_j|\). Quello che possiamo fare è calcolarci quindi i valori
-        \(|x_i-x_j|\) e \(|y_i-y_j|\), e verificare se questi valori sia uguali oppure no: nel caso siano differenti si
-        restituirà vero, altrimenti si restituirà falso.
-        <pre class="line-numbers"><code class="language-prolog">controlloDiagonale(A/B, C/D):-
-    A-C =\= B-D,
-    A-C =\= D-B.</code></pre>
+        <h2 id="3_2_pl">3.2) Controllo dell'unicità delle caselle</h2>
+        Il predicato <code class="language-prolog">controlloUnicita(_, _)</code> prende le coordinate di una casella e una lista di caselle, divisa in testa <code class="language-prolog">H</code> e coda <code class="language-prolog">T</code>, e restituisce vero se:
+        <ul>
+            <li>Il predicato <code class="langugae-prolog">controlloCaselle(X, [H])</code> è vero (le due caselle sono differenti).</li>
+            <li>Il predicato <code class="langugae-prolog">controlloCaselle(X, T)</code> è vero (la casella non è presente una seconda volta nella lista).</li>
+            <li>Il predicato <code class="language-prolog">controlloUnicita(H, T)</code> è vero (la prima casella della lista è unica rispetto al restante della lista).</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-prolog">controlloUnicita(_, []).
+
+controlloUnicita(X, [H|T]):-
+    controlloCaselle(X, [H]),
+    controlloCaselle(X, T),
+    controlloUnicita(H, T).</code></pre>
     </div>
 
     <div class="mb-3 border-0">
-        <h2 id="3_3_pl">3.3) Controllo delle coppie di regine</h2>
-        Il controllo della soluzione sfrutta un ragionamento per induzione: se la lista di regine contiene solo una
-        regina, allora quella regina è in una posizione valida, mentre se sono presenti due o più regine da confrontare, allora dovrò restituire vero se la regina di riferimento e la prima della lista non possono mangiarsi e se le regine restanti con quella di riferimento non si possono mangiare.
-        <pre class="line-numbers"><code class="language-prolog">controlloCoppie([_]).
-            
-controlloCoppie([A, B|T]):-
-    controlloCoppia(A, B),
-    controlloDiagonale(A, B),
-    controlloCoppie([A|T]).</code></pre>
+        <h2 id="3_3_pl">3.3) Controllo delle mosse</h2>
+        Il controllo della mosse utilizza un ragionamento molto semplice: data una sequenza di caselle, due caselle vicine definiscono una mossa se il cavallo può effettuare una mossa per muoversi dalla prima casella alla seconda. Per ottimizzare questo predicato possiamo usare un semplice ragionameto: se posizioniamo le caselle su un piano cartesiano e osserviamo la mossa di un cavallo come lo spostamento da un punto all'altro del piano, possiamo facilmente notare che due caselle formano una mossa se la differenza delle \(x\) in valore assoluto è pari ad 1 e la differenza delle \(y\) in valore assoluto è pari a 2 oppure la differenza delle \(x\) in valore assoluto è pari ad 2 e la differenza delle \(y\) in valore assoluto è pari a 1; in altre parole, quello che stiamo riprendendo è la condizione di esistenza di un arco tra due nodi (caselle) del grafo del cavallo.
+        <pre class="line-numbers"><code class="language-prolog">mossaValida(_, []).
+
+mossaValida(A/B, [C/D|T]):-
+   abs(A-C) =:= 2,
+   abs(B-D) =:= 1.
+
+mossaValida(A/B, [C/D|T]):-
+   abs(A-C) =:= 1,
+   abs(B-D) =:= 2.</code></pre>
     </div>
 
     <div class="mb-3 border-0">
-        <h2 id="3_4_pl">3.4) Controllo delle coppie di regine</h2>
-        Il controllo della soluzione sfrutta un ragionamento per induzione: se la lista di regine contiene solo una
-        regina,
-        allora quella regina è in una posizione valida, mentre se sono presenti due o più regine da confrontare, allora
-        dovrò restituire vero se la regina di riferimento e la prima della lista non possono mangiarsi e se le regine
-        restanti con quella di riferimento non si possono mangiare.
-        <pre class="line-numbers"><code class="language-prolog">controlloSoluzione([_]).
-            
-controlloSoluzione([A|T]):-
-    controlloCoppie([A|T]),
-    controlloSoluzione([T]).</code></pre>
+        <h2 id="3_4_pl">3.4) Controllo della soluzione</h2>
+        Il controllo della soluzione prende una sequenza di caselle ed esegue due semplici controlli:
+        <ul>
+            <li>Verifica prima di tutto che le caselle siano univoche.</li>
+            <li>Successivamente controlla che due caselle consecutive definiscono una mossa valida.</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-prolog">controlloSoluzione([H|T]):-
+    controlloUnicita(H, T),
+    mossaValida(H, T).</code></pre>
     </div>
 
     <div class="mb-3 border-0">
         <h1 id="3_5_pl">3.5) Esempio di esecuzione</h1>
-        Definito il codice e il suo funzionamento, possiamo eseguirlo per generare tutte le soluzioni dei problema; di
-        seguito è riportato l'output del codice nel caso in cui la grandezza (o numero delle regine) è impostato ad 8.
+        Definiti tutti i predicati, possiamo eseguirlo per verificare se una certa sequenza di caselle definisce una passeggiata del cavallo.
         <pre><code class="language-plaintext">Esecuzione 1:
-? controlloSoluzione(1/6, 2/1, 3/5, 4/2, 5/8, 6/3, 7/7, 8/4).
+? controlloSoluzione([5/5, 4/3, 5/1, 3/2, 1/1, 2/3, 1/5, 3/4, 5/3, 4/1, 2/2, 1/4, 3/5, 5/4, 4/2, 2/1, 1/3, 2/5, 4/4, 5/2, 3/1, 1/2, 2/4, 4/5, 3/3]).
   true
 
 Esecuzione 2:
-? controlloSoluzione(1/2, 2/4, 3/6, 4/8, 5/3, 6/1, 7/7, 8/5).
-  true
+? controlloSoluzione([5/5, 4/3, 5/1, 3/2, 1/1, 2/3, 1/5, 3/4, 5/3, 4/1, 2/2, 1/4, 3/5, 5/4, 5/2, 2/1, 1/3, 2/5, 4/4, 5/2, 3/1, 1/2, 2/4, 4/5, 3/3]).
+  false
 
 Esecuzione 3:
-? controlloSoluzione(1/5, 2/7, 3/2, 4/8, 5/5, 6/1, 7/3, 8/4).
+? controlloSoluzione([5/5, 4/3, 5/1, 3/2, 1/1, 2/3, 1/5, 3/4, 5/3, 4/1, 2/2, 1/4, 3/5, 5/4, 5/2, 2/1, 1/3, 2/5, 4/4, 5/2, 3/1, 1/2, 2/4, 4/5, 3/3]).
   false</code></pre>
     </div>
 </div>
