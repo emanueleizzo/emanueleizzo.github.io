@@ -18,6 +18,7 @@ const tables = {
         IPv4: { Materia: "reti_calcolatori", Nome: "sull'indirizzo IPv4", Descrizione: "Definizione dell'indirizzo IPv4 e della sua struttura, definizione della subnet mask, degli indirizzi classful e classless, del subnetting e del spuernetting." },
         IPv6: { Materia: "reti_calcolatori", Nome: "sull'indirizzo IPv6", Descrizione: "Definizione dell'indirizzo IPv6 e della sua struttura, differenze tra IPv4 e IPv6." },
         Routing: { Materia: "reti_calcolatori", Nome: "sul routing", Descrizione: "" },
+        Livello_trasporto: { Materia: "reti_calcolatori", Nome: "sul livello di trasporto", Descrizione: "Definizione di porta, socket e servizio. Il protocollo di trasporto connectionless UDP e il protocollo di trasporto connection-oriented TCP." },
 
         Prolog: { Materia: "prolog", Nome: " di introduzione su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato." },
     },
