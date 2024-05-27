@@ -4,6 +4,9 @@
         <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) Le porte</button></a></li>
         <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2) Le socket</button></a></li>
         <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">3) I servizi</button></a></li>
+        <li class="index-element"><a href="#4"><button type="button" class="btn btn-outline-secondary">4) Il protocollo di trasporto connectionless UDP</button></a></li>
+        <li class="index-element"><a href="#5"><button type="button" class="btn btn-outline-secondary">5) Il protocollo di trasporto connection-oriented TCP</button></a></li>
+        <li class="index-element"><a href="#6"><button type="button" class="btn btn-outline-secondary">6) Confronto tra i protocolli UDP e TCP</button></a></li>
     </ul>
 </div>
 
@@ -13,7 +16,7 @@
     <div class="m-2">
         <div class="row justify-content-around">
             <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
+                <div class="definition p-2 h-auto">
                     <h4>Porte ben conosciute</h4>
                     <ul>
                         <li>Sono porte assegnate a <mark class="yellow">specifiche applicazioni e servizi</mark>.</li>
@@ -22,7 +25,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
+                <div class="definition p-2 h-auto">
                     <h4>Porte registrate</h4>
                     <ul>
                         <li>Sono porte legati ad <mark class="yellow">alcuni servizi server</mark>.</li>
@@ -32,7 +35,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="definition my-2 p-2 h-100">
+                <div class="definition p-2 h-auto">
                     <h4>Porte dinamiche o private</h4>
                     <ul>
                         <li>Sono porte che <mark class="yellow">non possono essere usate a servizi comuni</mark> (questo dipoende dal fatto che sono <mark class="yellow">vulnerabili ad attacchi</mark>).</li>
@@ -85,5 +88,49 @@
     <ul>
         <li>Il protocollo TCP <mark class="green">fornisce la garanzia di consegna e il controllo di flusso</mark>, e per tale motivo si dice essere <mark class="green">connection-oriented</mark>.</li>
         <li>Il protocollo UDP <mark class="green">non fornisce la garanzia di consegna e il controllo di flusso</mark>, e per tale motivo si dice essere <mark class="green">connection-oriented</mark>.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="4">4) Il protocollo di trasporto connectionless UDP</h1>
+    <div class="definition m-2 p-2">
+        L'<mark class="green">User Datagram Protocol</mark> (<mark class="green">UDP</mark>) è un protocollo del livello di trasporto che non prevede l'usp di una connessione tra host mittente e host destinatario: infatti ciascun datagram UDP è trattato in modo indipendente.
+    </div>
+    Il servizio offerto da UDP è di tipo <mark class="yellow">besto effort</mark>: i datagram UDP possono essere persi o arrivare fuori sequenza, non si ha quindi alcuna granzia sulla consegna dei dati trasmessi. Alcuni dei vantaggi derivanti dall'uso di UDP sono:
+    <ul>
+        <li>Non richiede di stabilire una connessione, non introducendo quindi un ritardo dovuto alla fase di setup della connessione.</li>
+        <li>Non mantiene lo stato della connessione, quindi un pserver può supportare molti più client attivi.</li>
+        <li>Il controllo del livello applicativo è più efficace dato che, in mancanza di controllo della congesione, il mittente non viene mai bloccato.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="5">5) Il protocollo di trasporto connection-oriented TCP</h1>
+    <div class="definition m-2 p-2">
+        Il <mark class="green">Transmission Control Protocol</mark> (<mark class="green">TCP</mark>) è un protocollo di trasporto molto diffusp, più dell'UDP, in quanto offre un servizio <mark class="green">connection-oriented</mark> e <mark class="green">affidabile</mark>, garantendo quindi la conseguenza dei dati in modo ordinato (infatti si parla di <mark class="yellow">data stream</mark> inteso come <mark class="yellow">flusso di byte</mark>).
+    </div>
+    La connessione che TCP stabilisce tra mittente e destinatario offre all'applicazione che si trova a livello superiore l'impressione di usufruire di una linea dedicata. La connessione può quindi essere intesa come un canale logico le cui caratteristiche sono:
+    <ul>
+        <li><mark class="green">Full-duplex</mark>, che permette di trasmettere e ricevere in contemporanea sulla stessa connessione.</li>
+        <li><mark class="green">Point-to-point</mark>, ossia un solo mittente e un solo destinatario.</li>
+        <li>Richiede l'indicizzazione di <mark class="green">variabili di stato</mark> da parte del mittente e del ricevente.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="6">6) Confronto tra i protocolli UDP e TCP</h1>
+    È chiaro quindi che il TCP è da preferire per il trasferimento dati in cui è importante l'affidabilità della comunicazione; in particolare, il TCP viene usato quando:
+    <ul>
+        <li>L'applicazione richiede una connessione affidabile.</li>
+        <li>È necessario garantire l'integrità dei dati.</li>
+        <li>È necessario garantire che le richieste e le risposte arrivino a destinazione.</li>
+        <li>È necessario mantenere il controllo costante della comunicazione.</li>
+    </ul>
+    L'UDP invece è preferibile quando le prestazioni sono più importanti del ricevere i dati in modo perfetto; nello specifico, l'UDP viene usato quando:
+    <ul>
+        <li>Ci troviamo in una rete affidabile o quando l'affidabilità non è importante.</li>
+        <li>L'applicazione mette tutti i dati in un singolo datagram.</li>
+        <li>Non è importante che tutti i datagram arrivino a destinazione, ma è necessario non introdurre ritardi.</li>
+        <li>Eventuali meccanismo di ritrasmissione possono essere gestiti direttamente dall'applicazione.</li>
     </ul>
 </div>
