@@ -163,3 +163,23 @@ li.index-element {
 mjx-container.MathJax {
     margin: 0px !important;
 }
+
+div.bubble-text-left {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 25px;
+    border: 0px;
+    background-color: #4f4f4f;
+    color: white;
+}
+
+div.bubble-text-right {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 0px;
+    border: 0px;
+    background-color: #0f3c0e;
+    color: white;
+}

@@ -29,6 +29,7 @@ const tables = {
     },
 
     code: {
+        Compagnia_Aerea: { Nome: "per la previsione della soddisfazione dei clienti di una compagnia aerea", Descrizione: "Definizione del problema e dei dati con cui lavoriamo, realizzazione di ipotesi di lavoro, realizzazione e comparazione di diversi sistemi di machine learning (con relativa spiegazione)." },
         Rompicapo_8_Regine: { Nome: "per la risoluzione del Rompicapo delle 8 Regine", Descrizione: "Definizione del problema e realizzazione di due codici: uno in Python in grado di generare tutte le soluzioni possibili data una scacchiera di lato \\(k\\) e uno in Prolog in grado di verificare che una soluzione sia valida." },
         Passeggiata_Cavallo: { Nome: "per la risoluzione della Passeggiata del Cavallo", Descrizione: "Definizione del problema e realizzazione di due codici: uno in Python in grado di generare tutte le soluzioni possibili data una scacchiera di lato \\(k\\) e uno in Prolog in grado di verificare che una soluzione sia valida." },
         Equazione_Matematica: { Nome: "per la risoluzione del problema dell'Equazione Matematica", Descrizione: "Definizione del problema e realizzazione di due codici: uno in Python in grado di generare tutte le soluzioni possibili e uno in Prolog in grado di verificare che una soluzione sia valida." },
