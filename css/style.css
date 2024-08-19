@@ -183,3 +183,69 @@ div.bubble-text-right {
     background-color: #0f3c0e;
     color: white;
 }
+
+table.table {
+    border: 1px solid black;
+    border-collapse:separate;
+    border-radius: 10px;
+    border-spacing: 0;
+    margin: 0px;
+}
+
+table.table th:not(:last-child),
+table.table td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+table.table>thead>tr:not(:last-child)>th,
+table.table>thead>tr:not(:last-child)>td,
+table.table>tbody>tr:not(:last-child)>th,
+table.table>tbody>tr:not(:last-child)>td,
+table.table>tfoot>tr:not(:last-child)>th,
+table.table>tfoot>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>th,
+table.table>thead:not(:last-child),
+table.table>tbody:not(:last-child),
+table.table>tfoot:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+table.table thead {
+    background: rgb(53, 53, 53);
+    color: white;
+    font-weight: bold;
+}
+
+table.table {
+    /* Change these properties */
+    --border: 1px solid black;
+    border-radius: 10px;
+
+    /* Don't change these properties */
+    border-spacing: 0;
+    border-collapse: separate;
+    border: var(--border);
+    overflow: hidden;
+}
+
+/* Apply a border to the right of all but the last column */
+table.table th:not(:last-child),
+table.table td:not(:last-child) {
+    border-right: var(--border);
+}
+
+/* Apply a border to the bottom of all but the last row */
+table.table>thead>tr:not(:last-child)>th,
+table.table>thead>tr:not(:last-child)>td,
+table.table>tbody>tr:not(:last-child)>th,
+table.table>tbody>tr:not(:last-child)>td,
+table.table>tfoot>tr:not(:last-child)>th,
+table.table>tfoot>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>th,
+table.table>thead:not(:last-child),
+table.table>tbody:not(:last-child),
+table.table>tfoot:not(:last-child) {
+    border-bottom: var(--border);
+}
