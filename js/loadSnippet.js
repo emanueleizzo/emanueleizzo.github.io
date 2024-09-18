@@ -1,6 +1,6 @@
 function loadSnippet(type) {
     var name = window.location.search.split("=")[1];
-
+    
     var path;
     if (type == "lesson") {
         path = "html/" + type + "/" + tables[type][name]["Materia"] + "/" + name + ".html";
