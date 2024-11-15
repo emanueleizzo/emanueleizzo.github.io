@@ -14,6 +14,10 @@ const tables = {
         Routing: { Materia: "reti_calcolatori", Nome: "sul routing", Descrizione: "" },
         Livello_trasporto: { Materia: "reti_calcolatori", Nome: "sul livello di trasporto", Descrizione: "Definizione di porta, socket e servizio. Il protocollo di trasporto connectionless UDP e il protocollo di trasporto connection-oriented TCP." },
 
+        Programmazione_orientata_oggetti: { Materia: "java", Nome: " sulla programmazione orientata agli oggetti", Descrizione: "Introduzione al paradigma di programmazione. Definizione di oggetto, classe ed istanza." },
+        Java: { Materia: "java", Nome: " introduttiva su Java", Descrizione: "Introduzione al linguaggio di programmazione, alle sue caratteristiche e all'IDE utilizzato." },
+        Basi_linguaggio_Java: { Materia: "java", Nome: " sulle basi del linguaggio Java", Descrizione: "Esempio di primo codice Java con spiegazione riga per riga del codice." },
+        
         Prolog: { Materia: "prolog", Nome: " di introduzione su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato." },
     },
 
