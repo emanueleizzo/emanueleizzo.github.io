@@ -17,6 +17,7 @@ const tables = {
         Programmazione_orientata_oggetti: { Materia: "java", Nome: " sulla programmazione orientata agli oggetti", Descrizione: "Introduzione al paradigma di programmazione. Definizione di oggetto, classe ed istanza." },
         Java: { Materia: "java", Nome: " introduttiva su Java", Descrizione: "Introduzione al linguaggio di programmazione, alle sue caratteristiche e all'IDE utilizzato." },
         Basi_linguaggio_Java: { Materia: "java", Nome: " sulle basi del linguaggio Java", Descrizione: "Esempio di primo codice Java con spiegazione riga per riga del codice." },
+        Variabili_operatori: { Materia: "java", Nome: " sulle variabili e gli operatori in Java", Descrizione: "Definizione di identificatore e parola chiave. Definizione di variabile e dei diversi tipi di variabile. Definizione dei diversi operatori e del relativo comportamento, con caso particolari spiegati." },
         
         Database: { Materia: "database", Nome: " di introduzione sui database", Descrizione: "Definizione di database e nozioni fondamentali." },
     },
