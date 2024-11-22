@@ -18,7 +18,7 @@ const tables = {
         Java: { Materia: "java", Nome: " introduttiva su Java", Descrizione: "Introduzione al linguaggio di programmazione, alle sue caratteristiche e all'IDE utilizzato." },
         Basi_linguaggio_Java: { Materia: "java", Nome: " sulle basi del linguaggio Java", Descrizione: "Esempio di primo codice Java con spiegazione riga per riga del codice." },
         
-        Prolog: { Materia: "prolog", Nome: " di introduzione su Prolog", Descrizione: "Introduzione al linguaggio di programmazione, alla programmazione dichiarativa e all'IDE utilizzato." },
+        Database: { Materia: "database", Nome: " di introduzione sui database", Descrizione: "Definizione di database e nozioni fondamentali." },
     },
 
     article: {
