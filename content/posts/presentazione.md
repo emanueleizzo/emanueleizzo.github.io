@@ -1,9 +1,9 @@
 +++
-date = '2024-12-03T22:04:49+01:00'
+title = 'Presentazione'
+date = 2024-01-14T07:07:07+01:00
 draft = true
-title = 'My First Post'
 +++
-## Introduction
+## Presentazione
 
 This is **bold** text, and this is *emphasized* text.
 
