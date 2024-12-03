@@ -1,0 +1,210 @@
+<div class="mb-3 border-0">
+    <h3 id="index">INDICE</h3>
+    <ul class="index">
+        <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1) Il
+                    modello a strati o livelli</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#1_1"><button type="button" class="btn btn-outline-secondary">1.1)
+                        L'incapsulamento e il decapsulamento</button></a>
+            </li>
+        </ul>
+        <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2) Il
+                    modello ISO/OSI</button></a></li>
+        <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">3) Lo
+                    stack TCP/IP</button></a></li>
+        <li class="index-element"><a href="#4"><button type="button" class="btn btn-outline-secondary">4)
+                    ISO/OSI e TCP/IP a comparazione</button></a></li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="1">1) Il modello a strati o livelli</h1>
+    Il <mark class="green">modello a strati o livelli</mark> è un modello utilizzato per l'implementazione di
+    internet, basato su una metodologia top-down e rappresentato in verticale. Due host che voglio comunicare
+    realizzano la stessa architettura a strati e implementano uno o più protocolli a ogni livello per consentire
+    lo scambio di informazioni; i livelli N di mittente e destinatario prendono il nome di <mark class="yellow">peer
+        level</mark>. Ogni elemento attivo, in grado cioè di inviare e ricevere informazioni
+    in un livello è detto <mark class="yellow">entity</mark>; due entità paritarie vengono chiamate <mark
+        class="yellow">peer entity</mark>.
+    <div class="definition m-2 p-2">
+        Un <mark class="green">protocollo</mark> è un insieme di regole che definiscono la comunicazione tra
+        due peer entity.
+    </div>
+    Ogni livello fornisce un <mark class="green">servizio</mark> più astratto man mano che si procede dal basso
+    (hardware) verso l'alto (applicazioni), svolgendo ciascuno compiti diversi dagli altri; tutti insieme
+    concorrono a realizzare la <mark class="yellow">comunicazione tra i sistemi</mark>. Possiamo individuare due
+    modalità di comunicazione:
+    <ul>
+        <li>La <mark class="yellow">comunicazione logica tra peer entity</mark>, la quale avviene utilizzando i
+            <mark class="green">Prodotcol Data Unit</mark> (<mark class="green">PDU</mark>), ossia i messaggi
+            scambiati tra peer entity, i quali sono formati da header e dati.
+        </li>
+        <li>
+            La <mark class="yellow">comunicazione fisica tra livelli adiacenti</mark>, la quale avviene in due
+            modi:
+            <ul>
+                <li>In <b>trasimissione</b>, dove il livello N riceve il messaggio dal livello N+1, lo elabora e
+                    lo invia al livello N-1.</li>
+                <li>In <b>ricezione</b>, dove il livello N riceve il messaggio dal livello N-1, lo elabora e lo
+                    invia al livello N+1.</li>
+            </ul>
+            L'interazione tra due livelli adiacenti avviene tramite un'<mark class="green">interfaccia</mark>,
+            la quale definisce le regole secondo le quali un livello accede ai servizi offerti dal livello
+            sottostante.
+        </li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="1_1">1.1) L'incapsulamento e il decapsulamento</h2>
+    L'<mark class="green">incapsulamento</mark> è una tecnina utilizzata per il passaggio di informazioni utili
+    per lo svolgimento delle funzioni di quel livello. Quando il messaggio mandato dal mittente passa al livello
+    inferiore viene modificato con l'aggiunta di informazioni e dati che prendono il nome di <mark
+        class="green">header</mark> e che vengono collocati all'inizio, prima dell'unità dati. Quando invece un
+    messaggio ricevuto dal destinatario viene passato al livello superiore viene effettuato un <mark
+        class="green">decapsulamento</mark> del messaggio, rimuovendo l'header che è stato aggiunto dal
+    destinatario nel livello attuale.
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="2">2) Il modello ISO/OSI</h1>
+    Il <mark class="green">modello ISO/OSI</mark> è un modello teorico a strati che suddivide in <mark class="yellow">7
+        livelli</mark> le funzionalità necessarie a realizzare reti di computer. I sette
+    livelli che compongono questo modello sono:
+    <ul>
+        <li>Il <mark class="green">livello fisico</mark> (<mark class="green">physical layer</mark>) che si
+            occupa della trasmissione di una sequenza di bit attraverso un mezzo fisico.</li>
+        <li>Il <mark class="green">livello di collegamento</mark> (<mark class="green">data link layer</mark>)
+            che si occupa di rendere affidabile il collegamento instaurato a livello fisico, in modo che appaia
+            privo di errori al livello rete.</li>
+        <li>Il <mark class="green">livello di rete</mark> (<mark class="green">network layer</mark>) che si
+            occupa dell'instradamento verso il destinatario del pacchetto inviato dal mittente attraverso reti
+            diverse.</li>
+        <li>Il <mark class="green">livello di trasporto</mark> (<mark class="green">transport layer</mark>) che
+            è responsabile della consegna dell'intero messaggio da mittente a destinatario, occupandosi quindi
+            della comunicazione <mark class="yellow">end-to-end</mark>.</li>
+        <li>Il <mark class="green">livello di sessione</mark> (<mark class="green">session layer</mark>) che è
+            il controllore del dialogo svolto in rete.</li>
+        <li>Il <mark class="green">livello di presentazione</mark> (<mark class="green">presentation
+                layer</mark>) che offre un servizio di controllo della correttezza sintattica e semantica delle
+            informazioni scambiate tra due host.</li>
+        <li>Il <mark class="green">livello di applicazione</mark> (<mark class="green">application layer</mark>)
+            che offre un'interfaccia utente con la rete.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="3">3) Lo stack TCP/IP</h1>
+    Lo <mark class="green">stack TCP/IP</mark> è un'applicazione pratica del modello ISO/OSI che prende il nome
+    dai suoi due protocolli più importanti: <mark class="yellow">IP</mark> e <mark class="yellow">TCP</mark>.
+    Rispetto al modello ISO/OSI lo stack TCP/IP è composto da soli 4 livelli:
+    <ul>
+        <li>Il <mark class="green">livello fisico</mark> (<mark class="green">physical layer</mark>) che include
+            le funzioni del livello fisico, di collegamento e, in parte, di rete del modello OSI.</li>
+        <li>Il <mark class="green">livello di rete</mark> (<mark class="green">network layer</mark>), detto
+            anche <mark class="yellow">IP layer</mark>, che si occupa dell'instradamento dei pacchetti nella
+            rete e dell'interconnessione delle reti, offrendo un servizio connectionless.</li>
+        <li>Il <mark class="green">livello di trasporto</mark> (<mark class="green">transport layer</mark>),
+            detto anche <mark class="yellow">TCP layer</mark>, che permette di gestire le connessioni a livello
+            end-to-end. TCP infatti fornisce un servizio connection-oriented. È presente un ulteriore protocollo
+            su questo livello, chiamato <mark class="yellow">User Datagram Protocol</mark> (<mark
+                class="yellow">UDP</mark>), che in vece fornisce un servizio connectionless.</li>
+        <li>Il <mark class="green">livello di applicazione</mark> (<mark class="green">application layer</mark>)
+            che corrisponde agli ultimi tre strati del modello OSI e realizza i servizi di livello applicativo
+            per Internet.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="4">4) ISO/OSI e TCP/IP a comparazione</h1>
+    <div class="my-3">
+        <div class="row justify-content-between mb-2">
+            <div class="col-3">
+                <h3>Modello ISO/OSI</h3>
+            </div>
+            <div class="col-3">
+                <h3>Stack TCP/IP</h3>
+            </div>
+            <div class="col-3">
+                <h3>PDU</h3>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="green d-flex p-2 justify-content-center align-items-center">
+                    Applicazione
+                </div>
+                <div class="light-green d-flex p-2 justify-content-center align-items-center">
+                    Presentazione
+                </div>
+                <div class="pale-green d-flex p-2 justify-content-center align-items-center">
+                    Sessione
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="green d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Applicazione
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="border-black d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Messaggio
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="light-blue d-flex p-2 justify-content-center align-items-center">
+                    Trasporto
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="light-blue d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Trasporto
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="border-black d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Segmento o Datagram
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="yellow d-flex p-2 justify-content-center align-items-center">
+                    Rete
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="yellow d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Rete
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="border-black d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Pacchetto
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="light-orange d-flex p-2 justify-content-center align-items-center">
+                    Collegamento
+                </div>
+                <div class="orange d-flex p-2 justify-content-center align-items-center">
+                    Fisico
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="orange d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Fisico
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="border-black d-flex p-2 justify-content-center align-items-center" style="height: 100%">
+                    Frame
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

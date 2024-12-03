@@ -1,0 +1,420 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h3>INDICE</h3>
+            <ul class="index">
+                <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1)
+                            Definizione</button></a></li>
+                <ul class="index">
+                    <li class="index-element"><a href="#1_1"><button type="button"
+                                class="btn btn-outline-secondary">1.1) Nomenclatura</button></a>
+                    </li>
+                </ul>
+                <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">2)
+                            Simulazione</button></a>
+                </li>
+                <ul class="index">
+                    <li class="index-element"><a href="#2_1"><button type="button"
+                                class="btn btn-outline-secondary">2.1) Librerie utilizzate</button></a></li>
+                    <li class="index-element"><a href="#2_2"><button type="button"
+                                class="btn btn-outline-secondary">2.2) Prima simulazione</button></a>
+                    </li>
+                    <li class="index-element"><a href="#2_3"><button type="button"
+                                class="btn btn-outline-secondary">2.3) Seconda simulazione
+                                fissa</button></a></li>
+                    <li class="index-element"><a href="#2_4"><button type="button"
+                                class="btn btn-outline-secondary">2.4) Terza simulazione</button></a></li>
+
+                    <li class="index-element"><a href="#2_5"><button type="button"
+                                class="btn btn-outline-secondary">2.5) Conclusione</button></a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h1 id="1">1) Definizione</h1>
+            Lo <b>Stick Breaking Problem</b> è un problema di probabilità definito come segue.
+            <div class="definition m-2 p-2">
+                Poniamo di avere davanti a noi un bastoncino di lunghezza arbitraria \(l\), e poniamo di volerlo
+                dividere in due punti diversi. Ogni punto di rottura è scelto uniformemente a caso e in modo
+                indipendente. Quanto sarà lungo in media il pezzo più lungo, e quanto sarà lungo in media il pezzo più
+                corto?
+            </div>
+            Questo problema è la variante di un classico problema di probabilità conosciuto con il medesimo nome.
+            <div class="definition m-2 p-2">
+                Poniamo di avere davanti a noi un bastoncino di lunghezza arbitraria \(l\), e poniamo di volerlo
+                dividere in due punti diversi. Ogni punto di rottura è scelto uniformemente a caso e in modo
+                indipendente. Qual'è la probabilità che i tre segmenti formino un triangolo?
+            </div>
+            Il problema originale, oltre a presentare varie dimostrazioni teoriche e pratiche sul risultato, è stato
+            riadattato in varie forme, modificando sia la richiesta (come avviene sopra), sia modificando le azioni che
+            avvengono sul bastoncino o su una delle sue parti. Tornando ora però al nostro problema originale, è
+            possibile riadattarlo per trattare un numero arbitrario di punti di rottura.
+            <div class="definition m-2 p-2">
+                Poniamo di avere davanti a noi un bastoncino di lunghezza arbitraria \(l\), e poniamo di volerlo
+                dividere in \(n\) punti diversi. Ogni punto di rottura è scelto uniformemente a caso e in modo
+                indipendente. Quanto sarà lungo in media il pezzo più lungo, e quanto sarà lungo in media il pezzo più
+                corto?
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="1_1">1.1) Nomenclatura</h2>
+            Prima di andare avanti è necessario fornire alcune nomenclature:
+            <ul>
+                <li>\(l\), come abbiamo detto prima, definisce la lunghezza del nostro bastoncino o segmento.</li>
+                <li>\(X_1, X_2, ..., X_n\) sono le variabili aleatorie indipendenti e identicamente definite tramite la
+                    distribuzione uniforme \(U(0, l)\) che rappresentano i punti di taglio (nel caso in cui \(n=2\) si
+                    utilizzeranno le variabili aleatorie \(X, Y\)).</li>
+                <li>\(E_{\max}^{(n)}\) è la variabile aleatoria della lunghezza del segmento più lungo dopo \(n\)
+                    rotture.</li>
+                <li>\(E_{\min}^{(n)}\) è la variabile aleatoria della lunghezza del segmento più corto dopo \(n\)
+                    rotture.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h1 id="2">2) Simulazione</h1>
+            La simulazione si dividerà in tre implementazioni:
+            <ul>
+                <li>La prima implementazione, in cui andremo a vedere dato un certo numero \(n\) di tagli quale valore
+                    assumeranno \(E_{\max}^{(n)}\) ed \(E_{\min}^{(n)}\) all'aumentare degli esperimenti \(k\)
+                    effettuati.</li>
+                <li>La seconda implementazione, in cui andremo a vedere dato un certo numero \(k\) di esperimenti quale
+                    valore assumeranno \(E_{\max}^{(n)}\) ed \(E_{\min}^{(n)}\) all'aumentare del numero di tagli \(n\)
+                    effettuati.</li>
+                <li>La terza implementazione, in cui cercheremo tramite regressione lineare di recuperare delle
+                    informazioni dai dati che abbiamo ottenuto.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="2_1">2.1) Librerie utilizzate</h2>
+            Le librerie utilizzate saranno principalmente tre:
+            <ul>
+                <li><code class="language-python">numpy</code>, utilizzata per trattare i vettori e le matrici.</li>
+                <li><code class="language-python">numpy.sort</code>, usata per riordinare i valori di un vettore o di
+                    una matrice.</li>
+                <li><code class="language-python">math</code>, che fornisce costanti matematiche e operazioni
+                    matematiche.</li>
+                <li><code class="language-python">matplotlib.pyplot</code>, usata per riordinare i valori di un vettore
+                    o di una matrice.</li>
+                <li><code class="language-python">LinearRegression</code>, importato da <code
+                        class="language-python">sklearn.linear_model</code>, che permette di generare un modello lineare
+                    dato un insieme di dati.</li>
+            </ul>
+            <div class="my-3">
+                <pre class="line-numbers"><code class="language-python">import numpy as np
+import numpy.random as rnd
+    
+import math
+
+import matplotlib.pyplot as plt
+
+from sklearn.linear_model import LinearRegression</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="2_2">2.2) Prima simulazione</h2>
+            Nella prima simulazione, posto di avere un segmento di lunghezza \(l=1\), effettueremo \(m\) esperimenti nei
+            quali, preso il nostro segmento lo divideremo in \(n\) punti (dove \(n\) varierà), ci calcoleremo la
+            lunghezza dei vari segmenti ottenuti, cercheremo i segmenti di lunghezza massima e minima, e li andremo ad
+            usare per aggiornare le medie delle lunghezze medie dei segmenti più lunghi e più corti. Per questa
+            simulazione andremo a generare due grafici: nel primo utilizzeremo i dati genenrali senza alterarli, nel
+            secondo andremo ad applicare il logaritmo naturale sui valori ottenuti.
+            <div class=" my-3">
+                <pre class="line-numbers"><code class="language-python">lista_tagli = [2, 3, 4, 5, 6, 7, 8]
+
+lista_ripetizioni = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000]
+ripetizioni_max = lista_ripetizioni[len(lista_ripetizioni) - 1]
+
+mappa_risultati_max = np.zeros((len(lista_tagli), len(lista_ripetizioni)))
+mappa_risultati_min = np.zeros((len(lista_tagli), len(lista_ripetizioni)))
+
+lista_valori_medi_max = np.zeros((len(lista_tagli), ripetizioni_max))
+lista_valori_medi_min = np.zeros((len(lista_tagli), ripetizioni_max))
+
+for i in range(ripetizioni_max):
+    for j, num_tagli in enumerate(lista_tagli):
+        tagli = np.sort(rnd.uniform(0, 1, num_tagli))
+                                        
+        segmenti = np.zeros(num_tagli+1)
+                                
+        segmenti[0] = tagli[0]
+
+        for k in range(1, num_tagli):
+            segmenti[k] = tagli[k]-tagli[k-1]
+                                    
+            segmenti[num_tagli] = 1-tagli[num_tagli-1]
+
+            segmento_min = min(segmenti)
+            segmento_max = max(segmenti)
+                            
+            if i+1 >= 1:
+                lista_valori_medi_max[j, i] = ((lista_valori_medi_max[j, i-1]*i)+segmento_max)/(i+1)
+                lista_valori_medi_min[j, i] = ((lista_valori_medi_min[j, i-1]*i)+segmento_min)/(i+1)
+            else:
+                lista_valori_medi_max[j, i] = segmento_max/(i+1)
+                lista_valori_medi_min[j, i] = segmento_min/(i+1)
+                            
+    if i+1 in lista_ripetizioni:
+        for j in range(len(lista_tagli)):
+            mappa_risultati_max[j, lista_ripetizioni.index(i+1)] = lista_valori_medi_max[j, i]
+            mappa_risultati_min[j, lista_ripetizioni.index(i+1)] = lista_valori_medi_min[j, i]</code></pre>
+            </div>
+            Osservando i dati generati possiamo presupporre che, dato un certo numero di tagli \(n\), i valori medi del
+            segmento più lungo e del segmento più corto tendono a dei valori ben definiti.
+            <div class="row my-3">
+                <div class="col-6">
+                    <pre><code class="language-plaintext">Risultati per il valore medio della lunghezza massima:
+ [[0.57914988 0.56647071 0.61651471 0.63045775 0.61760878 0.60649821
+  0.60814054 0.61020971 0.61014681 0.61084672 0.6107173  0.61089871]
+ [0.54177762 0.51575221 0.51909093 0.50767612 0.50581228 0.51120959
+  0.51611506 0.51918142 0.52003182 0.52141387 0.52048165 0.5206143 ]
+ [0.43942518 0.49160258 0.46901284 0.4461619  0.45288385 0.45166013
+  0.45641948 0.45812334 0.45631646 0.45564814 0.45687935 0.45619155]
+ [0.37472114 0.3970853  0.40801161 0.40571799 0.41665903 0.40978215
+  0.4112089  0.40941286 0.40778525 0.40745234 0.40762768 0.40764922]
+ [0.35746484 0.34655473 0.36618207 0.37352757 0.37183792 0.36944106
+  0.37313173 0.37167337 0.37143554 0.37048873 0.3705285  0.37056576]
+ [0.32350608 0.33546452 0.33395988 0.35127694 0.33672402 0.33926812
+  0.33846445 0.3384126  0.34201276 0.34137661 0.33970635 0.34033094]
+ [0.32143193 0.32363953 0.32393688 0.31463068 0.31530488 0.32048229
+  0.31837475 0.31661046 0.3163296  0.31592923 0.31471954 0.31414372]]</code></pre>
+                </div>
+                <div class="col-6">
+                    <pre><code class="language-plaintext">Risultati per il valore medio della lunghezza minima:
+ [[0.1195513  0.14658683 0.11793959 0.11196475 0.11240807 0.1148344
+  0.11218832 0.11109319 0.11143153 0.11083905 0.11145569 0.11135797]
+ [0.07032129 0.06540182 0.06465895 0.06543849 0.06446452 0.0655473
+  0.06488311 0.06343206 0.06275578 0.06244968 0.06281788 0.06297393]
+ [0.03484008 0.03027315 0.0367733  0.03711979 0.04114718 0.04004181
+  0.03973008 0.04037771 0.03982544 0.03985738 0.03993112 0.04000901]
+ [0.0310448  0.02931267 0.02588371 0.02962134 0.02675395 0.02883868
+  0.02829839 0.02830126 0.02829154 0.02863042 0.02790415 0.02785242]
+ [0.02132252 0.02163137 0.02089453 0.01855346 0.01897203 0.01990009
+  0.01929402 0.02031854 0.02040167 0.02040627 0.02038931 0.02044291]
+ [0.01651932 0.0228105  0.02044374 0.01710715 0.01717286 0.01696908
+  0.01613424 0.01608982 0.0157203  0.0157148  0.01562337 0.01565044]
+ [0.01436105 0.01461884 0.01424646 0.01376031 0.01421452 0.01275318
+  0.01221816 0.01245094 0.01227246 0.01238889 0.01236679 0.01240077]]</code></pre>
+                </div>
+            </div>
+            Questo diventa ancora più evidente se andiamo a graficare i dati generati, ponendo sulle \(x\) il numero di
+            ripetizioni effettuate e sulle \(y\) la lunghezza media del segmento più lungo e del segmento più corto,
+            generando un plot per ogni numero di tagli effettuato.
+            <div class="row my-3">
+                <div class="col-6">
+                    <pre class="line-numbers"><code class="language-python">plt.figure(figsize=(7, 6))
+
+for i, tagli in enumerate(lista_tagli):
+    label_max = str(tagli) + " tagli"
+
+    plt.plot(range(1, ripetizioni_max+1), lista_valori_medi_max[i, :], label=label_max)
+
+plt.xlabel("Numero di ripetizioni")
+plt.ylabel("Lunghezza media del segmento più lungo")
+plt.legend()
+plt.show()</code></pre>
+                </div>
+                <div class="col-6">
+                    <pre class="line-numbers"><code class="language-python">plt.figure(figsize=(7, 6))
+
+for i, tagli in enumerate(lista_tagli):
+    label_min = str(tagli) + " tagli"
+
+    plt.plot(range(1, ripetizioni_max+1), lista_valori_medi_min[i, :], label=label_min)
+
+plt.xlabel("Numero di ripetizioni")
+plt.ylabel("Lunghezza media del segmento più corto")
+plt.legend()
+plt.show()</code></pre>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_1.png" width="100%">
+                </div>
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_2.png" width="100%">
+                </div>
+            </div>
+            Questo ci permette di presupporre che, in base al numero di tagli \(n\) effettuato, i valori
+            \(E_\max^{(n)}\) ed \(E_\min^{(n)}\) dovranno avere dei valori ben definiti. La domanda che ora sorge
+            spontanea è: esiste una funzione che dato il numero di tagli \(n\) ci permette di calcolare \(E_\max^{(n)}\)
+            ed \(E_\min^{(n)}\)?
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="2_3">2.3) Seconda simulazione</h2>
+            Nella seconda implementazione l'obbiettivo che vogliamo raggiungere è differente: fissa il numero di
+            ripetizioni dell'esperimento, vogliamo vedere come variano i valori medi del segmento più lungo e del
+            segmento più corto, in modo da capire se possiamo ricavare una formula per calcolare tali valori attesi dato
+            il numero di tagli effettuati. In particolare andremo a calcolare due set di valori: uno come la semplice
+            media degli esponenti, e uno come il logaritmo di tale medie.
+            <div class="my-3">
+                <pre class="line-numbers"><code class="language-python">tagli_max = 2000
+ripetizioni_max = 100
+
+lista_valori_medi = np.zeros((2, tagli_max-1))
+
+for i in range(2, tagli_max+1):
+    for j in range(1, ripetizioni_max+1):
+        tagli = np.sort(rnd.uniform(0, 1, i))
+
+        segmenti = np.zeros(i+1)
+
+        segmenti[0] = tagli[0]
+
+        for k in range(1, i):
+            segmenti[k] = tagli[k]-tagli[k-1]
+
+        segmenti[i] = 1-tagli[i-1]
+
+        segmento_min = min(segmenti)
+        segmento_max = max(segmenti)
+
+        lista_valori_medi[0, i-2] = lista_valori_medi[0, i-2] + segmento_max
+        lista_valori_medi[1, i-2] = lista_valori_medi[1, i-2] + segmento_min
+
+lista_valori_medi = lista_valori_medi / ripetizioni_max
+lista_valori_medi_log = np.log(lista_valori_medi)
+</code></pre>
+            </div>
+            Se andiamo a graficare i dati ottenuti, possiamo notare facilmente che i nostri valori medi sembrano seguire
+            <div class="row my-3">
+                <div class="col-6">
+                    <pre class="line-numbers"><code class="language-python">plt.figure(figsize=(7, 6))
+plt.plot(range(2, tagli_max+1), lista_valori_medi[0, :], label="Pezzo più lungo")
+plt.plot(range(2, tagli_max+1), lista_valori_medi[1, :], label="Pezzo più corto")
+plt.xlabel("Numero di tagli")
+plt.ylabel("Lunghezza media")
+plt.legend()
+plt.show()</code></pre>
+                </div>
+                <div class="col-6">
+                    <pre class="line-numbers"><code class="language-python">plt.figure(figsize=(7, 6))
+plt.plot(np.log(np.array(range(2, tagli_max+1))), lista_valori_medi_log[0, :], label="Pezzo più lungo")
+plt.plot(np.log(np.array(range(2, tagli_max+1))), lista_valori_medi_log[1, :], label="Pezzo più corto")
+plt.xlabel("Numero di ripetizioni")
+plt.ylabel("Lunghezza media (logaritmica)")
+plt.legend()
+plt.show()</code></pre>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_3.png" width="100%">
+                </div>
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_4.png" width="100%">
+                </div>
+            </div>
+            Da qui risulta facilmente visibile che la lunghezza media del segmento più lungo e del segmento più corto è
+            esprimibile tramite una funzione del tipo \(f(n)=cn^k\), con \(c, k\in\mathbb{R}\). La domanda che ora sorge
+            spontanea è: quali valori \(c_\max, c_\min, k_\max\) e \(k_\min\) permettono di definire un'approssimazione
+            di \(E_\max^{(n)}\) ed \(E_\min^{(n)}\) in funzione di \(n\)?
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="2_4">2.4) Terza simulazione</h2>
+            Nella terza implementazione quello che vogliamo fare è cercare un'approssimazione per i valori \(c_\max,
+            c_\min, k_\max\) e \(k_\min\). Per fare questo possiamo provare a ricavare un modello lineare partendo dai
+            dati che abbiamo generato nella precedente simulazione, in particolare usando i valori logaritmici; dobbiamo
+            ricordarci che, se applichiamo il logaritmo su una funzione del tipo \(cx^k\), abbiamo \(\ln cn^k=\ln c+k\ln
+            n\).
+            <div class="my-3">
+                <pre class="line-numbers"><code class="language-python">model_max = LinearRegression().fit(np.log(np.array(range(2, tagli_max+1)).reshape(-1, 1)), lista_valori_medi_log[0, :])
+model_min = LinearRegression().fit(np.log(np.array(range(2, tagli_max+1)).reshape(-1, 1)), lista_valori_medi_log[1, :])
+
+print("Risultati per il valore medio della lunghezza massima:")
+print(f"- Costante: {model_max.intercept_}")
+print(f"- Esponente: {model_max.coef_}\n")
+
+print("Risultati per il valore medio della lunghezza minima:")
+print(f"- Costante: {model_min.intercept_}")
+print(f"- Esponente: {model_min.coef_}")
+</code></pre>
+            </div>
+            <div class="row my-3">
+                <div class="col-6">
+                    Andando ad eseguire il codice sopra otteniamo come approssimazione:
+                    <ul>
+                        <li>\(c_\max=0.8190936615221052\)</li>
+                        <li>\(c_\min=-0.82770771\)</li>
+                        <li>\(k_\max=-0.15280740626050893\)</li>
+                        <li>\(k_\min=-1.97787018\)</li>
+                    </ul>
+                    Pertanto, le equazioni che otteniamo sono:
+                    <ul>
+                        <li>\(\ln E_{\max}^{(n)}\cong0.8190936615221052-0.1528074062605089\ln n\)</li>
+                        <li>\(\ln E_{\min}^{(n)}\cong-0.82770771-1.97787018\ln n\)</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre><code class="language-plaintext">Risultati per il valore medio della lunghezza massima:
+- Costante: 0.8190936615221052
+- Esponente: [-0.82770771]
+
+Risultati per il valore medio della lunghezza minima:
+- Costante: -0.15280740626050893
+- Esponente: [-1.97787018]</code></pre>
+                </div>
+            </div>
+            Applicando un'esponenziale per eliminare il logaritmo otteniamo i seguenti risultati:
+            <div class="row align-items-center">
+                <div class="col-6 math">
+                    \[\begin{align*}
+                    E_{\max}^{(n)}\cong&e^{0.8190936615221052-0.1528074062605089\ln n}=\\
+                    &=e^{0.8190936615221052}e^{-0.1528074062605089\ln n}=\\
+                    &=2.268442928434331e^{\ln n^{-0.1528074062605089}}=\\
+                    &=2.268442928434331n^{-0.1528074062605089}
+                    \end{align*}\]
+                </div>
+                <div class="col-6 math">
+                    \[\begin{align*}
+                    E_{\min}^{(n)}\cong&e^{-0.82770771-1.97787018\ln n}=\\
+                    &=e^{-0.82770771}e^{-1.97787018\ln n}=\\
+                    &=0.43704998e^{\ln n^{-1.97787018}}=\\
+                    &=0.43704998n^{-1.97787018}
+                    \end{align*}\]
+                </div>
+            </div>
+            Se andiamo a graficare le funzioni appena recuperate possiamo vedere facilmente che sono un'ottima
+            approssimazione per i valori di \(E_{\max}^{(n)}\) ed \(E_{\min}^{(n)}\)
+            <div class="row my-3">
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_5.png" width="100%">
+                </div>
+                <div class="col-6">
+                    <img src="img/Stick_Breaking_Problem/Grafico_6.png" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="mb-3 border-0">
+            <h2 id="2_5">2.5) Conclusione</h2>
+            Possiamo concludere quindi che esiste una funzione che ci permette di calcolare il valore atteso della
+            lunghezza del segmento più lungo e del segmento più corto in base al numero di tagli effettuati; in
+            particolare, siamo in grado di definire un theta di questi valori approssimando i valori ottenuti, ossia
+            \(E_{\max}^{(n)}\in\Theta(\frac{9}{4n^{\frac{3}{20}}})\) e \(E_{\min}^{(n)}\in\Theta(\frac{9}{20n^{2}})\).
+        </div>
+    </div>
+</div>

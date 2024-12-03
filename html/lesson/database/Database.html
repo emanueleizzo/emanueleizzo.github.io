@@ -1,0 +1,40 @@
+<div class="mb-3 border-0">
+    <h3 id="index">INDICE</h3>
+    <ul class="index">
+        <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1)
+                        Gli archivi</button></a></li>
+        <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">1)
+                        I database</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">2.1)
+                La progettazione di un database</button></a></li>
+        </ul>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="1">1) Gli archivi</h1>
+    Partiamo dal dare una una definizione di archivio: in generale, <mark class="green">un archivio è un insieme organizzato di informazioni</mark> caratterizzate da alcune proprietà fondamentali: 
+    <ul>
+        <li><mark class="yellow">Esiste un nesso logico tra di esse (cioè sono in qualche modo inerenti a un medesimo argomento).</mark> </li>
+        <li><mark class="yellow">Sono rappresentate secondo un formato che ne rende possibile l'interpretazione.</mark> </li>
+        <li><mark class="yellow">Sono registrate con un supporto su cui è possibile scrivere e rileggere anche a distanza di tempo.</mark> </li>
+        <li><mark class="yellow">Sono organizzate in modo che siano facilmente consultabili.</mark> </li> 
+    </ul>
+    Questi insiemi di informazioni logicamente organizzate e riferite a un unico soggetto sono indicati con il termine <mark class="green">record</mark> (letteralmente <b>“registrazione”</b>); le singole informazioni che compongono il record si chiamano <mark class="green">campi</mark>; l'elenco dei campi che lo compongono viene detto tracciato record.Un <mark class="green">file</mark> è una collezione di record che descrivono i singoli elementi di una realtà considerata. Ogni record è composto da un insieme di campi che contengono i valori assunti dalle caratteristiche scelte per descrivere la realtà.
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="2">2) I database</h1>
+    Con il termine <mark class="green">database</mark> (o <b>base di dati</b>) si indicano in informatica gli archivi di dati organizzati in modo integrato, progettati con tecniche di modellazione dei dati e gestiti sulle memorie di massa dei computer utilizzando appositi software, con l'obiettivo di manipolare e ritrovare in modo efficiente i dati memorizzati, superando i limiti presenti nelle organizzazioni tradizionali degli archivi. I prodotti software per la gestione dei database sono indicati con il termine <mark class="green">DBMS</mark>, acronimo di <b>DataBase Management System</b>.
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="3">2.1) La progettazione di un database</h2>
+    La <mark class="green">progettazione di un database</mark> ha lo scopo di modellare e organizzare i dati necessari per gestire una specifica attività del mondo reale. L'attività di progettazione consente prima di tutto di costruire una rappresentazione astratta della realtà in modo indipendente dalla struttura dei dati, e avviene a diversi <mark class="yellow">livelli di astrazione</mark> dal problema considerato:
+    <ul>
+        <li>Il <mark class="yellow">livello concettuale</mark> (o <mark class="yellow">livello di oggetti</mark>) rappresenta la realità dei dati e le relazioni tra essi attraverso uno schema e viene definito appunto tramite lo <mark class="yellow">schema concettuale</mark>.</li>
+        <li>Il <mark class="yellow">livello logico</mark> (o <mark class="yellow">livello di record</mark>) rappresenta il modo in cui i dati sono organizzati negli archivi. Con il passaggio al <mark class="yellow">modello logico</mark> l'insieme dei dati viene di una struttura che deve facilitare la <mark class="blue">manipolazione</mark> (o <mark class="blue">trattamento</mark>) dei dati e l'<mark class="blue">interrogazione</mark>.</li>
+        <li>Il <mark class="yellow">livello fisico</mark> rappresenta l'effettiva installazione degli archivi su disco, implementando quindi il <mark class="yellow">modello fisico</mark>.</li>
+    </ul>
+</div>

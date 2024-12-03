@@ -1,0 +1,251 @@
+mark {
+    display: inline;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+ul {
+    margin: 0em !important;
+}
+
+.display-7 {
+    font-size: 1.25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+mark.green {
+    background-color: #98fb98c0;
+}
+
+mark.yellow {
+    background-color: #eee8aac0;
+}
+
+mark.blue {
+    background-color: #afeeeec0;
+}
+
+mark.red {
+    background-color: #d87093c0;
+}
+
+canvas.graph {
+    width: 100%;
+    max-width: 800px;
+}
+
+div.definition {
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+}
+
+div.comment {
+    font-style: italic;
+    color: gray;
+}
+
+div.green {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71bb77;
+    font-weight: bolder;
+}
+
+div.light-green {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #8dca92;
+    font-weight: bolder;
+}
+
+div.pale-green {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #aae0ae;
+    font-weight: bolder;
+}
+
+div.cyan {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #71b8bb;
+    font-weight: bolder;
+}
+
+div.light-blue {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #7dc2e2;
+    font-weight: bolder;
+}
+
+div.dark-yellow {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #dcc25b;
+    font-weight: bolder;
+}
+
+div.yellow {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #e2e077;
+    font-weight: bolder;
+}
+
+div.orange {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #d19842;
+    font-weight: bolder;
+}
+
+div.light-orange {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #e2bf7d;
+    font-weight: bolder;
+}
+
+div.border-black {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+div.math {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+ul.index {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0.25rem 0rem;
+}
+
+li.index-element {
+    margin: 0.25rem 0rem;
+}
+
+mjx-container.MathJax {
+    margin: 0px !important;
+}
+
+div.bubble-text-left {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 25px;
+    border: 0px;
+    background-color: #4f4f4f;
+    color: white;
+}
+
+div.bubble-text-right {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 0px;
+    border: 0px;
+    background-color: #0f3c0e;
+    color: white;
+}
+
+table.table {
+    border: 1px solid black;
+    border-collapse:separate;
+    border-radius: 10px;
+    border-spacing: 0;
+    margin: 0px;
+}
+
+table.table th:not(:last-child),
+table.table td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+table.table>thead>tr:not(:last-child)>th,
+table.table>thead>tr:not(:last-child)>td,
+table.table>tbody>tr:not(:last-child)>th,
+table.table>tbody>tr:not(:last-child)>td,
+table.table>tfoot>tr:not(:last-child)>th,
+table.table>tfoot>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>th,
+table.table>thead:not(:last-child),
+table.table>tbody:not(:last-child),
+table.table>tfoot:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+table.table thead {
+    background: rgb(53, 53, 53);
+    color: white;
+    font-weight: bold;
+}
+
+table.table {
+    /* Change these properties */
+    --border: 1px solid black;
+    border-radius: 10px;
+
+    /* Don't change these properties */
+    border-spacing: 0;
+    border-collapse: separate;
+    border: var(--border);
+    overflow: hidden;
+}
+
+/* Apply a border to the right of all but the last column */
+table.table th:not(:last-child),
+table.table td:not(:last-child) {
+    border-right: var(--border);
+}
+
+/* Apply a border to the bottom of all but the last row */
+table.table>thead>tr:not(:last-child)>th,
+table.table>thead>tr:not(:last-child)>td,
+table.table>tbody>tr:not(:last-child)>th,
+table.table>tbody>tr:not(:last-child)>td,
+table.table>tfoot>tr:not(:last-child)>th,
+table.table>tfoot>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>td,
+table.table>tr:not(:last-child)>th,
+table.table>thead:not(:last-child),
+table.table>tbody:not(:last-child),
+table.table>tfoot:not(:last-child) {
+    border-bottom: var(--border);
+}

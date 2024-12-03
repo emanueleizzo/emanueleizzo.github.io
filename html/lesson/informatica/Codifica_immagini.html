@@ -1,0 +1,73 @@
+<div class="mb-3 border-0">
+    <h3 id="index">INDICE</h3>
+    <ul class="index">
+        <li class="index-element"><a href="#1"><button type="button" class="btn btn-outline-secondary">1)
+                        La teoria dei colori</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#2"><button type="button" class="btn btn-outline-secondary">1.1)
+                        La codifica RGB</button></a></li>
+        </ul>
+        <li class="index-element"><a href="#3"><button type="button" class="btn btn-outline-secondary">2)
+                        Le immagini raster</button></a></li>
+        <ul class="index">
+            <li class="index-element"><a href="#4"><button type="button" class="btn btn-outline-secondary">2.1)
+                        Definizione, risoluzione e dimensione di un'immagine</button></a></li>
+        </ul>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="1">1) La teoria dei colori</h1>
+    La <mark class="green">teoria dei colori</mark> in sintesi ci permette di dire che <mark class="green"> tramite tre colori prima è possibile otteneere tutti gli altri colori</mark> unendoli assieme. Dato un colore possiamo definirne tre caratteristiche differenti:
+    <ul>
+        <li>La <mark class="yellow">tanalità</mark> che definisce il colore o la tinta.</li>
+        <li>La <mark class="yellow">luminosità</mark> che indica la quantità di bianco o nero presente nel colore percepito.</li>
+        <li>La <mark class="yellow">saturazione</mark>, ossia l'intensità di una specifica tonalità.</li>
+    </ul>
+    La teoria dei colori si divide in due distinte interpretazioni, le quali differenziano sia per i colori primari suati, sia per la tecnica usata per creare nuovi colori:
+    <ul>
+        <li>La prima interpretazione è la <mark class="green">teoria additiva</mark>, basata sui colori primari <mark class="green">rosso, verde e blu</mark> e che si basa sul <mark class="green">sovrapporre i diversi colori per aggiungere luce e generare nuovi colori</mark>. Questa tecnica viene utilizzata in tutti gli schermi e monitor, e viene identificata con la sigla <mark class="green">RGB</mark></li>
+        <li>La prima interpretazione è la <mark class="green">teoria sottrattiva</mark>, basata sui colori primari <mark class="green">ciano, magenta e giallo</mark> e che si basa sul <mark class="green">sovrapporre i diversi colori per rimuovere luce e generare nuovi colori</mark>. Questa tecnica viene utilizzata nella stampa, e viene identificata con la sigla <mark class="green">CMYK</mark></li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h2 id="2">1.1) La codifica RGB</h2>
+    La <mark class="green">codifica RGB</mark> è una rappresentazione dei colori utilizzata in informatica e basata sulla teoria additiva. L'idea è molto semplice: viene dedicato 1 byte per rappresentare ognuno dei tre colori primari, ossia il rosso, il verde e il blu, o per essere più specifici il suo <mark class="green">canale</mark>; questo canale rappresenterà un valore compreso tra 0 e 255, il quale indica la quantità di colore associato usato. Un modo per rappresentare questi canali è quello di indicare sottoforma di tripla i tre valori dei canali. Per rappresentare un colore quindi vengono usati 3 byte, ossia 24 bit, che permettono di rappresentare \(2^{24}=16777216\) colori totali. Per comodità viene usata una <mark class="yellow">codifica esadecimale</mark> preceduta da un cancelletto per scrivere la codifica RGB dei vari colori. Per esempio:
+    <ul>
+        <li>Il colore <mark class="red">rosso</mark> è rappresentato dalla tripla <mark class="red">(255, 0, 0)</mark> o da <mark class="red">#ff0000</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">verde</mark> è rappresentato dalla tripla <mark class="red">(0, 255, 0)</mark> o da <mark class="red">#00ff00</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">blu</mark> è rappresentato dalla tripla <mark class="red">(0, 0, 255)</mark> o da <mark class="red">#0000ff</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">giallo</mark> è rappresentato dalla tripla <mark class="red">(255, 255, 0)</mark> o da <mark class="red">#ffff00</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">ciano</mark> è rappresentato dalla tripla <mark class="red">(0, 255, 255)</mark> o da <mark class="red">#00ffff</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">magenta</mark> è rappresentato dalla tripla <mark class="red">(255, 0, 255)</mark> o da <mark class="red">#ff00ff</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">bianco</mark> è rappresentato dalla tripla <mark class="red">(255, 255, 255)</mark> o da <mark class="red">#ffffff</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">nero</mark> è rappresentato dalla tripla <mark class="red">(0, 0, 0)</mark> o da <mark class="red">#000000</mark> in esadecimale</li>
+        <li>Il colore <mark class="red">marrone</mark> è rappresentato dalla tripla <mark class="red">(150, 100, 50)</mark> o da <mark class="red">#966432</mark> in esadecimale</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="3">2) Le immagini raster</h1>
+    Le <mark class="green">immagini raster</mark> sono una modalità di rappresentazione di immagini fotografiche e irregolari che sfrutta due operazioni di digitalizzazione:
+    <ul>
+        <li>Il <mark class="green">campionamento</mark>, dove l'immagine viene suddivisa uniformemente in piccole dette <mark class="green">pixel</mark> (<b>PICture ELement)</b>.</li>
+        <li>La <mark class="green">quantizzazione</mark>, in cui ad ogni pixel viene assegnato un numero che corrisponde al colore che domina al suo interno.</li>
+    </ul>
+    Le immagini raster si possono suddividere in quattro principali insiemi, in base a quali informazioni sono salvate all'interno dei vari pixel:
+    <ul>
+        <li>Le <mark class="yellow">immagini binarie</mark>, dove in ogni pixel viene salvato un solo bit (1 per il nero e 0 per il bianco).</li>
+        <li>Le <mark class="yellow">immagini in scala di grigi</mark>, dove in ogni pixel vengono salvati 8 bit, ossia 1 byte, permettendo di rappresentare 256 tonalità di grigio.</li>
+        <li>Le <mark class="yellow">immagini a 16 bmilioni di colori</mark>, dette anche <mark class="yellow">immagini in true color</mark>, dove in ogni pixel vengono salvati 24 bit, ossia 3 byte; ogni byte rappresenta la quantità di rosso, verde e blu viene misclelata per creare i diversi colori, permettendo di riprodurre circa 16 milioni di colori.</li>
+        <li>Le <mark class="yellow">immagini a colori indicizzati</mark>, dove i colori effettivamente utilizzati vengono salvati all'interno di una <mark class="yellow">palette</mark> ad \(n\) bit (\(n\) è l'esponente della potenza di 2 più vicina e più grande del numero di colori usati). La regola è molto semplice: ad ognuno dei colori usati vieen associata una relativa codifica, permettendo di diminuire lo spazio utilizzato. Esempio: poniamo di avere un'immagine <mark class="red">a 256 colori</mark>, questo significa che nella nostra immagine <mark class="red">sono codificati 256 colori</mark> piuttosto che i 16 milioni di base; questo è fatto <mark class="red">memorizzando per ognuno dei 256 colori un codice associato composto da 8 bit</mark>, e per ogni pixel viene <mark class="red">memorizzato il codice del colore rappresentato</mark>.</li>
+    </ul>
+</div>
+
+<div class="mb-3 border-0">
+    <h1 id="3">2.1) Definizione, risoluzione e dimensione di un'immagine</h1>
+    La <mark class="green">dimensione in pixel</mark> di un'immagine viene detta <mark class="green">definizione</mark> e si calcola facilmente moltiplicando il numero di pixel in larghezza per il numero di pixel in altezza. La <mark class="green">risoluzione</mark> indica <mark class="green">il numero di pixel per pollice</mark>; in altre parole, espressa la misura dell'immagine in pollici, <mark class="yellow">la risoluzione ci permette di calcolare a quanti pixel corrisponde la lunghezza dell'immmagine</mark>. La <mark class="green">dimensione fisica</mark> di un'immagine indica la dimensione che quest'ultima avrebbe su un supporto fisico, ed è calcolata come <mark class="green">il rapporto tra definizione e risoluzione</mark>. Il <mark class="green">peso</mark> di un'immagine indica la quantità di memoria necessaria per la memorizzazione dell'immagine, ed è calcolata come <mark class="green">il prodotto tra definizione e profondità di colore</mark>. Prendiamo questo esempio: abbiamo un'<mark class="red">immagine \(1280\times720\) con risoluzione 300 pixel</mark>, e vogliamo sapere la definizione, la dimensione fisica e il peso nel caso sia in true color o con palette a 256 colori. Partiamo con la <mark class="red">definizione</mark>, la quale è data dal prodotto <mark class="red">\(1280\times720=921600\) pixel</mark>; il passo successivo è quello di calcolare la <mark class="red">dimensione fisica</mark>, data dai rapporti <mark class="red">\(1280/300\cong4,26\) pollici</mark> e <mark class="red">\(720/300=2,4\) pollici</mark>, quindi la nostra immagine ha <mark class="red">dimensione fisica \(4,26\times2,4\) pollici</mark>; a questo punto mancasolo da calcolare il <mark class="red">peso</mark> dell'immagine, il quale è dato dal prodotto tra la definizione e la profondità dell'immagine:
+    <ul>
+        <li>Se l'immagine usa un <mark class="red">true color</mark> allora la profondità dell'immagine è di <mark class="red">24 bit o 3 byte per pixel</mark>, portando il peso dell'immagine a <mark class="red">\(921600\times3=2764800\) byte</mark>, ossia <mark class="red">2,63 MB circa</mark></li>
+        <li>Se l'immagine usa una <mark class="red">palette a 256</mark> allora la profondità dell'immagine è di <mark class="red">8 bit o 1 byte per pixel</mark> (questo perché per codificare \(256=2^8\) valori differenti in binario sono necessari 8 bit), portando il peso della sola immagine a <mark class="red">\(921600\times1=921600\) byte</mark>, il peso della palette a <mark class="red">\(256\times3=768\) byte</mark> e il peso totale dell'immagine a <mark class="red">\(921600+768=922368\) byte</mark>, ossia <mark class="red">900 KB circa</mark></li>
+    </ul>
+</div>

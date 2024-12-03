@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js https://polyfill.io/v3/polyfill.min.js">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+
+	<script type="text/javascript" language="javascript" src="js/prism.js"></script>
+	<script type="text/javascript" language="javascript" src="js/loadSubSnippet.js"></script>
+	<script type="text/javascript" language="javascript" src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+	<script>
+		var activeElementID = "";
+
+		function show(elementID) {
+			if (activeElementID != "") document.getElementById(activeElementID).className = "hidden";
+
+			document.getElementById(elementID).className = "visible";
+			activeElementID = elementID;
+		}
+	</script>
+
+	<title>Pagina di Emanuele Izzo</title>
+</head>
+
+<body>
+	<header>
+		<div class="px-3 py-2 bg-dark text-white">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+					<a href="index.html"
+						class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+						<div class="me-2 px-1">
+							<img src="img/Logo_black.png" width="40" height="40" />
+						</div>
+						Pagina di Emanuele Izzo
+					</a>
+					<ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+						<li>
+							<a href="index.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+									<path fill-rule="evenodd"
+										d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+								</svg>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="dispense.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M10.943 6H5.057L5 8h.5c.18-1.096.356-1.192 1.694-1.235l.293-.01v5.09c0 .47-.1.582-.898.655v.5H9.41v-.5c-.803-.073-.903-.184-.903-.654V6.755l.298.01c1.338.043 1.514.14 1.694 1.235h.5l-.057-2z" />
+									<path
+										d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+								</svg>
+								Dispense
+							</a>
+						</li>
+						<li>
+							<a href="articoli.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+									<path
+										d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+								</svg>
+								Articoli
+							</a>
+						</li>
+						<li>
+							<a href="codici.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z" />
+								</svg>
+								Codici
+							</a>
+						</li>
+						<li>
+							<a href="insegnamento.html" class="nav-link text-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="M8 0a.5.5 0 0 1 .447.276L8.81 1h4.69A1.5 1.5 0 0 1 15 2.5V11h.5a.5.5 0 0 1 0 1h-2.86l.845 3.379a.5.5 0 0 1-.97.242L12.11 14H3.89l-.405 1.621a.5.5 0 0 1-.97-.242L3.36 12H.5a.5.5 0 0 1 0-1H1V2.5A1.5 1.5 0 0 1 2.5 1h4.691l.362-.724A.5.5 0 0 1 8 0M2 11h12V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5zm9.61 1H4.39l-.25 1h7.72z" />
+								</svg>
+								Insegnamento
+							</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+								</svg>
+								Racconti
+							</a>
+						</li>
+						<li>
+							<a href="podcast.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z" />
+								</svg>
+								Podcast
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="i d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+								</svg>
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="https://linktr.ee/theguardian98" class="nav-link text-white">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+									class="i d-block mx-auto mb-1" viewBox="0 0 16 16">
+									<path
+										d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+									<path
+										d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+								</svg>
+								Linktree
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main role="main">
+		<div class="container my-5 p-4 align-items-center rounded-3 border bg-dark text-white shadow-lg">
+			<h1 class="display-5 fw-bold text-center">Materiale didattico</h1>
+			<div class="col-lg-11 m-auto">
+				<p class="lead mb-4">Di seguito è riportato tutto il materiale didattico per le materie che insegno.</p>
+			</div>
+		</div>
+
+		<p class="d-flex display-5 m-3 justify-content-center">Materie</p>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 mb-3 border-0">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group w-100">
+								<a onclick="loadSubSnippet('Informatica')" class="btn btn-sm btn-outline-secondary p-3">
+									<div class="d-flex flex-row justify-content-between align-items-center">
+										<p class="display-7 m-0 col-md-10">Informatica</p>
+										<svg height="auto" width="auto" version="1.1" id="_x32_"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+											xml:space="preserve" fill="currentColor">
+											<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+											<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+												stroke-linejoin="round"></g>
+											<g id="SVGRepo_iconCarrier">
+												<style type="text/css">
+													.st0 {
+														fill: currentColor;
+													}
+												</style>
+												<g>
+													<path class="st0"
+														d="M510.168,392.022l-45.594-57.326V93.611c0-11.662-9.458-21.12-21.12-21.12H68.546 c-11.662,0-21.115,9.458-21.115,21.12v241.085L1.837,392.022C0.648,393.517,0,395.367,0,397.287v25.373 c0,9.311,7.542,16.849,16.849,16.849h478.302c9.31,0,16.849-7.538,16.849-16.849v-25.373 C512,395.367,511.36,393.517,510.168,392.022z M77.226,102.291h357.548v202.606H77.226V102.291z M304.121,419.47h-96.242v-25.478 h96.242V419.47z">
+													</path>
+													<path class="st0"
+														d="M204.404,167.431c-0.117,0-0.225,0.036-0.31,0.096l-57.525,39.266c-0.152,0.112-0.242,0.277-0.242,0.467 v10.556c0,0.189,0.09,0.363,0.242,0.458l57.525,39.266c0.086,0.069,0.194,0.104,0.31,0.104c0.087,0,0.177-0.026,0.255-0.069 c0.181-0.096,0.298-0.286,0.298-0.493v-16.824c0-0.172-0.09-0.354-0.242-0.458l-39.94-27.267l39.94-27.258 c0.152-0.112,0.242-0.277,0.242-0.467v-16.815c0-0.207-0.117-0.406-0.298-0.492C204.581,167.449,204.49,167.431,204.404,167.431z">
+													</path>
+													<path class="st0"
+														d="M306.07,167.527c-0.091-0.06-0.195-0.096-0.312-0.096c-0.09,0-0.177,0.018-0.259,0.07 c-0.177,0.086-0.294,0.285-0.294,0.492v16.824c0,0.182,0.091,0.355,0.242,0.458l39.94,27.258l-39.94,27.267 c-0.151,0.104-0.242,0.285-0.242,0.466v16.815c0,0.207,0.117,0.397,0.294,0.493c0.082,0.043,0.169,0.069,0.259,0.069 c0.117,0,0.22-0.034,0.312-0.104l57.52-39.266c0.164-0.095,0.25-0.268,0.25-0.458v-10.556c0-0.19-0.086-0.355-0.25-0.467 L306.07,167.527z">
+													</path>
+													<path class="st0"
+														d="M281.375,158.224h-16.08c-0.237,0-0.449,0.147-0.522,0.372L228.26,264.473 c-0.056,0.164-0.026,0.354,0.074,0.492c0.109,0.147,0.277,0.242,0.454,0.242h16.08c0.238,0,0.45-0.156,0.523-0.38l36.508-105.859 c0.061-0.172,0.03-0.363-0.069-0.51C281.721,158.311,281.553,158.224,281.375,158.224z">
+													</path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 mb-3 border-0">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group w-100">
+								<a onclick="loadSubSnippet('Architettura_PC')"
+									class="btn btn-sm btn-outline-secondary p-3">
+									<div class="d-flex flex-row justify-content-between align-items-center">
+										<p class="display-7 m-0 col-md-10">Architettura del PC</p>
+										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
+											fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+											<path
+												d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z" />
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 mb-3 border-0">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group w-100">
+								<a onclick="loadSubSnippet('Sistemi_operativi')"
+									class="btn btn-sm btn-outline-secondary p-3">
+									<div class="d-flex flex-row justify-content-between align-items-center">
+										<p class="display-7 m-0 col-md-10">Sistemi operativi</p>
+										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
+											fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+											<path
+												d="M6.555 1.375 0 2.237v5.45h6.555zM0 13.795l6.555.933V8.313H0zm7.278-5.4.026 6.378L16 16V8.395zM16 0 7.33 1.244v6.414H16z" />
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 mb-3 border-0">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="btn-group w-100">
+								<a onclick="loadSubSnippet('Reti_calcolatori')"
+									class="btn btn-sm btn-outline-secondary p-3">
+									<div class="d-flex flex-row justify-content-between align-items-center">
+										<p class="display-7 m-0 col-md-10">Reti di calcolatori</p>
+										<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto"
+											fill="currentColor" class="i d-block col-md-2" viewBox="0 0 16 16">
+											<path
+												d="M14 13.5v-7a.5.5 0 0 0-.5-.5H12V4.5a.5.5 0 0 0-.5-.5h-1v-.5A.5.5 0 0 0 10 3H6a.5.5 0 0 0-.5.5V4h-1a.5.5 0 0 0-.5.5V6H2.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5M3.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m2 0h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zM9.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z" />
+											<path
+												d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="subject">
+
+		</div>
+	</main>
+
+	<footer class="container d-flex justify-content-center mw-100">
+		<div class="w-75 py-5">
+			<div class="row justify-content-between border-bottom py-2 my-2 mw-100">
+				<div class="col-2">
+					<h5>Sezioni</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+						<li class="nav-item mb-2"><a href="dispense.html" class="nav-link p-0 text-muted">Dispense</a>
+						</li>
+						<li class="nav-item mb-2"><a href="articoli.html" class="nav-link p-0 text-muted">Articoli</a>
+						</li>
+						<li class="nav-item mb-2"><a href="codici.html" class="nav-link p-0 text-muted">Codici</a></li>
+						<li class="nav-item mb-2"><a href="insegnamento.html"
+								class="nav-link p-0 text-muted">Insegnamento</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Racconti</a></li>
+						<li class="nav-item mb-2"><a href="podcast.html" class="nav-link p-0 text-muted">Podcast</a>
+						</li>
+						<li class="nav-item mb-2"><a href="portfolio.html" class="nav-link p-0 text-muted">Portfolio</a>
+						</li>
+						<li class="nav-item mb-2"><a href="https://linktr.ee/theguardian98"
+								class="nav-link p-0 text-muted">Linktree</a></li>
+					</ul>
+				</div>
+
+				<div class="col-4 offset-1">
+					<!-- <form>
+			          		<h5>Subscribe to our newsletter</h5>
+			          		<p>Monthly digest of whats new and exciting from us.</p>
+			          		<div class="d-flex w-100 gap-2">
+			            		<label for="newsletter1" class="visually-hidden">Email address</label>
+			            		<input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+			            		<button class="btn btn-primary" type="button">Subscribe</button>
+			          		</div>
+			        	</form> -->
+				</div>
+			</div>
+
+			<div class="d-flex justify-content-between py-2 my-2">
+				<p>© 2022 Emanuele Izzo. Tutti i diritti riservati.</p>
+				<ul class="list-unstyled d-flex">
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#twitter"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#instagram"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#facebook"></use>
+							</svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
