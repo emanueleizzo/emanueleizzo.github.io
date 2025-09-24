@@ -1,9 +1,11 @@
 function loadSnippet(type) {
     var name = window.location.search.split("=")[1];
-    
+
     var path;
     if (type == "lesson") {
         path = "html/" + type + "/" + tables[type][name]["Materia"] + "/" + name + ".html";
+    } else if (type == "thesis") {
+        path = "pdf/" + type + "/" + name + ".pdf";
     } else {
         path = "html/" + type + "/" + name + ".html";
     }
@@ -11,17 +13,24 @@ function loadSnippet(type) {
     fetch(path)
         .then(response => response.text())
         .then((data) => {
-            document.getElementById(type).innerHTML = data;
-            
+            if (type != "thesis") document.getElementById(type).innerHTML = data;
+            else {
+                document.getElementById("external_pdf").data = path;
+                document.getElementById("internal_pdf").src = path;
+            }
+
             switch (type) {
                 case 'lesson':
-                    document.getElementById("title").innerHTML = "Lezione " + tables[type][name]["Nome"]; 
+                    document.getElementById("title").innerHTML = "Lezione " + tables[type][name]["Nome"];
                     break;
-                case 'code': 
-                    document.getElementById("title").innerHTML = "Codice " + tables[type][name]["Nome"]; 
+                case 'code':
+                    document.getElementById("title").innerHTML = "Codice " + tables[type][name]["Nome"];
                     break;
-                case 'article': 
-                    document.getElementById("title").innerHTML = "Articolo " + tables[type][name]["Nome"]; 
+                case 'article':
+                    document.getElementById("title").innerHTML = "Articolo " + tables[type][name]["Nome"];
+                    break;
+                case 'thesis':
+                    document.getElementById("title").innerHTML = "Tesi " + tables[type][name]["Nome"];
                     break;
             }
 
