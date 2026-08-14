@@ -1,3 +1,96 @@
+/* STRUTTURA BASE PAGINA */ 
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(https://i.imgur.com/8lsmJBc.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+}
+
+/* FOOTER */
+
+/* GLASS CARD */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 10px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+/* STRUTTURA BASE BOX E VARIANTI */
+
+/* TITOLI */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* TESTO */
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/*
 mark {
     display: inline;
     width: fit-content;
@@ -218,24 +311,20 @@ table.table thead {
 }
 
 table.table {
-    /* Change these properties */
     --border: 1px solid black;
     border-radius: 10px;
 
-    /* Don't change these properties */
     border-spacing: 0;
     border-collapse: separate;
     border: var(--border);
     overflow: hidden;
 }
 
-/* Apply a border to the right of all but the last column */
 table.table th:not(:last-child),
 table.table td:not(:last-child) {
     border-right: var(--border);
 }
 
-/* Apply a border to the bottom of all but the last row */
 table.table>thead>tr:not(:last-child)>th,
 table.table>thead>tr:not(:last-child)>td,
 table.table>tbody>tr:not(:last-child)>th,
@@ -249,3 +338,4 @@ table.table>tbody:not(:last-child),
 table.table>tfoot:not(:last-child) {
     border-bottom: var(--border);
 }
+*/
