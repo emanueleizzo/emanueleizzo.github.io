@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/prism.css">
 
+    <script src="js/database.js"></script>
+    <script src="js/stampaArticoli.js"></script>
+
     <title>Emanuele Izzo</title>
 </head>
 
-<body>
+<body onload="stampaArticoli()">
     <header>
         <div class="m-3 p-2 glass-card">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -42,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="articoli.html" class="nav-link text-white">
+                        <a href="articoli.html" class="nav-link text-secondary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
                                 <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
                                 <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
@@ -59,11 +62,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="insegnamento.html" class="nav-link text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bbi d-block mx-auto mb-1" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .447.276L8.81 1h4.69A1.5 1.5 0 0 1 15 2.5V11h.5a.5.5 0 0 1 0 1h-2.86l.845 3.379a.5.5 0 0 1-.97.242L12.11 14H3.89l-.405 1.621a.5.5 0 0 1-.97-.242L3.36 12H.5a.5.5 0 0 1 0-1H1V2.5A1.5 1.5 0 0 1 2.5 1h4.691l.362-.724A.5.5 0 0 1 8 0M2 11h12V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5zm9.61 1H4.39l-.25 1h7.72z" />
+                        <a href="foto.html" class="nav-link text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4" />
+                                <path d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.97 5.97 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1M2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0M14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0" />
                             </svg>
-                            Insegnamento
+                            Foto
                         </a>
                     </li>
                     <li>
@@ -83,7 +87,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="portfolio.html" class="nav-link text-secondary">
+                        <a href="portfolio.html" class="nav-link text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="i d-block mx-auto mb-1" viewBox="0 0 16 16">
                                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                             </svg>
@@ -106,11 +110,11 @@
 
     <main role="main">
         <div class="container w-75 my-3">
-            <div class="mx-3 mt-3 mb-5 p-3 glass-card">
+            <div class="m-3 mb-5 p-3 glass-card">
                 <h1 class="display-5 fw-bold text-center mb-2">Articoli</h1>
             </div>
 
-            <div class="m-3 p-3 glass-card">
+            <div class="m-3 p-3 mb-5 glass-card">
                 <h2 class="display-5 fw-bold text-center mb-2">Tesi</h2>
 
                 <div class="row">
@@ -118,8 +122,8 @@
                         <div class="m-3 p-3">
                             <h3 class="fblog-post-title fw-bold text-center mb-2">Tesi di laurea triennale</h3>
                             <h5>PAC-MAN AI: reinforcement learning applicato al videogioco (Tesi di laurea triennale 2020/21).</h5>
-                            <a href="pdf/thesis/Tesi_triennale.pdf" class="m-2 p-2 no-decotarion items-align-center" target="_blank" title="Clicca per vedere la tesi">
-                                <img class="card-img-top" style="width: 75%; display: block; margin: 0 auto; border-radius: 15px;" src="img/Tesi_triennale.png" data-holder-rendered="true" />
+                            <a href="pdf/tesi/Tesi_triennale.pdf" class="m-2 p-2 no-decotarion items-align-center" target="_blank" title="Clicca per vedere la tesi">
+                                <img class="card-img-top" style="width: 75%; display: block; margin: 0 auto; border-radius: 15px;" src="img/tesi/Tesi_triennale.png" data-holder-rendered="true" />
                             </a>
                         </div>
                     </div>
@@ -128,7 +132,7 @@
                         <div class="m-3 p-3">
                             <h3 class="blog-post-title fw-bold text-center mb-2">Tesi di laurea magistrale</h3>
                             <h5>TBD</h5>
-                            <!-- <a href="pdf/thesis/Tesi_triennale.pdf" class="m-2 p-2 no-decotarion items-align-center" target="_blank" title="Clicca per vedere la tesi">
+                            <!-- <a href="pdf/tesi/Tesi_triennale.pdf" class="m-2 p-2 no-decotarion items-align-center" target="_blank" title="Clicca per vedere la tesi">
                                 <img class="card-img-top" style="width: 75%; display: block; margin: 0 auto; border-radius: 15px;" src="img/Tesi_triennale.png" data-holder-rendered="true" />
                             </a> -->
                         </div>
@@ -136,30 +140,11 @@
                 </div>
             </div>
 
-            <div class="m-3 p-3 glass-card">
+            <div class="m-3 p-3 mb-5 glass-card">
                 <h2 class="display-5 fw-bold text-center mb-2">Articoli vari</h2>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div class="m-3 p-3">
-                            <h5 class="fblog-post-title fw-bold text-center mb-2">Stick breakin problem</h5>
-                            <a href="pdf/articles/Stick_breaking_problem.pdf" class="btn btn-primary w-100 glass-card" target="_blank" title="">Clicca per vedere l'articolo</a>
-                        </div>
-                    </div>
-
-                    <div class="col-3">
-                        <div class="m-3 p-3">
-                            <h5 class="fblog-post-title fw-bold text-center mb-2">Problema delle 8 regine</h5>
-                            <a href="pdf/articles/Problema_otto_regine.pdf" class="btn btn-primary w-100 glass-card" target="_blank" title="">Clicca per vedere l'articolo</a>
-                        </div>
-                    </div>
-
-                    <div class="col-3">
-                        <div class="m-3 p-3">
-                            <h5 class="fblog-post-title fw-bold text-center mb-2">Passeggiata del cavallo</h5>
-                            <a href="pdf/articles/Passeggiata_cavallo.pdf" class="btn btn-primary w-100 glass-card" target="_blank" title="">Clicca per vedere l'articolo</a>
-                        </div>
-                    </div>
+                <div class="row justify-content-between" id="articoli-container">
+                    <!-- Gli articoli verranno inseriti qui tramite JavaScript -->
                 </div>
             </div>
         </div>
