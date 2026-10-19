@@ -12,21 +12,16 @@ const tabelle = {
         {"nome": "Passeggiata del cavallo", "sigla": "PC"}
     ],
 
-    foto: [
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-1", "formato": "jpg"},
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-2", "formato": "jpg"},
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-3", "formato": "jpg"},
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-4", "formato": "jpg"},
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-5", "formato": "jpg"},
-        {"nome": "La ragazza di Lars", "sigla": "LRDL-6", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-1", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-2", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-3", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-4", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-5", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-6", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-7", "formato": "jpg"},
-        {"nome": "Shooting con Chiara al parco del Tuscolo", "sigla": "SCT-8", "formato": "jpg"},
+    progetti_sartoria: [   
+        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione": "", "informazioni": {
+            "sezioni": ["Moodboard", "Giacca", "Tunica", "Cappello"],
+            "moodboard": {
+                "formato": "12",
+                "immagine": "moodboard.png",
+                "descrizione": ""
+            }
+        }},
+        {"nome": "Bernardo Altano", "immagine": "Bernardo Altano.jpg"}
     ]
 };
 

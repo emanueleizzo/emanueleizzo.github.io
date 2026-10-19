@@ -1,3 +1,26 @@
+/* IMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* VARIABILI */
+
+:root {
+    --charcoal-color: #1a1a1a;
+    --forest-color: #2e4639;
+    --sage-color: #7a8f7a;
+    --gold-color: #d4af6a;
+    --oxblood-color: #683a3e;
+    --parchment-color: #e6edc9;
+}
+
+.text-golden {
+    color: var(--gold-color);
+}
+
+.text-charcoal {
+    color: var(--charcoal-color);
+}
+
 /* STRUTTURA BASE PAGINA */
 
 html {
@@ -5,19 +28,23 @@ html {
 }
 
 body {
-    background: url(https://i.imgur.com/8lsmJBc.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: var(--forest-color);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0.0);
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--forest-color);
     color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+body.index {
+    background: url('../img/Background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover auto;
 }
 
 /* MAIN */
@@ -28,90 +55,51 @@ main {
 
 /* FOOTER */
 
-/* GLASS CARD */
+.footer {
+    background-color: var(--forest-color);
+    color: var(--parchment-color);
+    text-align: center;
+}
 
-.glass-card {
-    background: rgba(255, 255, 255, 0.1);
+/* GLASS BOX */
+
+.glass-box {
+    background: rgba(46, 70, 57, 0.75);
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 0 20px 10px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    padding: 0.5rem;
 }
 
-.glass-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.8),
-            transparent);
+/* PARCHMENT BOX */
+
+.parchment-box {
+    clip-path: shape(from 25.76px 11.26px, curve to calc(1.72% + 28.97px) 14.5px with calc(0% + 30px) 1px, smooth to calc(5.17% + 26.9px) 21px, smooth to calc(8.62% + 24.83px) 9.5px, smooth to calc(12.07% + 22.76px) 3.5px, smooth to calc(15.52% + 20.69px) 14px, smooth to calc(18.97% + 18.62px) 17px, smooth to calc(22.41% + 16.55px) 13.5px, smooth to calc(25.86% + 14.48px) 10.5px, smooth to calc(29.31% + 12.41px) 3.5px, smooth to calc(32.76% + 10.34px) 15.5px, smooth to calc(36.21% + 8.28px) 18px, smooth to calc(39.66% + 6.21px) 14px, smooth to calc(43.1% + 4.14px) 14px, smooth to calc(46.55% + 2.07px) 13.5px, smooth to calc(50% + 0px) 13.5px, smooth to calc(53.45% + -2.07px) 16.5px, smooth to calc(56.9% + -4.14px) 23.5px, smooth to calc(60.34% + -6.21px) 25.5px, smooth to calc(63.79% + -8.28px) 27px, smooth to calc(67.24% + -10.34px) 16px, smooth to calc(70.69% + -12.41px) 6px, smooth to calc(74.14% + -14.48px) 16px, smooth to calc(77.59% + -16.55px) 25px, smooth to calc(81.03% + -18.62px) 18px, smooth to calc(84.48% + -20.69px) 16px, smooth to calc(87.93% + -22.76px) 25.5px, smooth to calc(91.38% + -24.83px) 26.5px, smooth to calc(94.83% + -26.9px) 23px, smooth to calc(98.28% + -28.97px) 18.5px, smooth to calc(100% - 26.11px) 18.11px, smooth to calc(100% - 14.11px) 26.11px, smooth to calc(100% - 3.5px) calc(2.63% + 28.42px), smooth to calc(100% - 6.5px) calc(7.89% + 25.26px), smooth to calc(100% - 8px) calc(13.16% + 22.11px), smooth to calc(100% - 3.5px) calc(18.42% + 18.95px), smooth to calc(100% - 10.5px) calc(23.68% + 15.79px), smooth to calc(100% - 12px) calc(28.95% + 12.63px), smooth to calc(100% - 12.5px) calc(34.21% + 9.47px), smooth to calc(100% - 14px) calc(39.47% + 6.32px), smooth to calc(100% - 11px) calc(44.74% + 3.16px), smooth to calc(100% - 13px) calc(50% + 0.00px), smooth to calc(100% - 9px) calc(55.26% + -3.16px), smooth to calc(100% - 13.5px) calc(60.53% + -6.32px), smooth to calc(100% - 13.5px) calc(65.79% + -9.47px), smooth to calc(100% - 7px) calc(71.05% + -12.63px), smooth to calc(100% - 7.5px) calc(76.32% + -15.79px), smooth to calc(100% - 16px) calc(81.58% + -18.95px), smooth to calc(100% - 21.5px) calc(86.84% + -22.11px), smooth to calc(100% - 12px) calc(92.11% + -25.26px), smooth to calc(100% - 5.5px) calc(97.37% + -28.42px), smooth to calc(100% - 6.39px) calc(100% - 19.39px), smooth to calc(100% - 19.39px) calc(100% - 4.39px), smooth to calc(98.28% - 28.97px) calc(100% - 12px), smooth to calc(94.83% - 26.9px) calc(100% - 14px), smooth to calc(91.38% - 24.83px) calc(100% - 4.5px), smooth to calc(87.93% - 22.76px) calc(100% - 17.5px), smooth to calc(84.48% - 20.69px) calc(100% - 17.5px), smooth to calc(81.03% - 18.62px) calc(100% - 17px), smooth to calc(77.59% - 16.55px) calc(100% - 18px), smooth to calc(74.14% - 14.48px) calc(100% - 11.5px), smooth to calc(70.69% - 12.41px) calc(100% - 11.5px), smooth to calc(67.24% - 10.34px) calc(100% - 16.5px), smooth to calc(63.79% - 8.28px) calc(100% - 23px), smooth to calc(60.34% - 6.21px) calc(100% - 20.5px), smooth to calc(56.9% - 4.14px) calc(100% - 23px), smooth to calc(53.45% - 2.07px) calc(100% - 21.5px), smooth to calc(50% - 0px) calc(100% - 19.5px), smooth to calc(46.55% - -2.07px) calc(100% - 22.5px), smooth to calc(43.1% - -4.14px) calc(100% - 19.5px), smooth to calc(39.66% - -6.21px) calc(100% - 11px), smooth to calc(36.21% - -8.28px) calc(100% - 6px), smooth to calc(32.76% - -10.34px) calc(100% - 4px), smooth to calc(29.31% - -12.41px) calc(100% - 11.5px), smooth to calc(25.86% - -14.48px) calc(100% - 16px), smooth to calc(22.41% - -16.55px) calc(100% - 11.5px), smooth to calc(18.97% - -18.62px) calc(100% - 6.5px), smooth to calc(15.52% - -20.69px) calc(100% - 6px), smooth to calc(12.07% - -22.76px) calc(100% - 11.5px), smooth to calc(8.62% - -24.83px) calc(100% - 9.5px), smooth to calc(5.17% - -26.9px) calc(100% - 7px), smooth to calc(1.72% - -28.97px) calc(100% - 4.5px), smooth to 28.59px calc(100% - 14.09px), smooth to 22.59px calc(100% - 28.59px), smooth to 10px calc(97.37% - 28.42px), smooth to 1.5px calc(92.11% - 25.26px), smooth to 12.5px calc(86.84% - 22.11px), smooth to 14.5px calc(81.58% - 18.95px), smooth to 14px calc(76.32% - 15.79px), smooth to 19.5px calc(71.05% - 12.63px), smooth to 18px calc(65.79% - 9.47px), smooth to 23px calc(60.53% - 6.32px), smooth to 18.5px calc(55.26% - 3.16px), smooth to 5.5px calc(50% - 0px), smooth to 1px calc(44.74% - -3.16px), smooth to 12.5px calc(39.47% - -6.32px), smooth to 20px calc(34.21% - -9.47px), smooth to 23.5px calc(28.95% - -12.63px), smooth to 22px calc(23.68% - -15.79px), smooth to 14px calc(18.42% - -18.95px), smooth to 7.5px calc(13.16% - -22.11px), smooth to 15px calc(7.89% - -25.26px), smooth to 27.5px calc(2.63% - -28.42px), smooth to 23.76px 25.76px, smooth to 25.76px 11.26px);
+    background-color: var(--parchment-color);
+    color: var(--charcoal-color);
 }
 
-.glass-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.8),
-            transparent,
-            rgba(255, 255, 255, 0.3));
+/* POLAROID BOX */
+
+.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1em;
 }
 
-/* STRUTTURA BASE BOX E VARIANTI */
-/* LIGHTBOX */
+/* NAVBAR */
 
-#lightbox-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(80, 80, 80, 0.80);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
+.nav-link,
+.nav-link:hover,
+.nav-link:active {
+    color: var(--gold-color) !important;
 }
 
-#lightbox-overlay.active {
-    display: flex;
-}
-
-#lightbox-img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 8px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-    object-fit: contain;
-}
-
-#lightbox-close {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    line-height: 1;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-#lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+.nav-link-actual,
+.nav-link-actual:hover,
+.nav-link-actual:active {
+    color: var(--parchment-color) !important;
 }
 
 /* TITOLI */
@@ -124,6 +112,11 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
+    font-family: 'Cinzel', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
 }
 
 /* TESTO */
@@ -131,4 +124,12 @@ h6 {
 p {
     margin: 0;
     padding: 0;
+}
+
+em.handwriting {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    display: block;
+    color: var(--charcoal-color);
+    font-size: 2em;
 }
