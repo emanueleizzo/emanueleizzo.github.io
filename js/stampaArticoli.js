@@ -12,18 +12,25 @@ function stampaArticoli() {
 
     articoli.forEach(articolo => {
         count++;
-        const card = document.createElement('div');
-        if (count < (righe - 1) * 4) {
-            card.className = 'col-3 mb-4';
-        } else {
-            card.className = 'col-3';
-        }
-        card.innerHTML = `
-            <div class="m-3 p-3">
-                <h5 class="fblog-post-title fw-bold text-center mb-2">${articolo.nome}</h5>
-                <a href="pdf/articoli/${articolo.sigla}.pdf" class="btn btn-primary w-100 glass-card" target="_blank" title="">Clicca per vedere l'articolo</a>
+
+        const cover = document.createElement('div');
+        cover.classList.add("col-6", "p-0");
+
+        const link = document.createElement('a');
+        link.className = 'paper-item';
+        link.href = `pdf/articoli/${articolo.sigla}.pdf`;
+        link.target = '_blank';
+        link.title = 'Clicca per vedere l\'articolo';
+        link.innerHTML = `
+            <span class="paper-number">${count.toString().padStart(2, '0')}</span>
+            <div class="paper-content">
+                <div>${articolo.tipo} - ${articolo.data}</div>
+                <h3>${articolo.nome}</h3>
+                <p>${articolo.descrizione}</p>
             </div>
         `;
-        container.appendChild(card);
+
+        cover.appendChild(link);
+        container.appendChild(cover);
     });
 }

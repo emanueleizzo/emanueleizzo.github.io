@@ -12,20 +12,33 @@ function stampaDispense() {
 
     dispense.forEach(dispensa => {
         count++;
-        const card = document.createElement('div');
+
+        const cover = document.createElement('div');
         if (count < (righe - 1) * 4) {
-            card.className = 'col-3 mb-4';
+            cover.className = 'col-3 mb-4';
         } else {
-            card.className = 'col-3';
+            cover.className = 'col-3';
         }
-        card.innerHTML = `
-            <div class="m-3 p-3">
-                <h5 class="fblog-post-title fw-bold text-center mb-2">${dispensa.nome}</h5>
-                <a href="pdf/tesi/${dispensa.sigla}.pdf" class="m-2 p-2 no-decotarion items-align-center" target="_blank" title="Clicca per vedere la dispensa">
-                    <img class="card-img-top" style="width: 75%; display: block; margin: 0 auto; border-radius: 15px;" src="img/dispense/${dispensa.immagine}" data-holder-rendered="true" />
-                </a>
-            </div>
-        `;
-        container.appendChild(card);
+        cover.classList.add('p-3');
+
+        const link = document.createElement('a');
+        link.className = 'book-cover';
+        link.style.setProperty("--book-color", getRandomColor());
+        link.href = `pdf/dispense/${dispensa.sigla}.pdf`;
+        link.target = '_blank';
+        link.title = 'Clicca per vedere la dispensa';
+        link.innerHTML = `<h5 class="text-center mb-2 w-100">${dispensa.nome}</h5>`;
+
+        cover.appendChild(link);
+        container.appendChild(cover);
     });
+}
+
+function getRandomColor() {
+    const letters = '01234567';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 8)];
+    }
+    return color;
 }
