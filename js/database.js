@@ -18,12 +18,11 @@ const tabelle = {
     articoli: [
         {"nome": "Stick breaking problem", "sigla": "SBP", "tipo": "Accademico", "data": "02/05/2022", "descrizione": "Descrizione del problema dello stick breaking problem e della stima dei valori medi."},
         {"nome": "Problema delle 8 regine", "sigla": "P8R", "tipo": "Studio personale", "data": "20/12/2022", "descrizione": "Descrizione del problema delle 8 regine e del mio approccio alla sua risoluzione."},
-        {"nome": "Passeggiata del cavallo", "sigla": "PC", "tipo": "Studio personale", "data": "20/12/2022", "descrizione": "Descrizione del problema della passeggiata del cavallo e delle soluzioni adottate."}
+        {"nome": "Passeggiata del cavallo", "sigla": "PC", "tipo": "Studio personale", "data": "28/11/2022", "descrizione": "Descrizione del problema della passeggiata del cavallo e delle soluzioni adottate."}
     ],
 
     progetti_sartoria: [   
-        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione": "", "informazioni": {
-            "sezioni": ["Moodboard", "Giacca", "Tunica", "Pantaloni","Cappello"],
+        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione": "Costume realizzato per me da utilizzare durante l'evento di LARP Battle for Vilegis", "informazioni": {
             "moodboard": {
                 "formato": "12",
                 "immagine": "moodboard.png",
