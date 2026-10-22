@@ -16,35 +16,26 @@ const tabelle = {
     ],
 
     articoli: [
-        {"nome": "Stick breaking problem", "sigla": "SBP", "tipo": "Accademico", "data": "02/05/2022", "descrizione": "Descrizione del problema dello stick breaking problem e della stima dei valori medi."},
-        {"nome": "Problema delle 8 regine", "sigla": "P8R", "tipo": "Studio personale", "data": "20/12/2022", "descrizione": "Descrizione del problema delle 8 regine e del mio approccio alla sua risoluzione."},
-        {"nome": "Passeggiata del cavallo", "sigla": "PC", "tipo": "Studio personale", "data": "28/11/2022", "descrizione": "Descrizione del problema della passeggiata del cavallo e delle soluzioni adottate."}
+        {"nome": "Stick breaking problem", "sigla": "SBP", "tipo": "Accademico", "data": "02/05/2022", "descrizione": "Descrizione del problema dello stick breaking problem e della stima dei valori medi in Python e in R."},
+        {"nome": "Problema delle 8 regine", "sigla": "P8R", "tipo": "Studio personale", "data": "20/12/2022", "descrizione": "Descrizione del problema delle 8 regine e del mio approccio alla sua risoluzione in Python e in Prolog."},
+        {"nome": "Passeggiata del cavallo", "sigla": "PC", "tipo": "Studio personale", "data": "28/11/2022", "descrizione": "Descrizione del problema della passeggiata del cavallo e la ricerca delle relative soluzioni in Python e in Prolog."}
     ],
 
     progetti_sartoria: [   
-        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione": "Costume realizzato per me da utilizzare durante l'evento di LARP Battle for Vilegis", "informazioni": {
-            "moodboard": {
-                "formato": "12",
-                "immagine": "moodboard.png",
-                "descrizione": ""
-            },
+        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione_foto": "Foto realizzata al castello di Palombara Sabina", "descrizione_costume": "Costume realizzato per me da utilizzare durante l'evento di LARP Battle for Vilegis", "pezzi": {
             "giacca": {
-                "formato": "6",
                 "immagine": "giacca.png",
                 "descrizione": ""
             },
             "tunica": {
-                "formato": "6",
                 "immagine": "tunica.png",
                 "descrizione": ""
             },
             "pantaloni": {
-                "formato": "6",
                 "immagine": "pantaloni.png",
                 "descrizione": ""
             },
             "cappello": {
-                "formato": "6",
                 "immagine": "cappello.png",
                 "descrizione": ""
             }
