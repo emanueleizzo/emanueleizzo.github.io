@@ -22,7 +22,7 @@ const tabelle = {
     ],
 
     progetti_sartoria: [   
-        {"nome": "Tim Glaydor", "immagine": "Tim Glaydor.jpg", "descrizione_foto": "Foto realizzata al castello di Palombara Sabina", "descrizione_costume": "Costume realizzato per me da utilizzare durante l'evento di LARP Battle for Vilegis", "pezzi": {
+        {"nome": "Tim Glaydor", "immagine": "tim_glaydor.jpg", "descrizione_foto": "Foto realizzata al castello di Palombara Sabina", "descrizione_costume": "Costume realizzato per me da utilizzare durante l'evento di LARP Battle for Vilegis", "pezzi": {
             "giacca": {
                 "immagine": "giacca.png",
                 "descrizione": ""
