@@ -14,14 +14,6 @@
     --parchment-color: #e6edc9;
 }
 
-.text-gold {
-    color: var(--gold-color);
-}
-
-.text-charcoal {
-    color: var(--charcoal-color);
-}
-
 /* STRUTTURA BASE PAGINA */
 
 html {
@@ -154,12 +146,16 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     text-align: center !important;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
 }
 
 /* TESTO */
@@ -185,6 +181,29 @@ em.handwriting-s {
     color: var(--charcoal-color);
     font-size: 1.75em;
     font-style: normal;
+}
+
+.text-gold {
+    color: var(--gold-color);
+}
+
+.text-charcoal {
+    color: var(--charcoal-color);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 0.85rem;
+}
+
+a,
+a:hover,
+a:active {
+    color: var(--gold-color);
+    text-decoration: underline;
 }
 
 /* BOX PER LE TESI */
@@ -285,7 +304,38 @@ em.handwriting-s {
 
 /* BOTTONi */
 
-.btn-sartoria {
+.btn-gold,
+.btn-gold:hover,
+.btn-gold:active {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--gold-color);
+    padding: 0.5em;
+    font-size: 1.25em;
+    color: var(--gold-color);
+    text-decoration: none;
+}
+
+.btn-parchment,
+.btn-parchment:hover,
+.btn-parchment:active {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--parchment-color);
+    padding: 0.5em;
+    font-size: 1.25em;
+    color: var(--parchment-color);
+    text-decoration: none;
+}
+
+.btn-transparent,
+.btn-transparent:hover,
+.btn-transparent:active {
+    display: inline-flex;
     align-items: center;
     vertical-align: middle;
     background-color: rgba(0, 0, 0, 0);
@@ -293,6 +343,14 @@ em.handwriting-s {
     padding: 0.5em;
     font-size: 1.5em;
     color: var(--parchment-color);
+    text-decoration: none;
+}
+
+/* IMMAGINI */
+
+.profile-pic {
+    border-radius: 10%;
+    border: 2px solid var(--gold-color);
 }
 
 /* DISSOLVENZE */
@@ -369,4 +427,15 @@ em.handwriting-s {
         visibility: visible;
         transform: translateX(0);
     }
+}
+
+/* ELEMENTI VARI */
+
+.portfolio-dates {
+    border-right: 2px solid var(--parchment-color);
+}
+
+.divisor-end {
+    border-bottom: 2px solid var(--parchment-color);
+    padding-bottom: 0.5em;
 }
