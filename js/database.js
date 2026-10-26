@@ -40,7 +40,7 @@ const tabelle = {
                 "descrizione": ""
             }
         }},
-        {"nome": "Bernardo Altano", "immagine": "Bernardo Altano.jpg"}
+        {"nome": "Bernardo Altano", "immagine": "bernardo_altano.jpg", "descrizione_foto": "Foto realizzata durante il Celtic Festival di Guidonia", "descrizione_costume": "Costume realizzato per il mio ragazzo da utilizzare durante varie fiere ed eventi.", "pezzi": {}}
     ]
 };
 
