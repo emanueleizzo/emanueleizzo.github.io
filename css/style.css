@@ -199,11 +199,23 @@ em.handwriting-s {
     font-size: 0.85rem;
 }
 
+.text-xsmall {
+    font-size: 0.65rem;
+}
+
 a,
 a:hover,
 a:active {
     color: var(--gold-color);
     text-decoration: underline;
+}
+
+
+a.no-style,
+a.no-style:hover,
+a:active {
+    color: var(--parchment-color);
+    text-decoration: none;
 }
 
 /* BOX PER LE TESI */
@@ -438,4 +450,18 @@ a:active {
 .divisor-end {
     border-bottom: 2px solid var(--parchment-color);
     padding-bottom: 0.5em;
+}
+
+/* SCROLL ORIZZONTALE */
+
+.scroll-horizontal {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.white-space-wrap {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
