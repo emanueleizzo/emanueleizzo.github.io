@@ -19,7 +19,7 @@ const tabelle = {
         {"nome": "Stick breaking problem", "sigla": "SBP", "tipo": "Accademico", "data": "02/05/2022", "descrizione": "Descrizione del problema dello stick breaking problem e della stima dei valori medi in Python e in R."},
         {"nome": "Rompicapo delle 8 regine", "sigla": "R8R", "tipo": "Studio personale", "data": "20/12/2022", "descrizione": "Descrizione del problema delle 8 regine e del mio approccio alla sua risoluzione in Python e in Prolog."},
         {"nome": "Passeggiata del cavallo", "sigla": "PC", "tipo": "Studio personale", "data": "28/11/2022", "descrizione": "Descrizione del problema della passeggiata del cavallo e la ricerca delle relative soluzioni in Python e in Prolog."},
-        {"nome": "D&D e la probabilità", "sigla": "DDP", "tipo": "Studio personale", "data": "08/11/2026", "descrizione": "Introduzione generale alla probabilità, a D&D, e studio sui diversi metodi per la generazione delle statistiche di partenza"}
+        {"nome": "D&D e la probabilità", "sigla": "DDP", "tipo": "Studio personale", "data": "08/11/2026", "descrizione": "Introduzione generale alla probabilità, a D&D, e studio sui diversi metodi per la generazione delle statistiche di partenza [DA COMPLETARE]"}
     ],
 
     libri: {
