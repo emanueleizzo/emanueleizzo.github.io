@@ -65,9 +65,17 @@ main {
     padding: 0.5rem;
 }
 
+.glass-box-gradient {
+    background: rgba(46, 70, 57, 0.25);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
 /* BOOK COVER */
 
-/* Colore modificabile da JS: el.style.setProperty('--book-color', '#2e4639') */
 .book-cover {
     --book-color: var(--oxblood-color);
     position: relative;
@@ -201,6 +209,11 @@ em.handwriting-s {
 
 .text-xsmall {
     font-size: 0.65rem;
+}
+
+.text-wrap {
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 a,
@@ -441,6 +454,52 @@ a:active {
     }
 }
 
+/* ENLARGE RIGHT */
+
+.enlarge-right {
+    animation: enlarge-right 0.5s forwards;
+}
+
+@keyframes enlarge-right {
+    from {
+        opacity: 0;
+        width: 0;
+        transform-origin: right;
+        visibility: hidden;
+        display: none;
+    }
+
+    to {
+        opacity: 1;
+        width: 40%;
+        transform-origin: right;
+        visibility: visible;
+        display: block;
+    }
+}
+
+.shrink-right {
+    animation: shrink-right 0.5s forwards;
+}
+
+@keyframes shrink-right {
+    from {
+        opacity: 1;
+        width: 40%;
+        transform-origin: right;
+        visibility: visible;
+        display: block;
+    }
+
+    to {
+        opacity: 0;
+        width: 0;
+        transform-origin: right;
+        visibility: hidden;
+        display: none;
+    }
+}
+
 /* ELEMENTI VARI */
 
 .portfolio-dates {
@@ -464,4 +523,36 @@ a:active {
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+/* FLEX */
+
+.d-flex-inline {
+    display: flex;
+    flex-direction: row;
+}
+
+/* WIDTH CLASSES */
+
+.w-30 {
+    width: 30%;
+}
+
+/* VISIBILITÀ */
+
+.visible {
+    visibility: visible;
+    display: block;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+/* COPERTINE LIBRI */
+
+.copertina-libro {
+    width: 100% * (2/12);
+    aspect-ratio: 1 / sqrt(2);
 }
