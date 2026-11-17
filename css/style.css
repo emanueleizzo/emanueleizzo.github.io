@@ -159,10 +159,12 @@ h2 {
 }
 
 h3 {
+    color: var(--parchment-color);
     font-size: 1.75rem;
 }
 
 h4 {
+    color: var(--parchment-color);
     font-size: 1.25rem;
 }
 
@@ -555,4 +557,11 @@ a:active {
 .copertina-libro {
     width: 100% * (2/12);
     aspect-ratio: 1 / sqrt(2);
+}
+
+/* PODCAST PIC */
+
+.podcast-pic {
+    border-radius: 10%;
+    border: 2px solid var(--gold-color);
 }

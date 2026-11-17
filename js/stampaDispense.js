@@ -3,6 +3,7 @@ function stampaDispense() {
     const dispense = tabelle.dispense;
     dispense.sort((a, b) => a.nome.localeCompare(b.nome));
     let count = 0;
+    const righe = Math.ceil(dispense.length / 4);
 
     dispense.forEach(dispensa => {
         count++;
